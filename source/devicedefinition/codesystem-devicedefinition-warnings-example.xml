@@ -15,8 +15,6 @@
 		<valueInteger value="0"/>
 	</extension>
 	<url value="http://hl7.org/fhir/devicedefinition-warnings-example"/>
-	<identifier>
-	</identifier>
 	<version value="6.0.0"/>
 	<name value="DeviceDefinitionWarningsExample"/>
 	<title value="Device Definition Warnings"/>
