@@ -1423,7 +1423,7 @@
       </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DeviceDefinitionWarningsExample"/>
+          <valueString value="DeviceWarningsExample"/>
         </extension>
         <strength value="example"/>
         <description value="Hazards of using a device."/>

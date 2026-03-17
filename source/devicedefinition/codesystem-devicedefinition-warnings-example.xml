@@ -16,8 +16,8 @@
 	</extension>
 	<url value="http://hl7.org/fhir/devicedefinition-warnings-example"/>
 	<version value="6.0.0"/>
-	<name value="DeviceDefinitionWarningsExample"/>
-	<title value="Device Definition Warnings"/>
+	<name value="DeviceWarningsExample"/>
+	<title value="Device Warnings"/>
 	<status value="active"/>
 	<experimental value="true"/>
 	<date value="2026-03-16T10:01:24+11:00"/>
