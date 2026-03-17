@@ -230,7 +230,7 @@ A client retrieves the following ImagingStudy:
 <p>
 (See <a href="imagingstudy-example-xr.json.html">Example XR</a> for full example)
 </p><p>
-The client retrieves the referenced Endpoint (see <a href="endpoint-example-wadors.json.html">Example WADO-RS</a>) and extracts the WADO-RS URL: <pre>https://pacs.hospital.org/wado-rs</pre>.
+The client retrieves the referenced Endpoint (see <a href="endpoint-example-wadors.json.html">Example WADO-RS</a>) and extracts the WADO-RS URL: <pre>https://pacs.hospital.org/wado-rs</pre>
 </p><p>
 The client uses the WADO-RS URL, the identifier.value and the series.uid to construct a WADO-RS metadata request:
 </p>
