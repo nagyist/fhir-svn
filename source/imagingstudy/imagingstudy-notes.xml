@@ -66,16 +66,14 @@ that service for all series in that study that do not have a specified Endpoint 
 contained instances. That is, an ImagingStudy.series.endpoint overrides an ImagingStudy.endpoint 
 of the same connection type. 
 Systems can determine if a particular study, series, or instance is available or offline by interacting with the endpoint.
-Since each study, or individual series of a study can be stored on different imaging 
-archive servers, per-series endpoints are required. For the identified services and use cases, all instances within 
-a series would be stored together, and thus instance-level endpoints are not defined.
+Since individual series of a study can be stored on different imaging archive servers, accessing all series of the study may require per-series endpoints.
 </p>
 <p>
 Different Endpoint connection types can have different capabilities, protocols or requirements.
 Furthermore, the specified <code>Endpoint.address</code> 
 identifies the DICOM Web Service Base URI (see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.2.html">DICOM PS 3.18 Section 8.2</a> ). 
-The URL needed to retrieve image data might need to be constructed from this base URL.
-See below for the details on use of imaging-related Endpoint connection types.
+The URL to retrieve image data is constructed from this base URL.
+See below for the details on the use of imaging-related Endpoint connection types.
 </p>
 <a name="wado-rs"></a>
 <h4>WADO-RS</h4>
@@ -86,7 +84,7 @@ identifies a DICOM WADO-RS service.
 <p>
 The DICOM WADO-RS (Web Access to DICOM Objects, RESTful mode) service uses a RESTful approach to study, series, and instance retrieval.
 This service allows for retrieval of native DICOM SOP instances, or instances “rendered” into other formats, including
-JPEG and MPEG. The media type of a response is specified by the request Accept header (preferred); or, by the <code>accept</code>
+JPEG and MPEG. The preferred media type of a response is specified by the request Accept header; or, by the <code>accept</code>
 query parameters. Supported media types depend on the  capabilities of the WADO-RS server and the classification of the instance 
 as "single frame", "multi-frame", "video", "text", or "other". 
 </p>
@@ -101,11 +99,12 @@ For example, using the following information in a fictional ImagingStudy resourc
 <li>the DICOM Series Instance UID of <code>1.2.250.1.59.40211.789001276.14556172.67789</code> found in <code>ImagingStudy.series.uid</code>, and</li>
 <li>the DICOM SOP Instance UID of <code>1.2.250.1.59.40211.2678810.87991027.899772.2</code> found in <code>ImagingStudy.series.instance.uid</code></li>
 </ul>
-we can construct the WADO-RS URL to issue an HTTP GET for a native DICOM PS3.10 instance file (if consistent with the Accept header):
+we can construct the WADO-RS URL to issue an HTTP GET for a native DICOM PS3.10 instance file:
 </p>
 <pre>
 
-https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/1.2.250.1.59.40211.2678810.87991027.899772.2
+GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/1.2.250.1.59.40211.2678810.87991027.899772.2 HTTP/1.1
+Accept: multipart/related; type="application/dicom"
 
 </pre>
 <p>
@@ -115,14 +114,14 @@ adjustments, and whether to “burn” patient or study demographics into the re
 of a multi-frame instance can be retrieved using the frames sub-resource.
 </p>
 <p>
-For example, provided the Accept header indicates a preference for image/jpeg, the example above can be
-extended with parameters that cause a JPEG (rendered to a size of 400 columns by 400 rows) of a region extending from
-the top-left corner of the original image to 1000 pixels across and 3000 pixels right, to be retrieved (additional
-sub-resource and parameters emphasized):
+The example above can be
+extended with parameters that request an image of a region extending from
+the top-left corner of the original image to 1000 pixels across and 3000 pixels right, to be rendered to a size of 400 columns by 400 rows:
 </p>
 <pre>
 
-https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/1.2.250.1.59.40211.2678810.87991027.899772.2<b>/rendered?viewport=400,400,0,0,1000,3000</b>
+GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/1.2.250.1.59.40211.2678810.87991027.899772.2<b>/rendered?viewport=400,400,0,0,1000,3000</b> HTTP/1.1
+Accept: image/jpeg
 
 </pre>
 <p>
@@ -130,12 +129,13 @@ If the specified WADO-RS service supports the DICOMweb thumbnail resource, a rep
 </p>
 <pre>
 
-https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/thumbnail
+GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/thumbnail HTTP/1.1
+Accept: image/jpeg
 
 </pre>
 <p>
 For further details on DICOM WADO-RS capabilities including additional rendering parameters,
-see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html.">DICOM PS 3.18 Section 10.4</a>.
+see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html">DICOM PS 3.18 Section 10.4</a>.
 </p>
 <a name="wado-uri"></a>
 <h4>WADO-URI</h4>
@@ -144,8 +144,8 @@ identifies a DICOM WADO-URI service.
 </p>
 <p>
 The DICOM WADO-URI (Web Access to DICOM Objects, URI mode) service uses HTTP query parameter syntax. This service allows
-for retrieval of native DICOM instances, or instances “rendered” into other formats, including JPEG and MPEG. The media
-type of a response is specified by the request Accept header (preferred); or, by the contentType query parameter.
+for retrieval of native DICOM instances, or instances “rendered” into other formats, including JPEG and MPEG. The preferred media
+type of a response is specified by the request Accept header; or, by the contentType query parameter.
 Supported media types depend on the classification of the instance as "single frame", "multi-frame", "video", "text", or "other."
 </p>
 <p>
@@ -159,11 +159,12 @@ For example, using the following information in a fictional ImagingStudy resourc
 <li>the DICOM Series Instance UID of <code>1.2.250.1.59.40211.789001276.14556172.67789</code> found in <code>ImagingStudy.series.uid</code>, and</li>
 <li>the DICOM SOP Instance UID of <code>1.2.250.1.59.40211.2678810.87991027.899772.2</code> found in <code>ImagingStudy.series.instance.uid</code></li>
 </ul>
-we can construct the WADO-URI URL to issue an HTTP GET for a native DICOM PS3.10 instance file (if consistent with the Accept header):
+we can construct the WADO-URI URL to issue an HTTP GET for a native DICOM PS3.10 instance file:
 </p>
 <pre>
 
-https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.59.40211.12345678.678910&amp;seriesUID=1.2.250.1.59.40211.789001276.14556172.67789&amp;objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2
+GET https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.59.40211.12345678.678910&amp;seriesUID=1.2.250.1.59.40211.789001276.14556172.67789&amp;objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2 HTTP/1.1
+Accept: application/dicom
 
 </pre>
 <p>
@@ -172,13 +173,13 @@ ratio), the region of interest within the image to render, brightness/contrast (
 to “burn” patient or study demographics into the rendered result, and which frame of a multi-frame instance to retrieve.
 </p>
 <p>
-For example, provided the Accept header indicates a preference for image/jpeg, the example above can be extended with
-parameters that cause a JPEG thumbnail (100 columns by 100 rows) of the left half of the image to be retrieved (additional
-parameters emphasized):
+The example above can be extended with
+parameters that request a 100x100 image thumbnail of the left half of the image to be retrieved:
 </p>
 <pre>
 
-https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.59.40211.12345678.678910&amp;seriesUID=1.2.250.1.59.40211.789001276.14556172.67789&amp;objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2&amp;<b>rows=100&amp;columns=100&amp;region=0,0,0.5,1 </b>
+GET https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.59.40211.12345678.678910&amp;seriesUID=1.2.250.1.59.40211.789001276.14556172.67789&amp;objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2&amp;<b>rows=100&amp;columns=100&amp;region=0,0,0.5,1 </b> HTTP/1.1
+Accept: image/jpeg
 
 </pre>
 <p>
