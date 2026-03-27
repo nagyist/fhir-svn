@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fhir-workflow": {
+      "command": "node",
+      "args": ["/Users/jdlnolen/workspace/claude-tools/fhir-mcp/dist/index.js"],
+      "env": {
+        "FHIR_REPO_PATH": "/Users/jdlnolen/workspace/fhir/fhir",
+        "PLAYWRIGHT_HEADLESS": "true"
+      }
+    }
+  }
+}
