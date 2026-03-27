@@ -586,7 +586,7 @@
         </extension>
         <strength value="example"/>
         <description value="The type of relationship between the documents."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/RelatedArtifactType"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/related-artifact-type|5.0.0"/>
       </binding>
     </element>
     <element id="DocumentReference.related.target">
