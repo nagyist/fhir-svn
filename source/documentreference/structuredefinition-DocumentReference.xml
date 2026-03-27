@@ -544,16 +544,19 @@
       </mapping>
     </element>
     <element id="DocumentReference.related">
+      <extension url="http://hl7.org/fhir/build/StructureDefinition/uml-dir">
+        <valueCode value="right"/>
+      </extension>   
       <path value="DocumentReference.related"/>
-      <short value="Related identifiers or resources associated with the document reference"/>
-      <definition value="Any other resource this document reference was created or to which the creation of this record is tightly associated."/>
-      <comment value="Use only for references not covered by other elements."/>
+      <short value="Related resources with this document reference not represented elsewhere"/>
+      <definition value="Any resource to which the creation of this record is tightly associated not involving document reference lifecycle."/>
+      <comment value="Use only for references not covered by other document reference lifecycle elements, for example references at the data or workflow level. "/>
       <min value="0"/>
       <max value="*"/>
       <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+        <code value="BackboneElement"/>
       </type>
+      <isSummary value="false"/>
       <mapping>
         <identity value="fhircomposition"/>
         <map value="Composition.event.detail"/>
@@ -566,6 +569,37 @@
         <identity value="xds"/>
         <map value="DocumentEntry.referenceIdList"/>
       </mapping>
+    </element>
+    <element id="DocumentReference.related.code">
+      <path value="DocumentReference.related.code"/>
+      <short value="Type of relationship"/>
+      <definition value="Type of the relationship between the document reference and the related resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DocumentRelatedType"/>
+        </extension>
+        <strength value="example"/>
+        <description value="The type of relationship between the documents."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/RelatedArtifactType"/>
+      </binding>
+    </element>
+    <element id="DocumentReference.related.target">
+      <path value="DocumentReference.related.target"/>
+      <short value="Target of the reference"/>
+      <definition value="The target document of the related resource."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+      </type>
+      <isSummary value="false"/>
     </element>
     <element id="DocumentReference.bodyStructure">
       <path value="DocumentReference.bodyStructure"/>
@@ -938,8 +972,8 @@
         <valueCode value="right"/>
       </extension>
       <path value="DocumentReference.relatesTo"/>
-      <short value="Relationships to other documents"/>
-      <definition value="Relationships that this document has with other document references that already exist."/>
+      <short value="Relationships to other document references and their lifecycle changes"/>
+      <definition value="Relationships that this document reference has with other document references that already exist."/>
       <comment value="This element is labeled as a modifier because documents that append to other documents are incomplete on their own."/>
       <min value="0"/>
       <max value="*"/>
