@@ -1,6 +1,34 @@
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
 
 <div>
+<blockquote class="ballot-note" id="bn1">
+<p><b>Note to Balloters:</b> The key changes made since FHIR 6.0.0-ballot4 include:</p>
+<p>Moved the section on the Inclusion and Exclusion Criteria from the Scope and Usage to the Group notes.</p>
+<p>The Group.characteristic.timing element is now called Group.characteristic.relativeTime</p>
+<ul>
+<li>The definition for it has been changed to "The relative time in which the characteristic is determined."</li>
+<li>The short description is now "When (with respect to an event)"</li>
+<li>Updated the Group examples for this element change.</li>
+</ul> 
+<p>The following elements have their definitions revised:</p>
+<ul>
+<li>Group.combinationMethod, before: "Used to specify how two or more characteristics are combined." To now: "Used to specify how two or more characteristics are combined.&#xA;&#xA;* 'all-of': Each of the characteristics must be met. This is functionally equivalent to combining all characteristics with an AND operator.&#xA;* 'any-of': At least one of the characteristics must be met. This is functionally equivalent to combining all characteristics with an OR operator.&#xA;* 'at-least': At least n of the characteristics must be met. Use Group.combinationThreshold to specify the value of n.&#xA;* 'at-most': At most n of the characteristics must be met. Use Group.combinationThreshold to specify the value of n.&#xA;*  'except-subset': The characteristics expressed as exclusion criteria are used as exceptions to meeting the characteristics expressed as inclusion criteria."</li>
+<li>Group.characteristic.method, before: "Method for how the characteristic value was determined." To now: "The method modifies the Group.characteristic.code and indicates how the value is to be determined."</li>
+</ul>
+<p>The following elements have their short descriptions revised:</p>
+<ul>
+<li>Group.characteristic.instances[x]: "Number of occurrences"</li>
+<li>Group.characteristic.duration[x]: "How long"</li>
+<li>Group.characteristic.period: "When (in calendar time)"</li>
+</ul>
+<p>Added a comment to the Group.characteristic.offset element: "As an example, to express a characteristic of a calcium level greater than the normal limit or a hemoglobin level less than 1 g/dL below the reference range, the offset concept would represent &quot;normal limit&quot; [upper limit] or &quot;reference range&quot; [lower limit]."</p>
+</blockquote>
+<blockquote style="background-color: lightblue">
+	<p><b>Release Notes:</b></p>
+	<ul>
+		<li><a href="https://jira.hl7.org/browse/FHIR-45508">FHIR-45508</a></li>
+	</ul>
+</blockquote>
 <a name="scope"></a>
 <h2>Scope and Usage</h2>
 <a name="use"></a>
