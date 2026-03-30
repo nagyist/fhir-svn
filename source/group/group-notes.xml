@@ -89,30 +89,28 @@ rather than merely saying "family member".  There are a few options to support c
 <h4>Group.characteristic.code</h4>
 <p>Each characteristic must have a code value (CodeableConcept datatype) to specify the attribute. For instance:</p>
 <ul>
-    <li>for a characteristic of "age &gt; 18 years” the attribute is “age” and the attribute of age may be expressed as</li>
+    <li>for a characteristic of "age &gt; 18 years” the attribute is “age” and the attribute of age may be expressed as:</li>
 </ul>
 <p>"code": { "coding": [ { "system": "http://snomed.info/sct", "code": "397669002", "display": "Age" } ] }</p>
 <ul>
-    <li>for a characteristic of "Body mass index &gt;= 30 kg/m2" the attribute is "Body mass index" and the attribute may be expressed as</li>
+    <li>for a characteristic of "Body mass index &gt;= 30 kg/m2" the attribute is "Body mass index" and the attribute may be expressed as:</li>
 </ul>
 <p>"code": { "coding": [ { "system": "http://loinc.org", "code": "39156-5", "display": "Body mass index (BMI) [Ratio]" } ] }</p>
 <h4>Group.characteristic.value[x]</h4>
 <p>Each characteristic must have a value[x] value to specify the value of the attribute that holds for members of the group. There is no [x] in the JSON or XML expression as it is replaced with the data type (CodeableConcept, boolean, Quantity, Range, Reference, uri, or Expression)</p>
 <p>For instance:</p>
 <ul>
-    <li>for a characteristic of "age &gt; 18 years” the value is “&gt; 18 years” and the value may be expressed with a Quantity datatype as</li>
+    <li>for a characteristic of "age &gt; 18 years” the value is “&gt; 18 years” and the value may be expressed with a Quantity datatype as:</li>
 </ul>
-<p>"valueQuantity": { "comparator": "&gt;=", "value": 18, "unit": "years",</p>
-<p> "system": "http://unitsofmeasure.org", "code": "a" }</p>
+<p>"valueQuantity": { "comparator": "&gt;=", "value": 18, "unit": "years", "system": "http://unitsofmeasure.org", "code": "a" }</p>
 <ul>
-    <li>for a characteristic of "Body mass index &gt;= 30 kg/m2" the value is "&gt;= 30 kg/m2" and the value may be expressed as</li>
+    <li>for a characteristic of "Body mass index &gt;= 30 kg/m2" the value is "&gt;= 30 kg/m2" and the value may be expressed as:</li>
 </ul>
-<p>"valueQuantity": { "comparator": "&gt;=", "value": 30, "unit": "kg/m2",</p>
-<p>"system": "http://unitsofmeasure.org", "code": "kg/m2" }</p>
+<p>"valueQuantity": { "comparator": "&gt;=", "value": 30, "unit": "kg/m2", "system": "http://unitsofmeasure.org", "code": "kg/m2" }</p>
 <h4>Group.characteristic.exclude</h4>
 <p>Sometimes group membership is determined by characteristics not possessed. When this is the case, the Group.characteristic.exclude element has a value of true ("exclude": true). For characteristics that are not exclusion criteria, the Group.characteristic.exclude element has a value of false ("exclude": false). The exclude element is required.</p>
 <p>For example, an exclusion criterion of HbA1c ≥ 14.0% is expressed as:</p>
-<p>{ "description": "HbA1c ≥ 14.0%", "code": {; "coding": [ { "system": "http://loinc.org", "code": "59261-8", "display": "Hemoglobin A1c/Hemoglobin.total in Blood" } ] }, "valueQuantity": { "value": 14, "comparator": "&gt;=", "unit": "%", "system": "http://unitsofmeasure.org", "code": "%" }, "exclude": true }</p>
+<p>{ "description": "HbA1c ≥ 14.0%", "code": { "coding": [ { "system": "http://loinc.org", "code": "59261-8", "display": "Hemoglobin A1c/Hemoglobin.total in Blood" } ] }, "valueQuantity": { "value": 14, "comparator": "&gt;=", "unit": "%", "system": "http://unitsofmeasure.org", "code": "%" }, "exclude": true }</p>
 <h4>Group.characteristic.description</h4>
 <p>A short, natural language description of the characteristic (using the markdown datatype) that could be used to communicate the criteria to an end-user. The description element is for convenience so that end users can understand the characteristic and is neither a required part of the characteristic nor part of the structured representation of the characteristic.</p>
 <h4>Describing how the characteristic value is determined</h4>
