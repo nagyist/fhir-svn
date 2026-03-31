@@ -774,6 +774,7 @@
       <type>
         <code value="markdown"/>
       </type>
+      <isSummary value="true"/>
       <mapping>
         <identity value="v2"/>
         <map value="OBX"/>
