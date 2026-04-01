@@ -6,7 +6,7 @@
 <p>
 A referenced DICOM SOP instance could be:
 <ul>
-<li>A single- or multiframe, still or video image captured by a variety of imaging modalities, such as X-ray, MR, and ultrasound;</li>
+<li>A single- or multiframe, still or video image captured by one of a variety of imaging modalities, such as X-ray, MR, and ultrasound;</li>
 <li>A set of various presentation parameters, including annotation and markup;</li>
 <li>A set of measurements or a report, including radiation dose report and CAD analysis;</li>
 <li>An encapsulated PDF or CDA document;</li>
@@ -78,8 +78,7 @@ See below for the details on the use of imaging-related Endpoint connection type
 <a name="wado-rs"></a>
 <h4>WADO-RS</h4>
 <p>
-An <code><a href="endpoint.html">Endpoint</a>.connectionType</code> of code <code>dicom-wado-rs</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>,
-identifies a DICOM WADO-RS service. 
+An <code>Endpoint.connectionType</code> of code <code>dicom-wado-rs</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>,   identifies a DICOM WADO-RS service (see <a href="/endpoint-example-wadors.html">example of DICOM WADO-RS endpoint)</a>.
 </p>
 <p>
 The DICOM WADO-RS (Web Access to DICOM Objects, RESTful mode) service uses a RESTful approach to study, series, and instance retrieval.
@@ -139,8 +138,8 @@ see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/se
 </p>
 <a name="wado-uri"></a>
 <h4>WADO-URI</h4>
-<p>An <code>Endpoint.connectionType</code> of code <code>dicom-wado-uri</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>, 
-identifies a DICOM WADO-URI service.
+<p>
+An <code>Endpoint.connectionType</code> of code <code>dicom-wado-uri</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>, identifies a DICOM WADO-URI service (see <a href="/endpoint-example-wado-uri.html">example of DICOM WADO-URI endpoint)</a>.
 </p>
 <p>
 The DICOM WADO-URI (Web Access to DICOM Objects, URI mode) service uses HTTP query parameter syntax. This service allows
@@ -265,21 +264,29 @@ The WADO-RS server then returns the complete DICOM metadata for the requested se
 <li>Echocardiogram is sent to image archive and stored</li>
 <li>Image archive creates an <a href="imagingstudy.html">ImagingStudy</a>
   <ul>
-    <li><code>subject</code> is current <a href="patient.html">Patient</a></li>
-    <li><code>basedOn</code> includes current <a href="servicerequest.html">ServiceRequest</a></li>
-    <li><code>identifier</code> is Study Instance UID</li>
-    <li><code>endpoint</code> points to image archive WADO-RS service</li>
-    <li><code>modality</code> is US</li>
+    <li><code>ImagingStudy.subject</code> is current <a href="patient.html">Patient</a></li>
+    <li><code>ImagingStudy.basedOn</code> includes current <a href="servicerequest.html">ServiceRequest</a></li>
+    <li><code>ImagingStudy.identifier</code> is Study Instance UID</li>
+    <li><code>ImagingStudy.endpoint</code> points to image archive WADO-RS service</li>
+    <li><code>ImagingStudy.modality</code> is US</li>
   </ul>
 </li>
-<li>Image archive notifies EMR of imaging study</li>
-<li>Radiology reading workstation retrieves study images from image archive</li>
-<li>Radiologist reads study and selects several images as "key images"</li>
-<li>Radiology reading workstation sends DICOM Key Object Selection (KOS) to image archive</li>
+<li>Image archive notifies EMR of imaging study
+  <ul>
+    <li>See <a href="imagingstudy.html#workflow">ImagingStudy Create and Update Workflow</a> for possible notification mechanisms</li>
+  </ul>
+</li>
+<li>Radiology reading workflow (non-FHIR)
+  <ul>
+    <li>Radiology reading workstation retrieves study images from image archive</li>
+    <li>Radiologist reads study and selects several images as "key images"</li>
+    <li>Radiology reading workstation sends DICOM Key Object Selection (KOS) to image archive</li>
+  </ul>
+</li>
 <li>Image archive updates imaging study to include KOS
   <ul>
-    <li><code>modality</code> is now US,KOS</li>
-    <li>KOS series added</li>
+    <li><code>ImagingStudy.modality</code> is now US,KOS</li>
+    <li>KOS series details added to <code>ImagingStudy.series</code></li>
   </ul>
 </li>
 <li>Imaging study available to EMR clients</li>

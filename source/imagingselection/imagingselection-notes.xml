@@ -46,7 +46,6 @@
     <li>If <code>instance.sopClass</code> has a value of <code>urn:oid:1.2.840.10008.5.1.4.1.1.2.1</code>, this indicates that the instance is Enhanced CT, which is a multiframe image instance and therefore <code>instance.frameNumber</code> can be included to specify a list of frames</li>
     <li>If <code>instance.sopClass</code> has a value of <code>urn:oid:1.2.840.10008.5.1.4.1.1.88.22</code>, this indicates that the instance is Enhanced SR and therefore <code>instance.referencedContentItemIdentifier</code> can be included to specify a list of content item identifiers</li>
   </ul>
-  <p>Note: Because an imaging selection instance is limited to a single DICOM Series and each DICOM Series can contain only one type of instance - image, SR document, radiotherapy object, etc. - each imaging selection instance can only contain one type of subset.</p>
 
   <h3>Use of ImagingSelection.code and ImagingSelection.category</h3>
   <p>
@@ -169,6 +168,9 @@ While not required, this type of selection typically includes:
 <p>
 See <a href="imagingselection-example-2d-image-region-selection.html">2D Image Region Selection example</a>.
 </p>
+<p>
+Note that the <code>imageRegion2D</code> and <code>imageRegion3D</code> elements are mutually exclusive; an imaging selection cannot include both types of image region.
+</p>
 
 <h4>3D Image Selection</h4>
 <p>
@@ -189,8 +191,11 @@ This type of selection can also specify a set of images but this is not required
 <p>
 See <a href="imagingselection-example-3d-image-region-selection.html">3D Image Region Selection example</a>.
 </p>
+<p>
+Note that the <code>imageRegion2D</code> and <code>imageRegion3D</code> elements are mutually exclusive; an imaging selection cannot include both types of image region.
+</p>
 
-<a name="endpoints"></a>
+  <a name="endpoints"></a>
 <h3>ImagingSelection Endpoints</h3>
 <p>
 The <code>ImagingSelection.endpoint</code> elements indicate network
@@ -208,7 +213,7 @@ The URL to retrieve image data is from this base URL. See below for the details 
 <h4>WADO-RS</h4>
 <p>
 An <code>Endpoint.connectionType</code> of code <code>dicom-wado-rs</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>, 
-identifies a DICOM WADO-RS service. 
+identifies a DICOM WADO-RS service (see <a href="/endpoint-example-wadors.html">example of DICOM WADO-RS endpoint)</a>.
 </p>
 <p>
 The DICOM WADO-RS (Web Access to DICOM Objects, RESTful mode) service uses a RESTful approach to instance retrieval.
@@ -239,8 +244,8 @@ Accept: multipart/related; type="application/dicom"
 </pre>
 <a name="wado-uri"></a>
 <h4>WADO-URI</h4>
-<p>An <code>Endpoint.connectionType</code> of code <code>dicom-wado-uri</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>, 
-identifies a DICOM WADO-URI service. 
+<p>
+An <code>Endpoint.connectionType</code> of code <code>dicom-wado-uri</code>, system <code>http://terminology.hl7.org/CodeSystem/endpoint-connection-type</code>, identifies a DICOM WADO-URI service (see <a href="/endpoint-example-wado-uri.html">example of DICOM WADO-URI endpoint)</a>.
 </p>
 <p>
 The DICOM WADO-URI (Web Access to DICOM Objects, URI mode) service uses HTTP query parameter syntax. This service allows
@@ -290,4 +295,12 @@ Accept: application/dicom
     <li><code>bodySite</code> contains a reference to a <a href="bodystructure.html">BodyStructure</a> resource whose <code>includedStructure.structure</code> element contains an anatomic code that includes laterality</li>
     <li><code>bodySite</code> contains a reference to a <a href="bodystructure.html">BodyStructure</a> resource whose <code>includedStructure</code> element includes a laterality value. See this <a href="bodystructure-example-dicom-includedStructure.html">example BodyStructure representation of the Left Wrist, with laterality and SNOMED coding for anatomical structure</a>.</li>
   </ul>
+
+  <a name="dicom-uids"></a>
+  <h3>DICOM UIDs as Identifiers</h3>
+  <p>
+    In some cases, the <code>ImagingSelection.identifier</code> will be a DICOM UID, such as an Observation UID (see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.17.3.4.html#table_C.17-6">DICOM PS 3.3 Table C.17-6</a>).
+
+    When using a DICOM UID as the identifier, use the Identifier system of <code>"urn:dicom:uid"</code>, and prefix the UID value with <code>"urn:oid:"</code>.
+  </p>
 </div>
