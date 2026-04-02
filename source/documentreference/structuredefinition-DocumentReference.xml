@@ -198,7 +198,7 @@
     <element id="DocumentReference.basedOn">
       <path value="DocumentReference.basedOn"/>
       <short value="Activity that caused this document to be created"/>
-      <definition value="An activity that is fulfilled in whole or in part by the creation of this media."/>
+      <definition value="An activity that is fulfilled in whole or in part by the creation of this document."/>
       <requirements value="Allows tracing of authorization for the event and tracking whether proposals/recommendations were acted upon."/>
       <alias value="fulfills"/>
       <min value="0"/>
