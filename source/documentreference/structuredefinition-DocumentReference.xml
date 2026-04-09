@@ -582,11 +582,11 @@
       <isSummary value="false"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DocumentRelatedType"/>
+          <valueString value="AssociatedReferenceType"/>
         </extension>
         <strength value="example"/>
         <description value="The type of relationship between the documents."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/related-artifact-type"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/document-related-artifact-type"/>
       </binding>
     </element>
     <element id="DocumentReference.related.target">
