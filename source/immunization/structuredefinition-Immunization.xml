@@ -85,6 +85,20 @@
       <definition value="Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party."/>
       <min value="0"/>
       <max value="*"/>
+      <constraint>
+        <key value="imm-1"/>
+        <severity value="error"/>
+        <human value="statusReason SHALL only be present if the immunization status is 'not-done'"/>
+        <expression value="statusReason.exists() implies status = 'not-done'"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+      </constraint>
+      <constraint>
+        <key value="imm-2"/>
+        <severity value="error"/>
+        <human value="subpotentReason SHALL only be present if isSubpotent is 'true'"/>
+        <expression value="subpotentReason.exists() implies (isSubpotent.exists() and isSubpotent = true)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Immunization"/>
+      </constraint>
       <mapping>
         <identity value="workflow"/>
         <map value="Event"/>
