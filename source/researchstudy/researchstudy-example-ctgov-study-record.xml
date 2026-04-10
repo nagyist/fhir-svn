@@ -386,13 +386,13 @@
 		</targetAttachment>
 	</relatesTo>
 	<status value="active"/>
-	<primaryPurposeType>
+	<purposeType>
 		<coding>
 			<system value="http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type"/>
 			<code value="treatment"/>
 			<display value="Treatment"/>
 		</coding>
-	</primaryPurposeType>
+	</purposeType>
 	<phase>
 		<coding>
 			<system value="https://fevir.net/sevco"/>
