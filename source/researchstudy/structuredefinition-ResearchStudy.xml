@@ -403,12 +403,12 @@
         <map value=".status"/>
       </mapping>
     </element>
-    <element id="ResearchStudy.primaryPurposeType">
-      <path value="ResearchStudy.primaryPurposeType"/>
+    <element id="ResearchStudy.purposeType">
+      <path value="ResearchStudy.purposeType"/>
       <short value="treatment | prevention | diagnostic | supportive-care | screening | health-services-research | basic-science | device-feasibility"/>
       <definition value="The type of study based upon the intent of the study activities. A classification of the intent of the study."/>
       <min value="0"/>
-      <max value="1"/>
+      <max value="*"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
@@ -417,7 +417,7 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="ResearchStudyPrimaryPurposeType"/>
         </extension>
-        <strength value="preferred"/>
+        <strength value="example"/>
         <description value="Codes for the main intent of the study."/>
         <valueSet value="http://terminology.hl7.org/ValueSet/research-study-prim-purp-type"/>
       </binding>
