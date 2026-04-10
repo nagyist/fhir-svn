@@ -7,8 +7,9 @@
     <li>The key changes made since the January 2026 R6 ballot include:</li>
       <ul>
       <li>Updated Immunization.performer.function value set to use a value set defined in THO rather than in the FHIR base standard. - <a href="https://jira.hl7.org/browse/FHIR-53465">FHIR-53465</a></li>
-      <li>Updated Immunization.statusReason to clarify usage. - <a href="https://jira.hl7.org/browse/FHIR-54325">FHIR-54325</a></li>
+      <li>Updated Immunization.statusReason to clarify usage and add an invariant. - <a href="https://jira.hl7.org/browse/FHIR-54325">FHIR-54325</a></li>
       <li>Updated narrative text to reference changed names of data elements in the Medication resource. - <a href="https://jira.hl7.org/browse/FHIR-55486">FHIR-55486</a></li>  
+      <li>Added invariant to .subpotentReason. - <a href="https://jira.hl7.org/browse/FHIR-54326">FHIR-54326</a></li> 
       </ul>
     </ul>
     </blockquote>
