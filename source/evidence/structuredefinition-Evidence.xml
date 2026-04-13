@@ -719,7 +719,7 @@
 				</extension>
 				<strength value="extensible"/>
 				<description value="This is a set of terms for study design characteristics."/>
-				<valueSet value="http://hl7.org/fhir/ValueSet/study-design"/>
+				<valueSet value="http://terminology.hl7.org/ValueSet/study-design"/>
 			</binding>
 		</element>
 		<element id="Evidence.statistic">
