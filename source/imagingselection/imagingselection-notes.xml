@@ -124,7 +124,7 @@ An imaging selection that points to frames in a multiframe image requires:
 <li><code>instance</code> containing a single entry that specifies:
   <ul>
     <li><code>uid</code> to identify the SOP Instance UID of the selected image</li>
-    <li><code>frameNumber</code> to identify the list of frames included in the selection</li>
+    <li><code>frameNumber</code> to identify the list of frame numbers included in the selection</li>
   </ul>
 </li>
 </ul>

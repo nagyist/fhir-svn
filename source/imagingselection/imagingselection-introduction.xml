@@ -8,6 +8,7 @@
         <li>Clarified relationship between ImagingStudy and ImagingSelection</li>
         <li>Included mutually-exclusive nature of <code>imageRegion2D</code> and <code>imageRegion3D</code> in notes.</li>
         <li>Added guidance on the use of DICOM UIDs as <code>ImagingSelection.identifier</code> values.</li>
+        <li>Added <code>unknown</code> value to <code>imageRegion2D.regionType</code> and <code>imageRegion3D.regionType</code> code systems.</li>
       </ul>
     </blockquote>
   </div>
