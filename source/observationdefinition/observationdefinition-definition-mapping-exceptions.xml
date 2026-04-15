@@ -147,7 +147,6 @@
     <divergentElement patternPath="Definition.subject" resourcePath="ObservationDefinition.subject">
         <missingTypes _pattern="CodeableReference(Group)" reason="Unknown"/>
         <extraTypes _resource="CodeableConcept" reason="Unknown"/>
-        <bindingExistence _pattern="true" _resource="false" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
             <_pattern value="Type of individual the defined service is for"/>
             <resource value="Type of subject for the defined observation"/>
