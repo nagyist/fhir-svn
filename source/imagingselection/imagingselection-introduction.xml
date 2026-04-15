@@ -9,6 +9,7 @@
         <li>Included mutually-exclusive nature of <code>imageRegion2D</code> and <code>imageRegion3D</code> in notes.</li>
         <li>Added guidance on the use of DICOM UIDs as <code>ImagingSelection.identifier</code> values.</li>
         <li>Added <code>unknown</code> value to <code>imageRegion2D.regionType</code> and <code>imageRegion3D.regionType</code> code systems.</li>
+        <li>Update ImagingSelection <code>#wado-rs</code> and <code>#wado-uri</code> sections to be consistent with ImagingStudy.</li>
       </ul>
     </blockquote>
   </div>

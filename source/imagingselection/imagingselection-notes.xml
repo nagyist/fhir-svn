@@ -242,6 +242,36 @@ GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910
 Accept: multipart/related; type="application/dicom"
 
 </pre>
+<p>
+Query parameters on the "rendered" sub-resource can control other aspects of the rendering including: the rendered dimensions, the
+quality (compression ratio), the region of interest to render, the brightness/contrast (window center/width)
+adjustments, and whether to “burn” patient or study demographics into the rendered result. Specific frames
+of a multiframe instance can be retrieved using the frames sub-resource.
+</p>
+<p>
+The example above can be
+extended with parameters that request an image of a region extending from
+the top-left corner of the original image to 1000 pixels across and 3000 pixels right, to be rendered to a size of 400 columns by 400 rows:
+</p>
+<pre>
+
+GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/1.2.250.1.59.40211.2678810.87991027.899772.2<b>/rendered?viewport=400,400,0,0,1000,3000</b> HTTP/1.1
+Accept: image/jpeg
+
+</pre>
+<p>
+If the specified WADO-RS service supports the DICOMweb thumbnail resource, a representative image of the study can be requested, for example, to display alongside the study. The URL would look as follows:
+</p>
+<pre>
+
+GET https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/thumbnail HTTP/1.1
+Accept: image/jpeg
+
+</pre>
+<p>
+For further details on DICOM WADO-RS capabilities including additional rendering parameters,
+see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_10.4.html">DICOM PS 3.18 Section 10.4</a>.
+</p>
 <a name="wado-uri"></a>
 <h4>WADO-URI</h4>
 <p>
@@ -272,6 +302,25 @@ GET https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.5
 Accept: application/dicom
 
 </pre>
+<p>
+Additional query parameters can control other aspects of the rendering including rendered dimensions, quality (compression
+ratio), the region of interest within the image to render, brightness/contrast (window center/width) adjustments, whether
+to “burn” patient or study demographics into the rendered result, and which frame of a multiframe instance to retrieve.
+</p>
+<p>
+The example above can be extended with
+parameters that request a 100x100 image thumbnail of the left half of the image to be retrieved:
+</p>
+<pre>
+
+GET https://pacs.hospital.org/wado-uri?requestType=WADO&amp;studyUID=1.2.250.1.59.40211.12345678.678910&amp;seriesUID=1.2.250.1.59.40211.789001276.14556172.67789&amp;objectUID=1.2.250.1.59.40211.2678810.87991027.899772.2&amp;<b>rows=100&amp;columns=100&amp;region=0,0,0.5,1 </b> HTTP/1.1
+Accept: image/jpeg
+
+</pre>
+<p>
+For further details on DICOM WADO-URI capabilities including additional rendering parameters,
+see <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_9.html">DICOM PS 3.18 Chapter 9</a>.
+</p>
 
   <a name="laterality"></a>
   <h3>Body Site and Laterality</h3>
