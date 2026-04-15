@@ -103,7 +103,7 @@
       <constraint>
         <key value="ist-3"/>
         <severity value="error"/>
-        <human value="If numberOfSeries  and series are both present, the numberOfSeries value SHALL match the number of series elements"/>
+        <human value="If numberOfSeries and series are both present, the numberOfSeries value SHALL match the number of series elements"/>
         <expression value="numberOfSeries.exists() and series.exists() implies numberOfSeries = series.count()"/>
       </constraint>
       <constraint>
@@ -831,7 +831,7 @@
       </mapping>
       <mapping>
         <identity value="dicom"/>
-        <map value="Specimen Identifier (0040,0551) or Specimen UID (0040,0554) and + Issuer of the Specimen Identifier Sequence (0040,0562)"/>
+        <map value="Specimen Identifier (0040,0551) or Specimen UID (0040,0554) and Issuer of the Specimen Identifier Sequence (0040,0562)"/>
       </mapping>
     </element>
     <element id="ImagingStudy.series.started">
@@ -851,7 +851,7 @@
       </mapping>
       <mapping>
         <identity value="dicom"/>
-        <map value="Series Date (0008,0021) + and Series Time (0008,0031)"/>
+        <map value="Series Date (0008,0021) and Series Time (0008,0031)"/>
       </mapping>
     </element>
     <element id="ImagingStudy.series.performer">
