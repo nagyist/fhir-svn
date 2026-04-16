@@ -48,6 +48,6 @@
   <concept>
     <code value="InvestigationalProduct"/>
     <display value="Investigational Medicinal Product"/>
-    <definition value="A medicinal product which is being tested or used as a reference, including as a placebo, in a clinical trial. Its regulatory status is under evaluation in a clinical trial; may or may not have marketing authorization."/>
+    <definition value="A medicinal product which is being tested or used as a reference, including as a placebo, in a clinical trial. Its regulatory status is under evaluation in a clinical trial; might or might not have marketing authorization."/>
   </concept>
 </CodeSystem>
