@@ -16,7 +16,7 @@
                 </li>
                 <li>Non-substantive Changes
                     <ul>
-                        <li>None</li>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55080">FHIR-55080</a>: Potentially re-useable THO-candidate value sets in resource Measure</li>
                     </ul>
                 </li>
             </ul>
