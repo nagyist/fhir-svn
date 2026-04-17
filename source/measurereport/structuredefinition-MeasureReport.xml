@@ -231,7 +231,7 @@
       <type>
         <code value="code"/>
       </type>
-      <isModifier value="true"/>
+      <isModifier value="false"/>
       <isModifierReason value="This element determines whether the data in a data-exchange measure report is a snapshot or incremental update and is required in order to correctly apply the data update to a receiving system"/>
       <isSummary value="true"/>
       <binding>
@@ -562,7 +562,7 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <isModifier value="true"/>
+      <isModifier value="false"/>
       <isModifierReason value="Scoring determines what method was used to calculate the measure score and is required for correct interpretation of the score"/>
       <isSummary value="true"/>
       <binding>
@@ -590,7 +590,7 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <isModifier value="true"/>
+      <isModifier value="false"/>
       <isModifierReason value="Improvement notation determines how to interpret the measure score (i.e. whether an increase is an improvement)"/>
       <isSummary value="true"/>
       <binding>
