@@ -11,12 +11,18 @@
                 </li>
                 <li>Compatible, Substantive Changes
                     <ul>
-                        <li>None</li>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55083">FHIR-55083</a>: Relaxed .type to 0..1 and added 'other' to .type allowable concepts.</li>
                     </ul>
                 </li>
                 <li>Non-substantive Changes
                     <ul>
-                        <li>None</li>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55081">FHIR-55081</a>: Potentially re-useable THO-candidate value sets in resource MeasureReport</li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55082">FHIR-55082</a>: MeasureReport.status has no escape valve</li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55366">FHIR-55366</a>: Removed isModifier from .scoring, .dataUpdateType, and .improvementNotation</li>
                     </ul>
                 </li>
             </ul>
