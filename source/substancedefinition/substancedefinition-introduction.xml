@@ -8,7 +8,8 @@
     <ul>
         <li>Updates to the following elements:</li>
             <ul>
-                <li>SubstanceDefinition.name.official.authority, value set (and code system) substance-name-authority has been extended with code: "UT", UMC Terminologies</li>
+            	<li>SubstanceDefinition.moiety.identifier, which was made 0..* (previously 0..1)</li>
+            	<li>SubstanceDefinition.name.official.authority, value set (and code system) substance-name-authority has been extended with code: "UT", UMC Terminologies</li>
             </ul>
     </ul>
     </blockquote>
