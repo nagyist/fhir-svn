@@ -155,7 +155,7 @@
     <element id="MeasureReport.status">
       <path value="MeasureReport.status"/>
       <short value="complete | pending | error"/>
-      <definition value="The MeasureReport status. No data will be available until the MeasureReport status is complete."/>
+      <definition value="The MeasureReport status. No data will be available until the MeasureReport status is complete. Pending means the report is in progress and in the future should lead to a complete report or an error report. Systems that do not know the status of the measure report should use a status of &quot;error&quot; and a message that explains that the status is unknown."/>
       <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
       <min value="1"/>
       <max value="1"/>
