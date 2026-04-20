@@ -456,9 +456,10 @@ Observation.component.where(code.memberOf('http://hl7.org/fhir/ValueSet/observat
 <a name="fn-htmlChecks"> </a>
 <h5><b>htmlChecks : Boolean</b></h5>
 
-<p>When invoked on a single <a href="narrative.html#xhtml">xhtml</a> element returns true if the <a href="narrative.html#rules">rules around
-HTML usage</a> are met, and false if they are not. The return value is empty on any other kind of element, or a collection of 
-xhtml elements.
+<p>When invoked on a single <a href="narrative.html#xhtml">xhtml</a> element, the function returns true if the <a href="narrative.html#rules">rules around
+HTML usage</a> are met, and false if they are not.  If invoked on items of type 'string', the contents of the string are
+parsed as the content of a div and the function returns false if the string does not parse as valid HTML or fails the rules around HTML usage.
+The return value is empty on any other kind of element or if invoked on a collection of elements.
 </p>
 
 <hr/>
