@@ -534,12 +534,7 @@
        x="6.0"
        y="574.0"
        fill="black"
-       class="diagram-class-detail"><a
-   id="n1665"
-   xlink:href="measure-definitions.html#Measure.guidance"><title
-   id="title85059">Additional guidance for the measure including how it can be used in a clinical context, and the intent of the measure</title>guidance</a> : <a
-   id="n1666"
-   xlink:href="datatypes.html#markdown">markdown</a> [0..1]</text>
+       class="diagram-class-detail"> [0..1]</text>
   </g>
   <g
      id="n1670">
