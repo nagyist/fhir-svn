@@ -6,6 +6,9 @@
             <ul>
                 <li>Non-compatible Changes
                     <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55967">FHIR-55967</a>: Align reporter parameters in $evaluate, $care-gaps, and $collect-data</li>
+                    </ul>
+                    <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-51028">FHIR-51028</a>: Clarified examples are experimental content</li>
                     </ul>
                 </li>
