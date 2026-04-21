@@ -755,33 +755,6 @@
         <valueSet value="http://hl7.org/fhir/ValueSet/frequency-unit"/>
       </binding>
     </element>
-    <element id="Measure.topic">
-			<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-				<valueCode value="deprecated"/>
-			</extension>
-      <path value="Measure.topic"/>
-      <short value="The category of the measure, such as Education, Treatment, Assessment, etc"/>
-      <definition value="Descriptive topics related to the content of the measure. Topics provide a high-level categorization grouping types of measures that can be useful for filtering and searching."/>
-			<comment value="DEPRECATION NOTE: For consistency, implementations are encouraged to migrate to using the new 'topic' code in the useContext element.  (I.e. useContext.code indicating http://terminology.hl7.org/CodeSystem/usage-context-type#topic and useContext.valueCodeableConcept indicating the topic)"/>
-      <requirements value="Repositories must be able to determine how to categorize the measure so that it can be found by topical searches."/>
-      <min value="0"/>
-      <max value="*"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="DefinitionTopic"/>
-        </extension>
-        <strength value="example"/>
-        <description value="High-level categorization of the definition, used for searching, sorting, and filtering."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/definition-topic"/>
-      </binding>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A (to add?)"/>
-      </mapping>
-    </element>
     <element id="Measure.author">
       <path value="Measure.author"/>
       <short value="Who authored the content"/>
@@ -1015,26 +988,6 @@
       <type>
         <code value="markdown"/>
       </type>
-      <mapping>
-        <identity value="rim"/>
-        <map value="N/A (to add?)"/>
-      </mapping>
-    </element>
-    <element id="Measure.guidance">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="deprecated"/>
-      </extension>
-      <path value="Measure.guidance"/>
-      <short value="Additional guidance for implementers (deprecated)"/>
-      <definition value="Additional guidance for the measure including how it can be used in a clinical context, and the intent of the measure."/>
-      <comment value="NOTE: This element is deprecated in favor of the usage element"/>
-      <requirements value="Measure developers must be able to provide additional guidance for implementers to understand the intent with greater specificity than that provided in the population criteria of the measure. This element provides detailed guidance, where the usage element provides a summary of the guidance."/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="markdown"/>
-      </type>
-      <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A (to add?)"/>
