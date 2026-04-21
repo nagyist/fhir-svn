@@ -16,6 +16,9 @@
                     <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-55405">FHIR-55405</a>: Add search parameter for MeasureReport.category</li>
                     </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55979">FHIR-55979</a>: MeasureReport should include .compositeScoring element on .group</li>
+                    </ul>
                 </li>
                 <li>Non-substantive Changes
                     <ul>

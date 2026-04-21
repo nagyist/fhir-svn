@@ -577,6 +577,29 @@
         <map value="methodCode"/>
       </mapping>
     </element>
+    <element id="MeasureReport.group.compositeScoring">
+      <path value="MeasureReport.group.compositeScoring"/>
+      <short value="opportunity | all-or-nothing | linear | weighted"/>
+      <definition value="If this is a composite measure, the scoring method used to combine the component measures to determine the composite score."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CompositeMeasureScoring"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="The composite scoring method of the measure."/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/composite-measure-scoring"/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".methodCode { the aspect of how component measures are combined }"/>
+      </mapping>
+    </element>
     <element id="MeasureReport.group.improvementNotation">
       <extension url="http://hl7.org/fhir/build/StructureDefinition/committee-notes">
         <valueString value="Improvement notation is included in MeasureReport because it is critical to interpreting the measure, but it must match the improvementNotation of the measure being reported."/>
