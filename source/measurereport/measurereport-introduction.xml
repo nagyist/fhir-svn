@@ -27,6 +27,9 @@
                     <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-55366">FHIR-55366</a>: Removed isModifier from .scoring, .dataUpdateType, and .improvementNotation</li>
                     </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55926">FHIR-55926</a>: clarify exclusive use of 'subject' and 'subjectGroup' in $evaluate</li>
+                    </ul>
                 </li>
             </ul>
             <p></p>
