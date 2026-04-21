@@ -13,6 +13,9 @@
                     <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-55083">FHIR-55083</a>: Relaxed .type to 0..1 and added 'other' to .type allowable concepts.</li>
                     </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55405">FHIR-55405</a>: Add search parameter for MeasureReport.category</li>
+                    </ul>
                 </li>
                 <li>Non-substantive Changes
                     <ul>
