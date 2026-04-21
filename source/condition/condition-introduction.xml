@@ -24,13 +24,6 @@
 </ul>
 <p></p>
 </blockquote>
-<blockquote style="background-color: lightblue">
-  <p><b>All Changes (including Technical Corrections not listed above):</b></p>
-  <ul>
-    <li><a href="https://jira.hl7.org/browse/FHIR-54914">FHIR-54914</a>: Clarified Condition.verificationStatus comment</li>
-	<li><a href="https://jira.hl7.org/browse/FHIR-54454">FHIR-54454</a>: Clarified Condition.category short display</li>
-  </ul>
-</blockquote>
 
 
 <a name="scope"></a>
