@@ -13,6 +13,12 @@
                     <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-55083">FHIR-55083</a>: Relaxed .type to 0..1 and added 'other' to .type allowable concepts.</li>
                     </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55405">FHIR-55405</a>: Add search parameter for MeasureReport.category</li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55979">FHIR-55979</a>: MeasureReport should include .compositeScoring element on .group</li>
+                    </ul>
                 </li>
                 <li>Non-substantive Changes
                     <ul>
@@ -23,6 +29,9 @@
                     </ul>
                     <ul>
                         <li><a href="https://jira.hl7.org/browse/FHIR-55366">FHIR-55366</a>: Removed isModifier from .scoring, .dataUpdateType, and .improvementNotation</li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-55926">FHIR-55926</a>: clarify exclusive use of 'subject' and 'subjectGroup' in $evaluate</li>
                     </ul>
                 </li>
             </ul>
