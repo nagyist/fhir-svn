@@ -5,6 +5,11 @@
 			<ul>
 				<li>Clarified how to construct DICOMweb requests from Endpoint and other ImagingStudy element values.</li>
 				<li>Added consistent linking to other FHIR resources.</li>
+				<li>Added <code>ImagingStudy.series.instances.numberOfFrames</code> to present the number of frames in a multiframe image.</li>
+				<li>Added constraint such that <code>ImagingStudy.series.started</code> date / times must not predate <code>ImagingStudy.started</code>.</li>
+				<li>Updated use cases to clarify attribute level (i.e. <code>ImagingStudy.endpoint</code> vs. <code>ImagingStudy.series.endpoint</code> and to make it clearer which workflow steps do not relate to FHIR.</li>
+				<li>Clarified relationship between ImagingStudy and ImagingSelection</li>
+				<li>Removed a reference to Accession Number under <code>ImagingStudy.identifier</code>.</li>
 			</ul>
 		</blockquote>
 	</div>
@@ -48,9 +53,9 @@ One ImagingStudy resource SHALL reference one DICOM Study.
 <p>
     The <a href="imagingstudy.html">ImagingStudy</a> resource is used to store details of an entire DICOM Study and its relationships to other resources, such as <a href="patient.html">Patient</a>, <a href="servicerequest.html">ServiceRequest</a>, and <a href="encounter.html">Encounter</a>.
     </p>
-    <p>
-		The <a href="imagingselection.html">ImagingSelection</a> resource is used to reference to a subset of a study. Instances of this resource are created for specific clinical purposes and are unlikely to change once created.
-		</p>
+	<p>
+		The <a href="imagingselection.html">ImagingSelection</a> resource is used to reference a subset of a study. Instances of this resource are created for specific clinical purposes and are unlikely to change once created. <a href="imagingstudy.html">ImagingSelection.derivedFrom</a> references an <a href="imagingstudy.html">ImagingStudy</a> when the images were selected from it.
+	</p>
 		<p>
 		An <a href="observation.html">Observation</a> typically relates to a set of images in the following ways.
 		</p>
