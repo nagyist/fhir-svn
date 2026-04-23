@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="risk-assessment-outcome"/>
+  <id value="risk-assessment-outcome-example"/>
   <meta>
     <lastUpdated value="2021-01-05T10:01:24.148+11:00"/>
   </meta>
@@ -14,10 +14,10 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/risk-assessment-outcome"/>
+  <url value="http://hl7.org/fhir/risk-assessment-outcome-example"/>
   <version value="6.0.0"/>
-  <name value="RiskAssessmentOutcome"/>
-  <title value="Risk Assessment Outcome"/>
+  <name value="RiskAssessmentOutcomeExample"/>
+  <title value="Risk Assessment Outcome Example"/>
   <status value="active"/>
   <experimental value="true"/>
   <publisher value="HL7 (FHIR Project)"/>
@@ -33,7 +33,7 @@
   </contact>
   <description value="Example code system illustrating possible codes for identifying the condition or other outcome; e.g. death, remission, amputation, infection, etc."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/risk-assessment-outcome"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/risk-assessment-outcome-example"/>
   <content value="complete"/>
   <concept>
     <code value="death"/>
