@@ -1,3 +1,4 @@
+#!/bin/bash
 read -p "Remove all unnecessary files in $(pwd)? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
