@@ -237,7 +237,7 @@
 			<short value="draft | active | retired | unknown"/>
 			<definition value="The status of this EvidenceVariable. Enables tracking the life-cycle of the content."/>
 			<comment value="Allows filtering of evidence variables that are appropriate for use versus not.&#xa;&#xa;See guidance around (not) making local changes to elements [here](canonicalresource.html#localization)."/>
-			<min value="1"/>
+			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="code"/>
