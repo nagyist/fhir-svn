@@ -284,7 +284,7 @@
     </element>
 	<element id="Flag.supportingInfo">
 	  <extension url="http://hl7.org/fhir/build/StructureDefinition/committee-notes">
-        <valueString value="J#37795"/>
+        <valueString value="J#37795, J#56379"/>
       </extension>
       <path value="Flag.supportingInfo"/>
       <short value="Extra information to use in context of the flag"/>
@@ -299,6 +299,8 @@
 		<targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
 		<targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
 		<targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment"/>
+		<targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
+		<targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport"/>
       </type>
       <isSummary value="false"/>
       
