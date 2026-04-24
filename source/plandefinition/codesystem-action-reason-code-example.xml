@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="action-reason-code"/>
+  <id value="action-reason-code-example"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cds"/>
   </extension>
@@ -11,16 +11,16 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/action-reason-code"/>
+  <url value="http://hl7.org/fhir/action-reason-code-example"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.4.1945"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="ActionReasonCode"/>
-  <title value="Action Reason Code"/>
+  <name value="ActionReasonCodeExample"/>
+  <title value="Action Reason Code Example"/>
   <status value="active"/>
-  <experimental value="false"/>
+  <experimental value="true"/>
   <date value="2020-12-28T16:55:11+11:00"/>
   <publisher value="HL7 (FHIR Project)"/>
   <contact>
@@ -35,7 +35,7 @@
   </contact>
   <description value="Provides examples of reasons for actions to be performed."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/action-reason-code"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/action-reason-code-example"/>
   <content value="complete"/>
   <concept>
     <code value="off-pathway"/>
