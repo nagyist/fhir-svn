@@ -58,6 +58,9 @@
         <code value="deidentify"/>
       </concept>
       <concept>
+        <code value="destroy"/>
+      </concept>
+      <concept>
         <code value="receive"/>
       </concept>
       <concept>
