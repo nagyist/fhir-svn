@@ -205,7 +205,11 @@ approaches to enforcement.
 <h4>
 User Identity and Access Context
 </h4>
-
+<p>
+<em>Use case:</em> "How to represent User identity in FHIR Resources"
+</p><p>
+The user identity shall be communicated in the business <code>.identifier</code> element. Where the user identifier has other uses, such as an email address that may be recorded in <code>.telecom</code>, these replications of the user identity are expected, but the formal user identity mapping shall be found in <code>.identifier</code>. For encoding guidance see <a href="administration-module.html#8.0.3.1">Administrative Page - Privacy and Security section</a>
+</p>
 <p>
 
 <em>Use case:</em> "Access to protected Resources are enabled though user Role-Based, 
