@@ -336,7 +336,7 @@ IHE <a href="https://profiles.ihe.net/ITI/IUA">IUA Profile</a> constrains OAuth 
 An extension to a single level model, Cascaded Authorization, enables an OAuth/UMA authorization server to require and rely on the approval of another OAuth/UMA server before issuing a token and granting scopes. Using this model, the enterprise OAuth/UMA server at a provider organization can rely on the decisions by a Consent OAuth/UMA Server by requiring and accepting access tokens issued by that server as part of the client authorization process. This architecture preserves the independence of a consent management system, which can potentially be outsourced to third-parties, while ensuring that all authorization interfaces and interactions follow the OAuth/UMA protocols. A summary of the concepts and flows for Cascaded Authorization are discussed in <a href="https://confluence.hl7.org/display/SEC/Veterans+Health+Administration+Sponsored+Security+and+Privacy+Papers?preview=%266931686/66939023%2Cascaded_Authorization-2018-01-15.pdf">this report</a>. Further extensions to this model to leverage UMA’s capabilities to simplify some of the flows are discussed in <a href="https://confluence.hl7.org/display/SEC/Veterans+Health+Administration+Sponsored+Security+and+Privacy+Papers?preview=%266931686/66939022%2Privacy_Preserving_Authorization-2018-01-15.pdf">this report</a>. A reference implementation of Cascaded Authorization and more technical details can be found <a href="https://github.com/mojitoholic/pauldron">here</a>.
 </p>
 <p>
-For business to business workflows, the <a href="http://hl7.org/fhir/us/udap-security/b2b.html#b2b-authorization-extension-object">UDAP B2B Authorization Extension Object</a> can be used to assert consent information in communities supporting cross-organization FHIR based exchanges.
+For business to business workflows, the <a href="http://hl7.org/fhir/us/udap-security/b2b.html#b2b-authorization-extension-object">FAST Security for Scalable Registration, Authentication, and Authorization B2B Authorization Extension Object</a> can be used to assert consent information in communities supporting cross-organization FHIR based exchanges.
 </p>
 <a name="AccessDenied"></a>
 <h3>
@@ -444,7 +444,7 @@ does not leak with any use of external links.
 </p>
 
 <a name="break-the-glass"></a>
-<h4>Break the Glass</h4>
+<h2>Break the Glass</h2>
 
 <p>
 Break-the-glass, or break-glass, as it is called within some EHR systems, refers to a procedure that enables a clinician or end user who does not have access privileges to gain access to ePHI in emergency circumstances. The name comes from the old-fashioned manual fire alarms that required their users to break a pane of glass before activating the alarm. The idea was that accidental contact would not be forceful enough to break the glass, preventing the alarm from being triggered by mistake. Break-the-glass protocols typically involve alerting and control mechanisms, such as a pop-up screen warning the data about to be accessed is sensitive and restricted. Break-the-glass is a privileged function that is only given to the most trusted clinicians.
@@ -480,11 +480,11 @@ At a minimum, implementations must ensure:
 </ul>
 [%dragons-end%]
 <p>The following are some potential methods of declaring break-the-glass. The first one uses OAuth 2 to request an access token under break-the-glass conditions, placing the authorization decision within the security layer. The second one simply declares break-the-glass in the http request, relying on the Resource Server to confirm that break-the-glass is legitimate, authorized, and traced.</p>
-<h5>using OAuth</h5>
+<h3>using OAuth</h3>
 <p>
 When using the OAuth 2 client credentials grant, which has no user interaction, some profiles of OAuth 2 support passing the requested purpose of use in the access token request. In this case HL7 defines the <a href="https://terminology.hl7.org/CodeSystem-v3-ActReason.html#v3-ActReason-BTG">break-the-glass</a> as a <a href="https://terminology.hl7.org/ValueSet-v3-PurposeOfUse.html">purpose of use</a>.
 </p>
-<p>For example in <a href="https://hl7.org/fhir/us/udap-security/STU1.1/b2b.html#b2b-authorization-extension-object">HL7 UDAP Security</a>, the purpose of use can be requested using hl7-b2b OAuth extension:</p>
+<p>For example in <a href="https://hl7.org/fhir/us/udap-security/b2b.html#b2b-authorization-extension-object">HL7 FAST Security for Scalable Registration, Authentication, and Authorization - Business-to-Business</a>, the purpose of use can be requested using hl7-b2b OAuth extension:</p>
 <div>
   <pre>
     "extensions" : {  
@@ -506,7 +506,7 @@ When using the OAuth 2 authorization code grant, the authorization server might 
 In either case, the authorization server either grants or denies the request, logging the decision. If granted, the access token indicates break-the-glass authorization with expanded permissions, and the resource server enforces this elevated permissions.
 </p>
   
-<h5>using http Category</h5>
+<h3>using http Category</h3>
 <p>
 This solution utilizes an http header, specifically a draft ietf specification for a <a href="https://tools.ietf.org/html/draft-johnston-http-category-header-02">web category</a>.  
 The <a href="https://terminology.hl7.org/CodeSystem-v3-ActReason.html#v3-ActReason-BTG">break-the-glass</a> is indicated in the request as a 
