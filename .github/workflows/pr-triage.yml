@@ -262,7 +262,7 @@ jobs:
               print(f"Fetching {key} from {url}", file=sys.stderr)
               # Was -sf
               result = subprocess.run(
-                  ["curl", "-s", url],
+                  ["curl", "-s", "-s", "-A", "HL7-PR-Triage-Bot/1.0 (+https://github.com/HL7/jira-spec-extensions)", url],
                   capture_output=True, text=True,
               )
               if result.returncode != 0:
