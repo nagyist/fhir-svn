@@ -35,12 +35,6 @@
             <value value="http://www.hl7.org/Special/committees/healthcaredevices" />
         </telecom>
     </contact>
-    <contact>
-        <telecom>
-            <system value="url" />
-            <value value="http://www.hl7.org/Special/committees/healthcaredevices/index.cfm" />
-        </telecom>
-    </contact>
     <description value="Describes a physiological or technical alert condition report originated by a device.  The DeviceAlert resource is derived from the ISO/IEEE 11073-10201 Domain Information Model standard, but is more widely applicable. " />
     <fhirVersion value="6.0.0" />
     <mapping>
