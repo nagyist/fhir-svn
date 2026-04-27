@@ -16,14 +16,6 @@
     The DeviceMetric resource describes dynamic properties that characterize a direct or derived, quantitative or qualitative setting, or calculation produced by a medical device, i.e., readings and settings of, or from, the device.
  The DeviceMetric resource can also be used to describe the properties relevant to the metric such as status, last calibration time and type, measurement mode, color, and to link to the parent Device.
         </p>
-    </div>
-    <div>
-        <a name="scope"/>
-        <h2>Scope and Usage</h2>
-        <p>
-    The DeviceMetric resource describes dynamic properties that characterize a direct or derived, quantitative or qualitative setting, or calculation produced by a medical device, i.e., readings and settings of, or from, the device.
- The DeviceMetric resource can also be used to describe the properties relevant to the metric such as status, last calibration time and type, measurement mode, color, and to link to the parent Device.
-        </p>
         </div>
         <div>
         <a name="bnr"/>
