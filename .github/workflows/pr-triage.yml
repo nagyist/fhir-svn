@@ -578,7 +578,7 @@ jobs:
           PY
           )
 
-          SUBJECT="[Extension pack $SUBJECT_TAG] PR #$PR_NUMBER — $RECOMMENDATION"
+          SUBJECT="[FHIR core $SUBJECT_TAG] PR #$PR_NUMBER — $RECOMMENDATION"
 
           PAYLOAD=$(jq -n \
             --arg from "Claude Triage <claude-triage@lmckenzie.com>" \
