@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="action-participant-function"/>
+  <id value="action-participant-function-example"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cds"/>
   </extension>
@@ -11,16 +11,16 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="3"/>
   </extension>
-  <url value="http://hl7.org/fhir/action-participant-function"/>
+  <url value="http://hl7.org/fhir/action-participant-function-example"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.4.1946"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="ActionParticipantFunction"/>
-  <title value="Action Participant Function"/>
+  <name value="ActionParticipantFunctionExample"/>
+  <title value="Action Participant Function Example"/>
   <status value="active"/>
-  <experimental value="false"/>
+  <experimental value="true"/>
   <date value="2021-01-05T10:01:24+11:00"/>
   <publisher value="HL7 (FHIR Project)"/>
   <contact>
@@ -35,7 +35,7 @@
   </contact>
   <description value="The function performed by the participant for the action."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/action-participant-function"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/action-participant-function-example"/>
   <content value="complete"/>
   <concept>
     <code value="performer"/>
