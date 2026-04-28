@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="risk-assessment-method"/>
+  <id value="risk-assessment-method-example"/>
   <meta>
     <lastUpdated value="2021-01-05T10:01:24.148+11:00"/>
   </meta>
@@ -14,10 +14,10 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/risk-assessment-method"/>
+  <url value="http://hl7.org/fhir/risk-assessment-method-example"/>
   <version value="6.0.0"/>
-  <name value="RiskAssessmentMethod"/>
-  <title value="Risk Assessment Method"/>
+  <name value="RiskAssessmentMethodExample"/>
+  <title value="Risk Assessment Method Example"/>
   <status value="active"/>
   <experimental value="true"/>
   <publisher value="HL7 (FHIR Project)"/>
