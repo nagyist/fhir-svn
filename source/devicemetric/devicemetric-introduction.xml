@@ -5,7 +5,7 @@
             <ul>
                 <li>Breaking changes:
                     <ul>
-                        <li>Changed the <a href="devicemetric-definitions.html#DeviceMetric.color"><code>color</code></a> element from <a href="datatypes.html#code"><code>code</code></a> to a <a href="datatypes.html#CodeableConcept"><code>CodeableConcept</code></a> to allow for more flexibility in how the color of the metric is recorded, including allowing additional code systems. (<a href="https://jira.hl7.org/browse/FHIR-54243">FHIR-54464</a>)</li>
+                        <li>Changed the <a href="devicemetric-definitions.html#DeviceMetric.color"><code>color</code></a> element from <a href="datatypes.html#code"><code>code</code></a> to a <a href="datatypes.html#CodeableConcept"><code>CodeableConcept</code></a> to allow for more flexibility in how the color of the metric is recorded, including allowing additional code systems. (<a href="https://jira.hl7.org/browse/FHIR-54464">FHIR-54464</a>)</li>
                     </ul>
                 </li>
             </ul>
