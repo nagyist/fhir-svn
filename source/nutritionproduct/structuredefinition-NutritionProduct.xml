@@ -121,7 +121,7 @@
       <short value="active | inactive | entered-in-error"/>
       <definition value="The current state of the product."/>
       <comment value="Unknown does not represent &quot;other&quot; - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <type>
         <code value="code"/>
