@@ -84,38 +84,6 @@
         <map value="clinical.general"/>
       </mapping>
     </element>
-    <element id="NutritionProduct.code">
-      <path value="NutritionProduct.code"/>
-      <short value="A code that can identify the product"/>
-      <definition value="A code that specifies the product or a textual description if no code is available. This could be such codes as a USDA Branded Food Products Database number, a USDA Food Data Central (FDC) ID number, Universal Product Code (UPC), a Langual code, or a country specific food database code."/>
-      <alias value="type"/>
-      <min value="0"/>
-      <max value="1"/>
-      <type>
-        <code value="CodeableConcept"/>
-      </type>
-      <isSummary value="true"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="NutritionProductCode"/>
-        </extension>
-        <strength value="preferred"/>
-        <description value="Codes identifying specific types of nutrition products."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/edible-substance-type"/>
-      </binding>
-      <mapping>
-        <identity value="w5"/>
-        <map value="FiveWs.identifier"/>
-      </mapping>
-      <mapping>
-        <identity value="v2"/>
-        <map value="Varies by domain"/>
-      </mapping>
-      <mapping>
-        <identity value="rim"/>
-        <map value=".code"/>
-      </mapping>
-    </element>
     <element id="NutritionProduct.status">
       <path value="NutritionProduct.status"/>
       <short value="active | inactive | entered-in-error"/>
@@ -148,6 +116,38 @@
       <mapping>
         <identity value="rim"/>
         <map value=".status"/>
+      </mapping>
+    </element>
+    <element id="NutritionProduct.code">
+      <path value="NutritionProduct.code"/>
+      <short value="A code that can identify the product"/>
+      <definition value="A code that specifies the product or a textual description if no code is available. This could be such codes as a USDA Branded Food Products Database number, a USDA Food Data Central (FDC) ID number, Universal Product Code (UPC), a Langual code, or a country specific food database code."/>
+      <alias value="type"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="NutritionProductCode"/>
+        </extension>
+        <strength value="preferred"/>
+        <description value="Codes identifying specific types of nutrition products."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/edible-substance-type"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="Varies by domain"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
       </mapping>
     </element>
     <element id="NutritionProduct.category">
