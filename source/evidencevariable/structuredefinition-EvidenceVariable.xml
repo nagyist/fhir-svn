@@ -242,6 +242,7 @@
 			<type>
 				<code value="code"/>
 			</type>
+			<meaningWhenMissing value="Value is unknown."/>
 			<isModifier value="true"/>
 			<isModifierReason value="This is labeled as &quot;Is Modifier&quot; because applications should not use a retired EvidenceVariable without due consideration"/>
 			<isSummary value="true"/>
