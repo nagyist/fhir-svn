@@ -40,11 +40,11 @@ covered by insurance plans offered by that payor.
 </p>
 
 <p>
-	The <a href="paymentnotice.html">PaymentNotice</a> resource is used to indicate that a payment has, or is about to occur. The resource is used commonly when tracking of payment occurences is required for regulatory or business purposes. 
+	The <a href="paymentnotice.html">PaymentNotice</a> resource is used to indicate that a payment has, or is about to occur. The resource is used commonly when tracking of payment occurrences is required for regulatory or business purposes. 
 </p>
 
 <p>
-The <a href="claimresponse.html">ClaimResponse</a> resource is an insurer's adjudication and/or authorization of a set of healthcare-related goods and services for a patient against the patient's insurance coverages and does not indicate that payment has occured.
+The <a href="claimresponse.html">ClaimResponse</a> resource is an insurer's adjudication and/or authorization of a set of healthcare-related goods and services for a patient against the patient's insurance coverages and does not indicate that payment has occurred.
 </p>
 
 <p>
@@ -76,7 +76,7 @@ covered by insurance plans offered by that payor.</td>
 			</tr>
 			<tr>
 				<td><a href="paymentnotice.html">PaymentNotice</a></td>
-				<td>An indication that a payment has occured, is about to occur, or has been cancelled.</td>
+				<td>An indication that a payment has occurred, is about to occur, or has been cancelled.</td>
 			</tr>
 		</table>
 </div>
