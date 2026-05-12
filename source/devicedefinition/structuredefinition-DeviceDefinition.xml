@@ -955,8 +955,8 @@
     </element>
     <element id="DeviceDefinition.packaging.identifier">
       <path value="DeviceDefinition.packaging.identifier"/>
-      <short value="Business identifier of the packaged medication"/>
-      <definition value="The business identifier of the packaged medication."/>
+      <short value="Business identifier of the packaged device"/>
+      <definition value="The business identifier of the packaged device."/>
       <min value="0"/>
       <max value="1"/>
       <type>
