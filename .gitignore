@@ -397,5 +397,3 @@ ai-scratch/
 *.skill
 .skills/
 .mcp.json
-.jira-cache/
-docs/
