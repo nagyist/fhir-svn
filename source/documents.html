@@ -129,7 +129,7 @@ The document has several dates in it:
  <li>The document date (mandatory) found in <i>Bundle.timestamp</i>. It identifies when the document bundle was assembled from the underlying resources</li>
  <li>The Composition date (mandatory) found in <i>Composition.date</i>. It is when the author wrote the document logically</li>
  <li>The Attestation dates (optional). These are found in <i>Composition.attester.time</i> and is when the document was witnessed by the attesters. This would usually be at the same time as the composition date or afterwards</li>
- <li>The Composition last modified time (optional). This is found in <i>Composition.meta.lastUpdated</i> for the composition and is the last date of change of the composition. This must be &gt;= the composition date</li>
+ <li>The Composition last modified time (optional). This is found in <i>Composition.meta.lastUpdated</i> for the composition and is the last date of change of the composition, and is specific to the authoring system</li>
 </ul>
 <p>
 If there is a need to have a digital signature on a Document Bundle, this may be accomplished using the
