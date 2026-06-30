@@ -392,7 +392,7 @@ There are two types of changes that can be made to descriptive elements - revisi
 </table>
 
 <p>
-To remove any of the listed properties, repeat the property in the differential with identical values and use the[[[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress]]] extension
+To remove any of the listed properties, repeat the property in the differential with identical values and use the [[[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress]]] extension
 
 </p>
 
@@ -468,17 +468,20 @@ is easier with a flat structure.
 <a name="recurse"></a>
 <h3>Recursive Elements</h3>
 <p>
-Some backbone elements recurse.  e.g., Questionnaire.item.  When a profile defines
-constraints on such elements, the constraints apply to the recursive references to
-those elements as well.  i.e., If Questionnaire.item is constrained to have a type
-of 'group', that will cause Questionnaire.item.item, Questionnaire.item.item.item, etc.
-to all have the same constraint.
+Some backbone elements recurse. e.g., Questionnaire.item, or have the same content as another
+item e.g. ValueSet.compose.exclude has the same content as ValueSet.compose.include. When a
+profile defines constraints on such elements, the constraints only apply to the literally stated
+path on the element. If it is desired to apply constraints to element that has a content reference,
+profiles can either constrain them directly, or use the 
+[[[http://hl7.org/fhir/StructureDefinition/contentReferenceProfile]]] extension to apply the
+constraints from an applicable element (e.g. one that has the same value for contentReference)
+from either the same profile or a different profile. 
 </p>
 <p>
-If there is a need to enforce constraints on a recursive item that apply at some levels
-but not others (e.g., only the root, or everything except the root), formal constraints
-using FHIRPath can be used that limit their behavior to only the root or other specific
-levels of nesting can be used.
+As an example, If Questionnaire.item is constrained to have a type of 'group', and
+Questionnaire.item.item says that the profile applied to Questionnaire.item applies, then
+that will constrain type to 'group'. And because Questionnaire.item.item refers back to
+Questionnaire.item, this is a recursive structure. 
 </p>
 
 <a name="snapshot"></a>
