@@ -443,9 +443,9 @@ Bundle, then the following rules SHALL be observed:
 <ol>
  <li>Signatures SHALL be in a Provenance resource (there may be more than one such signature)</li>
  <li>The Provenance resources with these signatures SHALL be in entries in the Bundle</li>
- <li>The <code>Provenance.target</code> with a <code>reference</code> value of exactly <code>Bundle/[id]</code> 
+ <li>The <code>Provenance.target</code> with a <code>reference</code> value of exactly <code>#/</code> 
    where id is the id of the Bundle, such that the target identifies that the Bundle itself is being signed. Note that if 
-   the Provenance does not have a target of `Bundle/[id]` it does not represent an embedded signature, does not sign the Bundle, 
+   the Provenance does not have a target of `#/` it does not represent an embedded signature, does not sign the Bundle, 
    and is not subject to the rules documented here</li>
  <li>The Provenance resource SHALL have a <code>Provenance.signature</code> element that contains the signature of the Bundle,
    with all entries that contain embedded signing provenance resources removed (that is, all entries that have a resource which is a Provenance, where the Provenance.target elements includes
@@ -465,7 +465,10 @@ Bundle resources include the <code>Bundle.signature</code>, element, but a numbe
 identified, and the element is deprecated. Applications SHOULD use the method described above to sign Bundles (which may be 
 pre-adopted when working with earlier versions of the FHIR specification).
 </p>
-
+<p>
+Note the difference between a reference of <code>#</code> and <code>#/</code>; the first is references
+the Provenence itself, and the second references the bundle itself.
+</p>
 <a name="examples"></a>
 <h2>Worked Examples</h2>
 
