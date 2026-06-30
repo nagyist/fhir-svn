@@ -399,7 +399,6 @@ Notes:
 </p>
 <ul>
  <li>For all the types, the XML, JSON and Turtle representations of the primitive values are the same except for different escaping in XML and JSON, and some more specific type indications in RDF</li>
- <li>For string content,  parsers and serializers MAY retain, escape or strip unescaped non-supported UNICODE characters. If the characters are retained, a subsequent application-layer process can then determine appropriate handling based on context.</li>
  <li>For decimal values, the XML special values <code>INF</code>, <code>-INF</code> and <code>NaN</code> are not allowed, and JSON is restricted to the <a href="https://www.w3.org/TR/xmlschema-2/">precision limits documented in XML schema for xs:double and xs:decimal</a></li>
  <li>The precision of the decimal value has significance:<a name="precision"></a>
     <ul>
@@ -415,10 +414,6 @@ Notes:
  <li>Issues with the specified regexes:
    <ul>
      <li>The regexes are provided to assist with tooling, but are informative, <b>not normative</b>. There are several issues with the regexes.</li>
-     <li>The string regex has problems with Unicode - specifically, it might or might not allow Unicode whitespace to some degree depending on Unicode support in the regex engine being used.
-        The regexes <code>[\r\n\t\x{0020}-\x{FFFF}]*</code> or <code>[\r\n\t\u0020-\uFFFF]*</code> are better expressions of the constraints on string, but poorly supported (see <a href="https://www.regular-expressions.info/unicode.html">Regex Tutorial</a> for details).
-        The <code>string</code> regex also applies to <code>markdown</code> as well. The regex does not enforce the length limit</li>
-     <li>The Unicode issues also apply to the regex for <code>code</code>.</li>
      <li>The regexes should be qualified with start of string and end of string anchors based on the regex implementation used (e.g., caret '^' and dollar-sign '$' for JavaScript, POSIX, XML and XPath; '\A' and '\Z' for .NET, Java, Python and others; please verify these definitions with the regex implementation used).</li>
      <li>The regexes may allow a broader set of values than are actually valid (e.g., leap years) so additional validation is always needed.</li>
    </ul>
@@ -463,6 +458,30 @@ Notes:
 A simple way to convert plain text to be safe as markdown is to prefix any of the characters *, &amp;, #, [, &lt;, >, and ` with a backslash (\).
 When presenting markdown as plain text, implementers may wish to reverse this transform.
 [%end-note%]
+
+<a name="unicode"></a>
+<h3>Handling Unicode</h3>
+
+<p>
+IETF <a href="https://www.rfc-editor.org/rfc/rfc9839.html">RFC 9839</a> discusses particular sets of Unicode characters that 
+should be avoided on JSON (and XML) mostly because they are not expected or permitted in well-formed unicode. 
+This specification does not prohibit such characters, but implementations SHOULD avoid using them, and Implementation Guides 
+may prohibit their use.
+</p>
+<p>
+Parsers and serializers MAY retain, escape or strip unescaped non-supported UNICODE characters.
+If the characters are retained, a subsequent application-layer process can then determine appropriate handling based on context.
+</p>
+<p>
+The string regex has problems with Unicode - specifically, it might or might not allow Unicode whitespace to some degree depending
+on Unicode support in the regex engine being used.
+The regexes <code>[\r\n\t\x{0020}-\x{FFFF}]*</code> or <code>[\r\n\t\u0020-\uFFFF]*</code> are better expressions of the constraints 
+on string, but poorly supported (see <a href="https://www.regular-expressions.info/unicode.html">Regex Tutorial</a> for details).
+The <code>string</code> regex also applies to <code>markdown</code> as well. The regex does not enforce the length limit.
+</p>
+<p>The Unicode issues also apply to the regex for <code>code</code>.</p>
+
+
 
 <a name="representations"></a>
 <h3>Representations in XML, JSON, and Turtle</h3>
