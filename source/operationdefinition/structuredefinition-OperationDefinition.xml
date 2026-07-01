@@ -288,7 +288,7 @@
       <path value="OperationDefinition.kind"/>
       <short value="operation | query"/>
       <definition value="Whether this is an operation or a named query."/>
-      <comment value="Named queries are invoked differently, and have different capabilities."/>
+      <comment value="Named queries are invoked differently, and have different capabilities. If there is a need to pre-adopt new codes from a future version, set this element to 'operation' and convey the additional concept in an extension."/>
       <min value="1"/>
       <max value="1"/>
       <type>
