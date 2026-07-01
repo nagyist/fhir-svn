@@ -1112,6 +1112,13 @@
       <type>
         <code value="BackboneElement"/>
       </type>
+      <constraint>
+        <key value="exs-25"/>
+        <severity value="error"/>
+        <human value="Alternative steps can't have alternatives"/>
+        <expression value="step.alternative.exists().not()"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/ExampleScenario"/>
+      </constraint>
       <orderMeaning value="The order in which these elements appear is the order in which they are expected to be rendered (in a table, in a diagram, etc.)"/>
       <condition value="exs-13"/>
     </element>
