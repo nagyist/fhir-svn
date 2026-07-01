@@ -737,6 +737,7 @@
 			<type>
 				<code value="BackboneElement"/>
 			</type>
+			<orderMeaning value="The order items are listed indicates the order in which they should be presented to the user (if they are enabled)"/>
 			<constraint>
 				<key value="que-9"/>
 				<severity value="error"/>
@@ -1320,6 +1321,7 @@
 			<type>
 				<code value="BackboneElement"/>
 			</type>
+			<orderMeaning value="The order of the options indicates the order in which they should be presented to the user by default.  Extensions may drive changes to the presentation order."/>
 			<condition value="que-5"/>
 			<condition value="que-4"/>
 			<condition value="que-11"/>
