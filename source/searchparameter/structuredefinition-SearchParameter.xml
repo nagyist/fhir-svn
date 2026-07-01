@@ -536,6 +536,7 @@
 			<path value="SearchParameter.type"/>
 			<short value="number | date | string | token | reference | composite | quantity | uri | special | resource"/>
 			<definition value="The type of value that a search parameter may contain, and how the content is interpreted."/>
+			<comment value="If pre-adopting a new type from a future FHIR version, use the 'special' code and communicate the alternate type as an extension."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
