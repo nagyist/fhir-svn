@@ -537,7 +537,8 @@ has a process allowing violation of these rules in <a href="https://confluence.h
 	<tr>
       <td>Conformance Language</td>
       <td>
-      SHALL statements cannot be broken (though they can be clarified) and new SHALL statements cannot be introduced unless they are conditional based on version. e.g., "Instances in version x and higher of FHIR SHALL..." Changes of SHOULD to MAY and vice versa as well as introducing new MAY and SHOULD statements are permitted.
+      SHALL statements cannot be broken (though they can be clarified) and
+      new SHALL statements cannot be introduced unless they a) are conditional based on version (E.g. "Instances in version x and higher of FHIR SHALL..."), or b) depend on a new optional element introduced in that version.
       </td>
     </tr>
   </tbody>
