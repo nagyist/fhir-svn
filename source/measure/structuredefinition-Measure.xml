@@ -792,7 +792,7 @@
     <element id="Measure.author">
       <path value="Measure.author"/>
       <short value="Who authored the content"/>
-      <definition value="An individiual or organization primarily involved in the creation and maintenance of the content."/>
+      <definition value="An individual or organization primarily involved in the creation and maintenance of the content."/>
       <min value="0"/>
       <max value="*"/>
       <type>

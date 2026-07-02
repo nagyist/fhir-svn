@@ -493,7 +493,7 @@
       </extension>
       <path value="ConceptMap.author"/>
       <short value="Who authored the ConceptMap"/>
-      <definition value="An individiual or organization primarily involved in the creation and maintenance of the ConceptMap."/>
+      <definition value="An individual or organization primarily involved in the creation and maintenance of the ConceptMap."/>
       <min value="0"/>
       <max value="*"/>
       <type>

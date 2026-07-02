@@ -259,7 +259,7 @@
        class="diagram-class-detail"><a
    id="n1260"
    xlink:href="evidence-definitions.html#Evidence.author"><title
-   id="title47399">An individiual, organization, or device primarily involved in the creation and maintenance of the content</title>author</a> : <a
+   id="title47399">An individual, organization, or device primarily involved in the creation and maintenance of the content</title>author</a> : <a
    id="n1261"
    xlink:href="metadatatypes.html#ContactDetail">ContactDetail</a> [0..*]</text>
     <text
@@ -303,7 +303,7 @@
        class="diagram-class-detail"><a
    id="n1284"
    xlink:href="evidence-definitions.html#Evidence.editor"><title
-   id="title47419">An individiual, organization, or device primarily responsible for internal coherence of the content</title>editor</a> : <a
+   id="title47419">An individual, organization, or device primarily responsible for internal coherence of the content</title>editor</a> : <a
    id="n1285"
    xlink:href="metadatatypes.html#ContactDetail">ContactDetail</a> [0..*]</text>
     <text
@@ -314,7 +314,7 @@
        class="diagram-class-detail"><a
    id="n1290"
    xlink:href="evidence-definitions.html#Evidence.reviewer"><title
-   id="title47424">An individiual, organization, or device primarily responsible for review of some aspect of the content</title>reviewer</a> : <a
+   id="title47424">An individual, organization, or device primarily responsible for review of some aspect of the content</title>reviewer</a> : <a
    id="n1291"
    xlink:href="metadatatypes.html#ContactDetail">ContactDetail</a> [0..*]</text>
     <text
@@ -325,7 +325,7 @@
        class="diagram-class-detail"><a
    id="n1296"
    xlink:href="evidence-definitions.html#Evidence.endorser"><title
-   id="title47429">An individiual, organization, or device responsible for officially endorsing the content for use in some setting</title>endorser</a> : <a
+   id="title47429">An individual, organization, or device responsible for officially endorsing the content for use in some setting</title>endorser</a> : <a
    id="n1297"
    xlink:href="metadatatypes.html#ContactDetail">ContactDetail</a> [0..*]</text>
     <text
