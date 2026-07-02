@@ -1819,6 +1819,14 @@ Signature is used in the following places: [%dtusage Signature%], and also there
 extension: [[[http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature]]].
 </p>
 
+<p>
+There are situations where FHIR requires data to be transformed as part of the exchange process and
+these transformations will potentially cause signature issues unless a custom canonicalization mechanism
+is chosen that takes the changes into account.  These include:
+</p>
+<ul>
+  <li>Expectations for translating relative urls into absolute urls or moving referenced data inline in the <a href="async-bulk.html#3.2.6.1.5.0.4">Bulk Data Exchange</a> portion of the spec.</li>
+</ul>
 <a name="Annotation"></a>
 <a name="annotation"></a>
 <h2 style="margin-bottom: 1px">Annotation</h2>
