@@ -493,8 +493,10 @@ has a process allowing violation of these rules in <a href="https://confluence.h
     <tr>
       <td>Restful interface</td>
       <td>
-      Existing endpoints will not be renamed or removed, nor have their expected behavior changed in a manner that would cause reasonable systems designed
-      against prior versions to be non-interoperable.  Additional endpoints and interactions may be introduced.
+      Where the specification mandates specific names for endpoints or portions thereof (e.g. the <code>Patient</code> or <code>_history</code> portions
+      of <code>[base]/Patient/123/_history/4</code>), future versions will not rename, remove, or change the behavior of invoking those endpoints
+      in a manner that would cause reasonable systems designed against prior versions to be non-interoperable. Additional endpoints and
+      interactions may be introduced.
       </td>
     </tr>
     <tr>
