@@ -528,6 +528,7 @@
       <path value="ExampleScenario.actor.title"/>
       <short value="Label for actor when rendering"/>
       <definition value="The human-readable name for the actor used when rendering the scenario."/>
+      <requirements value="The title for a particular actor might be more refined/specific than what's found on the definition, if one is provided"/>
       <min value="1"/>
       <max value="1"/>
       <type>
@@ -542,6 +543,7 @@
       <path value="ExampleScenario.actor.description"/>
       <short value="Details about actor"/>
       <definition value="An explanation of who/what the actor is and its role in the scenario."/>
+      <requirements value="The description for a particular actor might be more refined/specific than what's found on the definition, if one is provided"/>
       <min value="0"/>
       <max value="1"/>
       <type>
