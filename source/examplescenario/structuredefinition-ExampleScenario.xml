@@ -998,6 +998,12 @@
         <human value="If specified, receiver must be a key of an actor within the ExampleScenario"/>
         <expression value="receiver.exists() implies receiver = 'OTHER' or %resource.actor.where(key=%context.receiver).exists()"/>
       </constraint>
+      <constraint>
+        <key value="exs-26"/>
+        <severity value="error"/>
+        <human value="A definition can only be provided if the type is code"/>
+        <expression value="definition.exists() implies type.code = 'operation' and type.system = 'http://hl7.org/fhir/restful-interaction'"/>
+      </constraint>
     </element>
     <element id="ExampleScenario.process.step.operation.type">
       <path value="ExampleScenario.process.step.operation.type"/>
@@ -1021,6 +1027,17 @@
       <max value="1"/>
       <type>
         <code value="string"/>
+      </type>
+    </element>
+    <element id="ExampleScenario.process.step.operation.definition">
+      <path value="ExampleScenario.process.step.operation.definition"/>
+      <short value="Operation invoked"/>
+      <definition value="If this operation represents the invocation of a FHIR operation, points to the canonical definition of that operation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="canonical"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/OperationDefinition"/>
       </type>
     </element>
     <element id="ExampleScenario.process.step.operation.initiator">
