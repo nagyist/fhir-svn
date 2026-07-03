@@ -3,8 +3,8 @@ There are several sections that have the same format describing the mappings bet
 * r4-r6-changes
 * r5-r6-changes
 
-These make it nice n simple and easier to write/review the configuration on a per version basis.
-And while processing, can load seperately, and configure the internal rules to handle the versioning, without the configuration rules explicitly stating it.
+These make it nice and simple and easier to write/review the configuration on a per version basis.
+And while processing, can load separately, and configure the internal rules to handle the versioning, without the configuration rules explicitly stating it.
 > **Note:** that the r4b changes are also included in the r4-r6 section for simplicity since they are so similar.
 
 ### Format of the entries
