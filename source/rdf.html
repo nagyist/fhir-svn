@@ -719,7 +719,7 @@ fhir:subject [
             <p>The following example shows concept IRIs added to an Observation.code (type CodeableConcept): </p>
 <pre class="rdf">
 &lt;http://example.org/o1&gt; a fhir:Observation ;
-  fhir:code ( [
+  fhir:code [
     <b>a loinc:29463-7</b>;   # OPTIONAL, but RECOMMENDED
     <b>a sct:27113001</b>;    # OPTIONAL, but RECOMMENDED
     fhir:coding ( [
@@ -731,7 +731,7 @@ fhir:subject [
       fhir:code [ fhir:v "27113001" ];
       fhir:display [ fhir:v "Body weight" ]
     ] ) ;
-  ] ) ;
+  ] ;
 </pre>
           <p>Using the optional <a href="http://hl7.org/fhir/StructureDefinition/rdf-concept-iri">RDF Concept IRI Extension</a>, the concept IRI MAY also be attached to the Coding from which it was derived.
             This supports cases where the concept IRI needs to be preserved in JSON or XML serialization, cases where Coding elements are used outside of CodeableConcepts, and cases where the <code>rdf:type</code> relation is not appropriate for the meaning of the concept.
@@ -848,7 +848,7 @@ fhir:subject [
 
 <pre class="rdf">
 &lt;http://example.org/fhir/MedicationRequest/MR321&gt; a fhir:MedicationRequest;
-  fhir: nodeRole fhir:treeRoot;
+  fhir:nodeRole fhir:treeRoot;
   fhir:extension ( [
      fhir:url [
        fhir:l &lt;http://example.org/fhir/StructureDefinition/observation-bodyPosition&gt; ;
