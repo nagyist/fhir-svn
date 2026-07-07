@@ -213,9 +213,7 @@ jobs:
               }
 
               if (!priorAdminComment) {
-                core.notice('No prior admin comment — skipping.');
-                core.setOutput('should_triage', 'false');
-                return;
+                core.notice('No prior admin comment — will do cold triage.');
               }
 
               triggerKind = 'author_responded';
