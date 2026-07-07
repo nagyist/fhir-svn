@@ -775,8 +775,8 @@
 		</element>
 		<element id="CodeSystem.filter.value">
 			<path value="CodeSystem.filter.value"/>
-			<short value="What to use for the value"/>
-			<definition value="A description of what the value for the filter should be."/>
+			<short value="Code from the system, or regex criteria, or boolean value for exists"/>
+			<definition value="CodeSystem.filter.value is represented as a string, and the string value must be as described in [Using Filter Values](valueset.html#filter-values)."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
