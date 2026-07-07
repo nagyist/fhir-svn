@@ -945,9 +945,10 @@ fhir:birthDate [
             which are object types in FHIR RDF, MAY have a 
             <code>fhir:modifierExtension</code> attached.
             In such a case the property name is prefixed with an underscore.
-
-            Note the underscore
-            at the beginning of "_occurrence" in the following example.</p>
+            Note the underscore at the beginning of "_occurrence" 
+            in the following contrived example, which would have been
+            better to express differently, without using a 
+            <code>fhir:modifierExtension</code>.</p>
 
 <a name="modifiedProperty"></a>
 <pre class="rdf">
@@ -956,15 +957,15 @@ fhir:birthDate [
   fhir:<b>_occurrence</b> [
     a fhir:Timing;
 
-    fhir:repeat [
-      fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+    fhir:repeat [        # Once a day, every day
+      fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
       fhir:period [ fhir:v "1.0"^^xsd:decimal ] ;
       fhir:periodUnit [ fhir:v "d" ]
     ] ;
 
     <b>fhir:modifierExtension</b> (
       [
-        fhir:url [
+        fhir:url [       # Except on Sundays
           fhir:l &lt;http://example.org/fhir/StructureDefinition/NeverOnSunday&gt; ;
           fhir:v "http://example.org/fhir/StructureDefinition/NeverOnSunday"^^xsd:anyURI ] ;
         fhir:value [ a fhir:Boolean ; fhir:v true ]
