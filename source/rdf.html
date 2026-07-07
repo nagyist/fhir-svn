@@ -945,7 +945,7 @@ fhir:birthDate [
             which are object types in FHIR RDF, MAY have a 
             <code>fhir:modifierExtension</code> attached.
             In such a case the property name is prefixed with an underscore.
-            Unmodified properties are not prefixed with an underscore.
+
             Note the underscore
             at the beginning of "_occurrence" in the following example.</p>
 
@@ -972,6 +972,18 @@ fhir:birthDate [
     ) ;
   ]
 </pre>
+
+         <p>
+            Unmodified properties are not prefixed with an underscore.
+            Furthermore, even though properties with 
+            <code><a href="elementdefinition-definitions.html#ElementDefinition.isModifier">isModifier</a>=true</code> 
+            (such as <a href="observation-definitions.html#Observation.status">Observation.status</a>)
+            can cause non-monotonicity, they are not prefixed with an 
+            underscore, because users are presumed to already understand
+            and expect those properties to be potentially non-monotonic.
+            In contrast, <code>fhir:modifierExtension</code>s are rare and
+            less expected.
+          </p>
 
 <p>See <a href="extensibility.html#modifierExtension">Modifier Extensions</a> for
 additional requirements around modifier extensions.
