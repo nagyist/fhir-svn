@@ -588,15 +588,15 @@
       <constraint>
         <key value="tcp-1"/>
         <severity value="error"/>
-        <human value="If there is more than one version, a version code must be defined"/>
-        <expression value="version.count() &gt; 1 implies version.all(code.exists())"/>
+        <human value="If there is more than one version, a version value must be defined"/>
+        <expression value="version.count() &gt; 1 implies version.all(value.exists())"/>
         <source value="http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities"/>
       </constraint>
       <constraint>
         <key value="tcp-7"/>
         <severity value="error"/>
-        <human value="Each version.code element must be distinct for a particular code system."/>
-        <expression value="version.code.isDistinct()"/>
+        <human value="Each version.value element must be distinct for a particular code system."/>
+        <expression value="version.value.isDistinct()"/>
         <source value="http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities"/>
       </constraint>
       <constraint>
@@ -630,6 +630,25 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CodeSystem"/>
       </type>
     </element>
+		<element id="TerminologyCapabilities.codeSystem.versionAlgorithm[x]">
+			<path value="TerminologyCapabilities.codeSystem.versionAlgorithm[x]"/>
+			<short value="How to compare versions"/>
+			<definition value="Indicates the mechanism used to compare versions to determine which CodeSystem is more current."/>
+			<comment value="This value indicates the version algorithm associated with all instances of the CodeSystem on the server. If the version algorithm is known to be different amongst different instances of the code system, then this element should not be used, and implementers should consider using the artifact-versionAlgorithm extension on the appropriate version descriptors instead.&#xA;&#xA;If set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can't be successfully be determined."/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<isSummary value="true"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSet value="http://hl7.org/fhir/ValueSet/version-algorithm"/>
+			</binding>
+		</element>
     <element id="TerminologyCapabilities.codeSystem.version">
       <path value="TerminologyCapabilities.codeSystem.version"/>
       <short value="Version of Code System supported"/>
@@ -644,9 +663,9 @@
       <condition value="tcp-7"/>
       <condition value="tcp-8"/>
     </element>
-    <element id="TerminologyCapabilities.codeSystem.version.code">
-      <path value="TerminologyCapabilities.codeSystem.version.code"/>
-      <short value="Version identifier for this version"/>
+    <element id="TerminologyCapabilities.codeSystem.version.value">
+      <path value="TerminologyCapabilities.codeSystem.version.value"/>
+      <short value="Code system business version"/>
       <definition value="For version-less code systems, there should be a single version with no identifier."/>
       <min value="0"/>
       <max value="1"/>
