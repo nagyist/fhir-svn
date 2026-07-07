@@ -914,15 +914,17 @@ fhir:birthDate [
               href="domainresource.html#DomainResource">DomainResources</a>,
             <a href="types.html#BackboneElement">BackboneElement</a>s
             and <a
-              href="types.html#BackboneType">BackboneType</a>s.
-            The type of any DomainResource with any <code>modifierExtension</code>
+              href="types.html#BackboneType">BackboneType</a>s.</p>
+
+            <p> The type name of any DomainResource with a <code>fhir:modifierExtension</code>
+            -- and <i>only</i> one with a <code>fhir:modifierExtension</code> --
             is prefixed with '_' in RDF.
-        The '_' prefix helps prevent FHIR RDF
+          The '_' prefix helps prevent FHIR RDF
           processors that do not understand a particular modifier
           extension from blindly processing it as though it still had
           the original semantics.&nbsp; The structure of the
           element is otherwise unchanged.  Note the underscore at the
-          beginning of "_MedicationRequest" in the following example:<br/> </p>
+          beginning of "_MedicationRequest" in the following example.<br/> </p>
 <pre class="rdf">
 &lt;http://example.org/fhir/MedicationRequest/MR321&gt; a <b>fhir:_MedicationRequest;</b>
   fhir:nodeRole fhir:treeRoot;
@@ -937,10 +939,15 @@ fhir:birthDate [
   ...
 </pre>
 
-          <p> BackboneElements and BackboneTypes are object types. Any
-            RDF property that references a modified BackboneElement or
-            BackboneType is prefixed with a '_'.  Note the underscore
-            at the beginning of "_occurrence" in the following example:</p>
+          <p> Similarly, any property whose value is derived from 
+            <a href="types.html#BackboneElement">BackboneElement</a>
+            or <a href="types.html#BackboneType">BackboneType</a>,
+            which are object types in FHIR RDF, MAY have a 
+            <code>fhir:modifierExtension</code> attached.
+            In such a case the property name is prefixed with an underscore.
+            Unmodified properties are not prefixed with an underscore.
+            Note the underscore
+            at the beginning of "_occurrence" in the following example.</p>
 
 <a name="modifiedProperty"></a>
 <pre class="rdf">
