@@ -197,7 +197,7 @@ Web Health Care and Life Sciences Interest Group</a>.
     fhir:l &lt;http://hl7.org/fhir/Patient/infant&gt; ;
     fhir:reference [ fhir:v "Patient/infant" ]
   ] ; #
-  …
+  ...
 </pre>
 
         <p> In this example, </p>
@@ -336,8 +336,8 @@ href="fhir.shex">fhir.shex</a>
             <code>fhir:coding</code> property holds a list of two members: </p>
 <pre class="rdf">
 fhir:coding <b>(</b>
-  [ fhir:system … ]
-  [ fhir:system … ]
+  [ fhir:system ... ]
+  [ fhir:system ... ]
 <b>)</b>
 </pre>
           <p> Since RDF lists can cause problems for OWL users, a
@@ -583,13 +583,13 @@ fhir:subject [
         fhir:v "http://example.org/fhir/Patient/23"^^xsd:anyURI ] ;
       fhir:resource &lt;http://example.org/fhir/Patient/23&gt;
     ] )
-…
+...
 # This is an entry of the above Bundle:
 <b>&lt;http://example.org/fhir/Patient/23&gt;</b> a fhir:Patient ;
   fhir:id [ fhir:v "23"] ;
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "…"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "..."^^rdf:XMLLiteral ]
   ] ;
   fhir:identifier ( [
      fhir:system [
@@ -660,12 +660,12 @@ fhir:subject [
       fhir:v "#1111"^^xsd:anyURI ;     # Local reference starts with "#"
     ]
   ] ) ;
-…
+...
 # The definition of the (logically) contained resource #1111 is here:
 <b>&lt;http://example.org/PlanDefinition/KDN5#1111&gt;</b> a fhir:ActivityDefinition ;
   fhir:id [ fhir:v "1111" ] ;   # Local identifier
   fhir:status [ fhir:v "draft" ] .
-…
+...
 </pre>
 
           <p>
@@ -690,13 +690,13 @@ fhir:subject [
       fhir:v "#2222"^^xsd:anyURI ;     # Local reference starts with "#"
     ]
   ] ) ;
-…
+...
 # The body of the (logically) contained resource 2222 is here, and receives
 # a URI derived from its parent's URI:
 <b>&lt;#2222&gt;</b> a fhir:ActivityDefinition ;
   fhir:id [ fhir:v "2222" ] ;   # Local identifier
   fhir:status [ fhir:v "draft" ] .
-…
+...
 </pre>
 
           <a name="identifying-concepts"></a>
@@ -880,7 +880,7 @@ fhir:subject [
        ] ) 
      ]
   ] )
-  …
+  ...
 </pre>
 
           <a name="primitiveExtension"></a>
@@ -888,7 +888,7 @@ fhir:subject [
           </p>
 
 <pre class="rdf">
-…
+...
 fhir:birthDate [
   fhir:v "2016-05-18"^^xsd:date ;
   <b>fhir:extension (</b> [
@@ -934,31 +934,32 @@ fhir:birthDate [
     ] ;
     fhir:value [ a fhir:Boolean ; fhir:v true ]
   ] )
-  …
+  ...
 </pre>
 
           <p> BackboneElements and BackboneTypes are object types. Any
             RDF property that references a modified BackboneElement or
             BackboneType is prefixed with a '_'.  Note the underscore
-            at the beginning of "_value" in the following example:</p>
+            at the beginning of "_occurrence" in the following example:</p>
 
+<a name="modifiedProperty"></a>
 <pre class="rdf">
-&lt;http://example.org/fhir/Observation/Obs123&gt; a fhir:Observation;
-  …
-  fhir:<b>_value</b> [
-    a fhir:Quantity;
-    fhir:value [ fhir:v "185"^^xsd:decimal ];
-    fhir:unit [ fhir:v "lbs" ];
-    fhir:system [
-      fhir:l &lt;http://unitsofmeasure.org&gt; ;
-      fhir:v "http://unitsofmeasure.org"^^xsd:anyURI
-    ];
-    fhir:code [ fhir:v "[lb_av]" ];
+&lt;http://example.org/fhir/Procedure/Proc123&gt; a fhir:Procedure;
+  ...
+  fhir:<b>_occurrence</b> [
+    a fhir:Timing;
+
+    fhir:repeat [
+      fhir:frequency [ fhir:v "2"^^xsd:positiveInteger ] ;
+      fhir:period [ fhir:v "1.0"^^xsd:decimal ] ;
+      fhir:periodUnit [ fhir:v "d" ]
+    ] ;
+
     <b>fhir:modifierExtension</b> (
       [
         fhir:url [
-          fhir:l &lt;http://example.org/fhir/StructureDefinition/anti-observation&gt; ;
-          fhir:v "http://example.org/fhir/StructureDefinition/anti-observation"^^xsd:anyURI ] ;
+          fhir:l &lt;http://example.org/fhir/StructureDefinition/NeverOnSunday&gt; ;
+          fhir:v "http://example.org/fhir/StructureDefinition/NeverOnSunday"^^xsd:anyURI ] ;
         fhir:value [ a fhir:Boolean ; fhir:v true ]
       ]
     ) ;
@@ -1002,7 +1003,6 @@ additional requirements around modifier extensions.
 
           <li><p>ShEx schema fhir.shex (NORMATIVE, <a href="#modExtNotInShEx">except for modifier extensions</a>).
             This schema is intended to help users validate FHIR RDF data.
-            Except as noted for <a href="modifierExtensions">modifier extensions</a>,
             It is normative in the sense that
             if some purported FHIR RDF data is
             inconsistent with the ShEx schema, and that data does not use
