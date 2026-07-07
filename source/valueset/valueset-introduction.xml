@@ -21,6 +21,7 @@
                         <li><a href="https://jira.hl7.org/browse/FHIR-52065">FHIR-52065</a>: Removed the draft and experimental Common UCUM units value set, in favor of the THO Common UCUM units value set.</li>
                         <li><a href="https://jira.hl7.org/browse/FHIR-49701">FHIR-49701</a>: Clarified behavior of the `handle-unclosed-expansion` parameter in ValueSet/$expand</li>
                         <li><a href="https://jira.hl7.org/browse/FHIR-56404">FHIR-56404</a>: Clarified ValueSet reference search parameter definition</li>
+                        <li><a href="https://jira.hl7.org/browse/FHIR-51614">FHIR-51614</a>: Clarified use of display and designation for concepts in value sets</li>
                     </ul>
                 </li>
             </ul>
