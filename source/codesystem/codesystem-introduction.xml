@@ -19,6 +19,7 @@
     <ul>
       <li><a href="https://jira.hl7.org/browse/FHIR-57372">FHIR-57372</a>: Clarified source and syntax of URIs in CodeSystem.property.uri</li>
       <li><a href="https://jira.hl7.org/browse/FHIR-56431">FHIR-56431</a>: Clarified use of filter values</li>
+      <li><a href="https://jira.hl7.org/browse/FHIR-53988">FHIR-53988</a>: Clarified use of concept property code and why there is no binding</li>
     </ul>
   </li>
 </ul>

@@ -1038,7 +1038,8 @@
 			</extension>
 			<path value="CodeSystem.concept.property.code"/>
 			<short value="Reference to CodeSystem.property.code or a FHIR defined concept-property"/>
-			<definition value="A code that is a reference to CodeSystem.property.code or is a code from [http://hl7.org/fhir/concept-properties](codesystem.html#defined-props) in the case that there is no corresponding code defined in `CodeSystem.property.code`."/>
+			<definition value="Identifies a property that is either defined in this CodeSystem (`CodeSystem.property.code`) or is a code from [http://hl7.org/fhir/concept-properties](codesystem.html#defined-props)."/>
+			<comment value="Note that when the `CodeSystem.property.code` is defined in the CodeSystem itself, there is no mechanism to create a ValueSet, so there is no terminology binding."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
