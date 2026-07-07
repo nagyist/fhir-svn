@@ -17,11 +17,47 @@
 <h1>Using Codes in Resources</h1>
 <table class="colsn"><tr><td id="wg">Responsible Owner: <a _target="blank" href="[%wg vocab%]">[%wgt vocab%]</a> Work Group</td><td id="ballot"><a href="versions.html#std-process">Standards Status</a>:<!--!ns!--><a href="versions.html#std-process">Normative</a></td></tr></table>
 
+<blockquote class="ballot-note" id="bn1">
+<p><b>Note to Balloters:</b> Key changes made since FHIR 6.0.0-ballot4:</p>
+<ul>
+  <li>Non-compatible Changes
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>Compatible, Substantive Changes
+    <ul>
+      <li>None</li>
+    </ul>
+  </li>
+  <li>Non-substantive Changes
+    <ul>
+      <li><a href="https://jira.hl7.org/browse/FHIR-54555">FHIR-54555</a>: Clarified use of the terms 'concept code' and 'code' throughout the specification</li>
+    </ul>
+  </li>
+</ul>
+<p></p>
+</blockquote>
+<blockquote style="background-color: lightblue">
+  <p><b>All Changes (including Technical Corrections not listed above):</b></p>
+  <ul>
+      <li>None</li>
+  </ul>
+</blockquote>
+
+
 <a name="bindings"></a>
 <p>
 Many elements in the FHIR resources have a <b>coded value</b>: some fixed string
-(a sequence of characters) assigned elsewhere that identifies some defined "concept". The
-sequence of characters and its meaning may be defined in one of several places:
+(a sequence of characters) assigned elsewhere that identifies some defined <i>concept</i>. 
+Throughout this specification, the term <i>concept code</i> (see <a href="codesystem-definitions.html#CodeSystem.concept.code">CodeSystem.concept.code</a>) 
+refers to this identifying string. The word <i>code</i> is used as a shorthand for <i>concept code</i> in most prose descriptions in this specification, 
+and the two terms should be treated as equivalent. Note that <code>code</code> is also the name of a FHIR primitive <a href="datatypes.html#code">data type</a> 
+&mdash; a string taken from a set of controlled values where the applicable code system is implicit rather than carried in the instance. Where element defintions, type 
+declarations, or constraint expressions reference <code>code</code> in this sense, they refer to the data type, not to a <i>concept code</i>.
+</p>
+<p>
+The coded value and its meaning may be defined in one of several places:
 </p>
 <ul>
  <li>As one of a set of fixed values defined in this specification</li>
