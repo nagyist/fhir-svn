@@ -688,6 +688,25 @@
       <condition value="tcp-8"/>
       <isSummary value="true"/>
     </element>
+    <element id="TerminologyCapabilities.codeSystem.version.content">
+      <path value="TerminologyCapabilities.codeSystem.version.content"/>
+      <short value="not-present | example | fragment | complete | supplement"/>
+      <definition value="The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CodeSystemContentMode"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The extent of the content of the code system (the concepts and codes it defines) are represented in a code system resource."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/codesystem-content-mode|6.0.0"/>
+      </binding>
+    </element>
     <element id="TerminologyCapabilities.codeSystem.version.supplement">
       <path value="TerminologyCapabilities.codeSystem.version.supplement"/>
       <short value="Canonical identifier for a supported supplement to this code system version (including supplement version)"/>
@@ -788,7 +807,7 @@
       <path value="TerminologyCapabilities.codeSystem.content"/>
       <short value="not-present | example | fragment | complete | supplement"/>
       <definition value="The extent of the content of the code system (the concepts and codes it defines) are represented in this resource instance."/>
-      <min value="1"/>
+      <min value="0"/>
       <max value="1"/>
       <type>
         <code value="code"/>
