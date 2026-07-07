@@ -175,6 +175,40 @@ jobs:
               }
 
               if (comment.user.login !== prAuthor) {
+                // Admin /triage command: forces a cold triage when the normal
+                // pull_request_target event was skipped (e.g. fork PRs held
+                // by GitHub's approval gate). Only admin comments are checked.
+                if (/\/triage\b/i.test(comment.body || '')) {
+                  let commenterPerm = 'none';
+                  try {
+                    const { data: perm } = await github.rest.repos.getCollaboratorPermissionLevel({
+                      owner, repo, username: comment.user.login,
+                    });
+                    commenterPerm = perm.permission;
+                  } catch (err) {
+                    commenterPerm = 'none';
+                  }
+
+                  if (commenterPerm === 'admin') {
+                    core.notice(`Admin ${comment.user.login} requested /triage.`);
+                    core.setOutput('should_triage', 'true');
+                    core.setOutput('security_override', 'false');
+                    core.setOutput('pr_number', String(prNumber));
+                    core.setOutput('head_sha', pr.head.sha);
+                    core.setOutput('base_sha', pr.base.sha);
+                    core.setOutput('base_ref', pr.base.ref);
+                    core.setOutput('html_url', pr.html_url);
+                    core.setOutput('trigger_kind', 'admin_triage');
+                    core.setOutput('pr_title', pr.title || '');
+                    const isFork_t = pr.head.repo && pr.head.repo.full_name !== pr.base.repo.full_name;
+                    core.setOutput('is_fork', isFork_t ? 'true' : 'false');
+                    core.setOutput('fork_label', isFork_t ? pr.head.repo.full_name : '');
+                    return;
+                  } else {
+                    core.notice(`"/triage" from non-admin ${comment.user.login} — ignoring.`);
+                  }
+                }
+
                 core.notice(`Comment is not from PR author (${comment.user.login} vs ${prAuthor}) — skipping.`);
                 core.setOutput('should_triage', 'false');
                 return;
@@ -1332,6 +1366,7 @@ jobs:
               - "pr_updated": PR was opened non-draft or received new commits.
               - "ready_for_review": a draft was just marked ready.
               - "author_responded": the PR author replied to a prior admin comment.
+              - "admin_triage": an admin used /triage to manually request triage.
               - "security_override": an admin bypassed the security scan.
 
             === Review context ===
