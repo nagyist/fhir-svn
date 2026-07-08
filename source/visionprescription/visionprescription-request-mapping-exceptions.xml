@@ -67,6 +67,12 @@
             <resource value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
         </commentsUnmatched>
     </divergentElement>
+    <divergentElement patternPath="Request.priority" resourcePath="VisionPrescription.priority">
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
+    </divergentElement>
     <divergentElement patternPath="Request.subject" resourcePath="VisionPrescription.patient">
         <missingTypes _pattern="Reference(Group)" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
