@@ -179,7 +179,6 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="GuidanceResponse.topic"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GuidanceResponse-topic"/>
         <description value="Topics associated with the guidance"/>
         <code value="topic"/>
         <type value="token"/>
