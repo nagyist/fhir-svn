@@ -515,7 +515,7 @@
 			</extension>
 			<path value="ValueSet.author"/>
 			<short value="Who authored the ValueSet"/>
-			<definition value="An individiual or organization primarily involved in the creation and maintenance of the ValueSet."/>
+			<definition value="An individual or organization primarily involved in the creation and maintenance of the ValueSet."/>
 			<min value="0"/>
 			<max value="*"/>
 			<type>
