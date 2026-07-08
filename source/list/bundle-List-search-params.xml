@@ -169,7 +169,7 @@
         <description value="Who and/or what defined the list contents (aka Author)"/>
         <code value="contributor"/>
         <type value="reference"/>
-        <expression value="List.contributor"/>
+        <expression value="List.source"/>
         <processingMode value="normal"/>
       </SearchParameter>
     </resource>
@@ -204,7 +204,7 @@
         <description value="Who and/or what contributed the list contents"/>
         <code value="source"/>
         <type value="reference"/>
-        <expression value="List.source"/>
+        <expression value="List.contributor"/>
         <processingMode value="normal"/>
       </SearchParameter>
     </resource>
