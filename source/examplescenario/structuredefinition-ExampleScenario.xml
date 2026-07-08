@@ -1003,7 +1003,7 @@
       <constraint>
         <key value="exs-26"/>
         <severity value="error"/>
-        <human value="A definition can only be provided if the type is code"/>
+        <human value="A definition can only be provided if the type is 'operation'"/>
         <expression value="definition.exists() implies type.code = 'operation' and type.system = 'http://hl7.org/fhir/restful-interaction'"/>
       </constraint>
     </element>
@@ -1011,6 +1011,7 @@
       <path value="ExampleScenario.process.step.operation.type"/>
       <short value="Kind of action"/>
       <definition value="The standardized type of action (FHIR or otherwise)."/>
+      <comment value="This binding is extensible to provide support for non-FHIR interactions as well"/>
       <min value="0"/>
       <max value="1"/>
       <type>
