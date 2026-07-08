@@ -164,6 +164,7 @@
     <divergentElement patternPath="Event.performer.actor" resourcePath="DocumentReference.author">
         <lowerCardinality _pattern="1" _resource="0" reason="Not always known"/>
         <upperCardinality _pattern="1" _resource="*" reason="Need more than one to enable broad use."/>
+        <missingTypes _pattern="Reference(HealthCareService)" reason="Unknown"/>
         <extraTypes _resource="Reference(Group)" reason="More specific to the use-case need"/>
         <shortUnmatched reason="Not always a who, sometimes a what.">
             <_pattern value="Who performed document reference"/>
@@ -176,7 +177,7 @@
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="DocumentReference.attester.party">
         <lowerCardinality _pattern="1" _resource="0" reason="Not always known or relevant"/>
-        <missingTypes _pattern="Reference(CareTeam, Device)" reason="Unknown">
+        <missingTypes _pattern="Reference(CareTeam, Device, HealthCareService)" reason="Unknown">
             <!--Old pattern: Reference(CareTeam,Device)-->
             <!--Old reason: Attestation requires specific actors-->
         </missingTypes>
