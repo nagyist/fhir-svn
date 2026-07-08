@@ -39,7 +39,7 @@
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="DetectedIssue.author">
         <lowerCardinality _pattern="1" _resource="0" reason="Generalization"/>
-        <missingTypes _pattern="Reference(Organization, CareTeam)" reason="Unknown">
+        <missingTypes _pattern="Reference(Organization, CareTeam, HealthCareService)" reason="Unknown">
             <!--Old pattern: Reference(Organization,CareTeam)-->
             <!--Old reason: Specialization-->
         </missingTypes>

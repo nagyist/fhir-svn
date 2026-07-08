@@ -87,6 +87,10 @@
             <_pattern value="Indicates how quickly the request orchestration should be addressed with respect to other requests."/>
             <resource value="Indicates how quickly the request should be addressed with respect to other requests."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.priority" resourcePath="RequestOrchestration.action.priority">
         <summary _pattern="true" _resource="false" reason="Unknown"/>
@@ -94,6 +98,10 @@
             <_pattern value="Indicates how quickly the request orchestration should be addressed with respect to other requests."/>
             <resource value="Indicates how quickly the action should be addressed with respect to other actions."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.code" resourcePath="RequestOrchestration.code">
         <shortUnmatched reason="Unknown">
