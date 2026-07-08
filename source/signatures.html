@@ -365,7 +365,7 @@ generally use JSON signatures with the JSON canonicalization in JSON resources, 
 When the signature is a JWS Digital Signature, the following rules apply:
 </p>
 <ul>
- <li>The Signature.data is base64 encoded compact serialization JWS-Signature as specified in <a href="https://tools.ietf.org/html/rfc7515">RFC 7515: JSON Web Signature (JWS). NOTE: Because JWS is already base-64 encoded, this means that the signature will be double-encoded.</a></li>
+ <li>The Signature.data is base64 encoded compact serialization JWS-Signature as specified in <a href="https://tools.ietf.org/html/rfc7515">RFC 7515: JSON Web Signature (JWS)</a>. NOTE: Because JWS is already base-64 encoded, this means that the signature will be double-encoded.</li>
  <li>The value of Signature.sigFormat is <code>application/jose</code> and this SHOULD be populated</li>
  <li>The <code>Signature.targetFormat</code> SHOULD be populated, and the value SHOULD contain a canonicalization URL from those defined above. The custom protected header property <code>canon</code> MAY be also be used to identify the canonicalization method</li>
  <li>The signature is a <a href="https://tools.ietf.org/html/rfc7515#appendix-F">Detached</a> Signature
