@@ -123,6 +123,10 @@
             <_pattern value="Indicates how quickly the medication request should be addressed with respect to other requests."/>
             <resource value="Indicates how quickly the Medication Request should be addressed with respect to other requests."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.code" resourcePath="MedicationRequest.medication">
         <lowerCardinality _pattern="0" _resource="1" reason="Unknown"/>
