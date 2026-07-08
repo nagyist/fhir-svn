@@ -978,7 +978,7 @@
     <Cell ss:StyleID="s80"><Data ss:Type="String">What document is being referenced</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s81"><Data ss:Type="String">The document being referenced, represented as an attachment. This is exclusive with the resource element</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s82"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s81"><Data ss:Type="String">RelatedArtifact.document.url is a version specific reference to the citation content (e.g. stabe), which is different to RelatedArtifact.url, which is a reference to content that can change over time</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">RelatedArtifact.document.url is a version specific reference to the citation content (e.g. stable), which is different to RelatedArtifact.url, which is a reference to content that can change over time</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s82"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s89"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s89"><NamedCell ss:Name="_FilterDatabase"/></Cell>

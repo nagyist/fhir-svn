@@ -167,7 +167,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/List-source"/>
         <description value="Who and/or what defined the list contents (aka Author)"/>
-        <code value="contributor"/>
+        <code value="source"/>
         <type value="reference"/>
         <expression value="List.source"/>
         <processingMode value="normal"/>
@@ -202,7 +202,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/List-contributor"/>
         <description value="Who and/or what contributed the list contents"/>
-        <code value="source"/>
+        <code value="contributor"/>
         <type value="reference"/>
         <expression value="List.contributor"/>
         <processingMode value="normal"/>
