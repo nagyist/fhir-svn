@@ -1,0 +1,269 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "S52.209A"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Unsp fracture of shaft of unsp ulna, init for clos fx",
+  "code" : "S52.209A",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#S52.209A (\"undefined\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#S52.209A\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at Coding\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"S52.209A\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "S52.209D"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Unsp fx shaft of unsp ulna, subs for clos fx w routn heal",
+  "code" : "S52.209D",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#S52.209D (\"undefined\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#S52.209D\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at Coding\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"S52.209D\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "code" : "M96.1",
+    "display" : "Postlaminectomy syndrome, not elsewhere classified"
+  }]
+}, "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Postlaminectomy syndrome, not elsewhere classified",
+  "code" : "M96.1",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#M96.1 (\"Postlaminectomy syndrome, not elsewhere classified\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#M96.1\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at CodeableConcept.coding[0]\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"M96.1\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "code" : "G89.4",
+    "display" : "Chronic pain syndrome"
+  }]
+}, "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Chronic pain syndrome",
+  "code" : "G89.4",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#G89.4 (\"Chronic pain syndrome\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#G89.4\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at CodeableConcept.coding[0]\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"G89.4\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "code" : "M53.88",
+    "display" : "Other specified dorsopathies, sacral and sacrococcygeal region"
+  }]
+}, "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Oth dorsopathies, sacral and sacrococcygeal region",
+  "code" : "M53.88",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#M53.88 (\"Other specified dorsopathies, sacral and sacrococcygeal region\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#M53.88\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at CodeableConcept.coding[0]\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"M53.88\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "code" : "M47.816",
+    "display" : "Spondylosis without myelopathy or radiculopathy, lumbar region"
+  }]
+}, "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Spondylosis w/o myelopathy or radiculopathy, lumbar region",
+  "code" : "M47.816",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#M47.816 (\"Spondylosis without myelopathy or radiculopathy, lumbar region\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#M47.816\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at CodeableConcept.coding[0]\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"M47.816\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "code" : "E84.0",
+    "display" : "Cystic fibrosis with pulmonary manifestations"
+  }],
+  "text" : "Cystic Fibrosis"
+}, "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "display" : "Cystic fibrosis with pulmonary manifestations",
+  "code" : "E84.0",
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "version" : "2026-04-01",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Validate \"[http://hl7.org/fhir/sid/icd-10-cm#E84.0 (\"Cystic fibrosis with pulmonary manifestations\")]\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Check \"http://hl7.org/fhir/sid/icd-10-cm#E84.0\"\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: CodeSystem found: http://hl7.org/fhir/sid/icd-10-cm|2026-04-01 for http://hl7.org/fhir/sid/icd-10-cm|2026-04-01\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: check code in (http://hl7.org/fhir/sid/icd-10-cm) at CodeableConcept.coding[0]\n1ms http://hl7.org/fhir/sid/icd-10-cm/vs|2026-04-01: Code \"E84.0\" found in http://hl7.org/fhir/sid/icd-10-cm|2026-04-01",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------

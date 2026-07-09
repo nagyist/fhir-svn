@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/audit-entity-detail-type-example"
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r5: Error: A definition for CodeSystem 'http://hl7.org/fhir/audit-entity-detail-type-example' could not be found, so the value set cannot be expanded\r\n"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/audit-entity-detail-type-example"
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r5: Error: A definition for CodeSystem 'http://hl7.org/fhir/audit-entity-detail-type-example' could not be found, so the value set cannot be expanded\r\n"
+}
+-------------------------------------------------------------------------------------

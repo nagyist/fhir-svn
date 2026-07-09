@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/ValueSet/loinc-cholesterol"}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Unable to find a server to expand 'http://hl7.org/fhir/ValueSet/loinc-cholesterol'"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/ValueSet/servicerequest-parameter-focus", "version": "6.0.0-ballot4"}####
+e: {
+  "class" : "UNKNOWN",
+  "error" : "Unable to expand included value set 'http://hl7.org/fhir/ValueSet/device-type': The value set 'http://hl7.org/fhir/ValueSet/device-type|6.0.0-ballot4' expansion has too many codes to produce (>1000) (and Error from https://tx.fhir.org/r5: Error: The value set 'http://hl7.org/fhir/ValueSet/device-type' expansion has too many codes to produce (>10000)\r\n)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/ValueSet/servicerequest-parameter-focus", "version": "6.0.0-ballot4"}####
+e: {
+  "class" : "UNKNOWN",
+  "error" : "Unable to expand included value set 'http://hl7.org/fhir/ValueSet/device-type': The value set 'http://hl7.org/fhir/ValueSet/device-type|6.0.0-ballot4' expansion has too many codes to produce (>1000) (and Error from https://tx.fhir.org/r5: Error: The value set 'http://hl7.org/fhir/ValueSet/device-type' expansion has too many codes to produce (>10000)\r\n)"
+}
+-------------------------------------------------------------------------------------

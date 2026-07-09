@@ -1,0 +1,95 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "doi:10.1016/S0735-1097(99)00126-6",
+      "concept" : [{
+        "code" : "20A",
+        "display" : "1st Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "21A",
+        "display" : "2nd Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "22A",
+        "display" : "3rd Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "28A",
+        "display" : "Ramus Laterals"
+      },
+      {
+        "code" : "29A",
+        "display" : "3rd Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "15A",
+        "display" : "1st Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "16A",
+        "display" : "2nd Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "9",
+        "display" : "Posterior descending septal perforators"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r5: Error: A definition for CodeSystem 'doi:10.1016/S0735-1097(99)00126-6' could not be found, so the value set cannot be expanded\r\n"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "doi:10.1016/S0735-1097(99)00126-6",
+      "concept" : [{
+        "code" : "20A",
+        "display" : "1st Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "21A",
+        "display" : "2nd Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "22A",
+        "display" : "3rd Marginal Coronary Artery Laterals"
+      },
+      {
+        "code" : "28A",
+        "display" : "Ramus Laterals"
+      },
+      {
+        "code" : "29A",
+        "display" : "3rd Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "15A",
+        "display" : "1st Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "16A",
+        "display" : "2nd Diagonal Coronary Artery Laterals"
+      },
+      {
+        "code" : "9",
+        "display" : "Posterior descending septal perforators"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r5: Error: A definition for CodeSystem 'doi:10.1016/S0735-1097(99)00126-6' could not be found, so the value set cannot be expanded\r\n"
+}
+-------------------------------------------------------------------------------------

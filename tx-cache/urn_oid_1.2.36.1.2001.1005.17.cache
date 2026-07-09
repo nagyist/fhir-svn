@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "urn:oid:1.2.36.1.2001.1005.17"
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "class" : "UNKNOWN",
+  "error" : "Error from https://tx.fhir.org/r5: Error: A definition for CodeSystem 'urn:oid:1.2.36.1.2001.1005.17' could not be found, so the value set cannot be expanded\r\n"
+}
+-------------------------------------------------------------------------------------

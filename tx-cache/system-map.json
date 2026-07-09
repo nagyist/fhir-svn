@@ -1,0 +1,1741 @@
+{
+  "systems" : [{
+    "system" : "doi:10.1016/S0735-1097(99)00126-6",
+    "url" : "doi:10.1016/S0735-1097(99)00126-6",
+    "authoritative" : [],
+    "candidates" : ["https://tx.fhir.org/r5"]
+  },
+  {
+    "system" : "http://acme-rehab.org",
+    "url" : "http://acme-rehab.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/config/fhir/codesystems/internal",
+    "url" : "http://acme.com/config/fhir/codesystems/internal",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/containers/additive",
+    "url" : "http://acme.com/containers/additive",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/containers/capacities",
+    "url" : "http://acme.com/containers/capacities",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/containers/codes",
+    "url" : "http://acme.com/containers/codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/containers/types",
+    "url" : "http://acme.com/containers/types",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/devices",
+    "url" : "http://acme.com/devices",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/devices/pacemakers/octane/serial",
+    "url" : "http://acme.com/devices/pacemakers/octane/serial",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/labs/reports",
+    "url" : "http://acme.com/labs/reports",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.com/list-codes",
+    "url" : "http://acme.com/list-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.lab",
+    "url" : "http://acme.lab",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/codes/SectionType",
+    "url" : "http://acme.org/codes/SectionType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/devices/clinical-codes",
+    "url" : "http://acme.org/devices/clinical-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/lab/codes/flags",
+    "url" : "http://acme.org/lab/codes/flags",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/lab/codes/organisms",
+    "url" : "http://acme.org/lab/codes/organisms",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/lab/codes/panels",
+    "url" : "http://acme.org/lab/codes/panels",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/lab/codes/tests",
+    "url" : "http://acme.org/lab/codes/tests",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/messagetypes",
+    "url" : "http://acme.org/messagetypes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.org/tests",
+    "url" : "http://acme.org/tests",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.ped/apgarcolor",
+    "url" : "http://acme.ped/apgarcolor",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.ped/apgarheartrate",
+    "url" : "http://acme.ped/apgarheartrate",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.ped/apgarmuscletone",
+    "url" : "http://acme.ped/apgarmuscletone",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.ped/apgarreflexirritability",
+    "url" : "http://acme.ped/apgarreflexirritability",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acme.ped/apgarrespiratoryeffort",
+    "url" : "http://acme.ped/apgarrespiratoryeffort",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://acmelabs.org",
+    "url" : "http://acmelabs.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://cancer.questionnaire.org/system/code/yesno",
+    "url" : "http://cancer.questionnaire.org/system/code/yesno",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://dicom.nema.org/resources/ontology/DCM",
+    "url" : "http://dicom.nema.org/resources/ontology/DCM",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://ema.europa.eu/example/WHOAnatomicalTherapeuticChemicalATCClassificationSystem",
+    "url" : "http://ema.europa.eu/example/WHOAnatomicalTherapeuticChemicalATCClassificationSystem",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/administrabledoseform",
+    "url" : "http://ema.europa.eu/example/administrabledoseform",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/authorizationstatus",
+    "url" : "http://ema.europa.eu/example/authorizationstatus",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/characteristic",
+    "url" : "http://ema.europa.eu/example/characteristic",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/comorbidity",
+    "url" : "http://ema.europa.eu/example/comorbidity",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/contraindicationsasdisease-symptom-procedure",
+    "url" : "http://ema.europa.eu/example/contraindicationsasdisease-symptom-procedure",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/country",
+    "url" : "http://ema.europa.eu/example/country",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/countryCode",
+    "url" : "http://ema.europa.eu/example/countryCode",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/diseasestatus",
+    "url" : "http://ema.europa.eu/example/diseasestatus",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/frequencyofoccurrence",
+    "url" : "http://ema.europa.eu/example/frequencyofoccurrence",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/indicationasdisease-symptom-procedure",
+    "url" : "http://ema.europa.eu/example/indicationasdisease-symptom-procedure",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/indicationsasdisease-symptom-procedure",
+    "url" : "http://ema.europa.eu/example/indicationsasdisease-symptom-procedure",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/ingredientRole",
+    "url" : "http://ema.europa.eu/example/ingredientRole",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/intendedeffect",
+    "url" : "http://ema.europa.eu/example/intendedeffect",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/interactant",
+    "url" : "http://ema.europa.eu/example/interactant",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/interactionsType",
+    "url" : "http://ema.europa.eu/example/interactionsType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/jurisdictionCode",
+    "url" : "http://ema.europa.eu/example/jurisdictionCode",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/manufactureddoseform",
+    "url" : "http://ema.europa.eu/example/manufactureddoseform",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/manufacturingOperationType",
+    "url" : "http://ema.europa.eu/example/manufacturingOperationType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/marketingAuthorizationApplicationType",
+    "url" : "http://ema.europa.eu/example/marketingAuthorizationApplicationType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/marketingAuthorizationProcedureType",
+    "url" : "http://ema.europa.eu/example/marketingAuthorizationProcedureType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/medication",
+    "url" : "http://ema.europa.eu/example/medication",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/packageItemContainerMaterial",
+    "url" : "http://ema.europa.eu/example/packageItemContainerMaterial",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/packageitemcontainertype",
+    "url" : "http://ema.europa.eu/example/packageitemcontainertype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/routeofadministration",
+    "url" : "http://ema.europa.eu/example/routeofadministration",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/shelfLifeTypePlaceHolder",
+    "url" : "http://ema.europa.eu/example/shelfLifeTypePlaceHolder",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/specialprecautionsforstorage",
+    "url" : "http://ema.europa.eu/example/specialprecautionsforstorage",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/substance",
+    "url" : "http://ema.europa.eu/example/substance",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/symptom-condition-effectclassification",
+    "url" : "http://ema.europa.eu/example/symptom-condition-effectclassification",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/therapyrelationshiptype",
+    "url" : "http://ema.europa.eu/example/therapyrelationshiptype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/undesirableeffectassymptom-condition-effect",
+    "url" : "http://ema.europa.eu/example/undesirableeffectassymptom-condition-effect",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ema.europa.eu/example/unitofpresentation",
+    "url" : "http://ema.europa.eu/example/unitofpresentation",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Domain",
+    "url" : "http://example.europa.eu/fhir/Domain",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Genus",
+    "url" : "http://example.europa.eu/fhir/Genus",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/LinkageSubstance",
+    "url" : "http://example.europa.eu/fhir/LinkageSubstance",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Modification",
+    "url" : "http://example.europa.eu/fhir/Modification",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/MoietyRole",
+    "url" : "http://example.europa.eu/fhir/MoietyRole",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Part",
+    "url" : "http://example.europa.eu/fhir/Part",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Species",
+    "url" : "http://example.europa.eu/fhir/Species",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Status",
+    "url" : "http://example.europa.eu/fhir/Status",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/Substance",
+    "url" : "http://example.europa.eu/fhir/Substance",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/SubstanceType",
+    "url" : "http://example.europa.eu/fhir/SubstanceType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/SugarSubstance",
+    "url" : "http://example.europa.eu/fhir/SugarSubstance",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.europa.eu/fhir/WeightType",
+    "url" : "http://example.europa.eu/fhir/WeightType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org",
+    "url" : "http://example.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/dosefom",
+    "url" : "http://example.org.uk/fhir/dosefom",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/doseform",
+    "url" : "http://example.org.uk/fhir/doseform",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/ingredientType",
+    "url" : "http://example.org.uk/fhir/ingredientType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/legalstatusofsupply",
+    "url" : "http://example.org.uk/fhir/legalstatusofsupply",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/route",
+    "url" : "http://example.org.uk/fhir/route",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org.uk/fhir/substances",
+    "url" : "http://example.org.uk/fhir/substances",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/CodeSystem/contexttype",
+    "url" : "http://example.org/CodeSystem/contexttype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/CodeSystem/events",
+    "url" : "http://example.org/CodeSystem/events",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/codes",
+    "url" : "http://example.org/codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/do-not-use/fhir-codes#resourceTypes",
+    "url" : "http://example.org/do-not-use/fhir-codes#resourceTypes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/animal-breed",
+    "url" : "http://example.org/fhir/CodeSystem/animal-breed",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/basic-resource-codes",
+    "url" : "http://example.org/fhir/CodeSystem/basic-resource-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/benefit-subcategory",
+    "url" : "http://example.org/fhir/CodeSystem/benefit-subcategory",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/claim-careteamrole",
+    "url" : "http://example.org/fhir/CodeSystem/claim-careteamrole",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/ex-visionservice",
+    "url" : "http://example.org/fhir/CodeSystem/ex-visionservice",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/group-example-characteristic",
+    "url" : "http://example.org/fhir/CodeSystem/group-example-characteristic",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/group-example-gender",
+    "url" : "http://example.org/fhir/CodeSystem/group-example-gender",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/group-example-owner",
+    "url" : "http://example.org/fhir/CodeSystem/group-example-owner",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/group-example-type",
+    "url" : "http://example.org/fhir/CodeSystem/group-example-type",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/indications",
+    "url" : "http://example.org/fhir/CodeSystem/indications",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/patient-contact-relationship",
+    "url" : "http://example.org/fhir/CodeSystem/patient-contact-relationship",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/pharmacy-form",
+    "url" : "http://example.org/fhir/CodeSystem/pharmacy-form",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/pharmacy-information",
+    "url" : "http://example.org/fhir/CodeSystem/pharmacy-information",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/pharmacy-refill",
+    "url" : "http://example.org/fhir/CodeSystem/pharmacy-refill",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/provider-qualification",
+    "url" : "http://example.org/fhir/CodeSystem/provider-qualification",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/CodeSystem/use-contexts",
+    "url" : "http://example.org/fhir/CodeSystem/use-contexts",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/foo-types",
+    "url" : "http://example.org/fhir/foo-types",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/modifiers",
+    "url" : "http://example.org/fhir/modifiers",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/oralservicecodes",
+    "url" : "http://example.org/fhir/oralservicecodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/fhir/v2/administrative-status",
+    "url" : "http://example.org/fhir/v2/administrative-status",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/local",
+    "url" : "http://example.org/local",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/local/if1",
+    "url" : "http://example.org/local/if1",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/mysys",
+    "url" : "http://example.org/mysys",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/questionnaires",
+    "url" : "http://example.org/questionnaires",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/requirement-categories",
+    "url" : "http://example.org/requirement-categories",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/service-category",
+    "url" : "http://example.org/service-category",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/stratification",
+    "url" : "http://example.org/stratification",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://example.org/system",
+    "url" : "http://example.org/system",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://fdasis.nlm.nih.gov",
+    "url" : "http://fdasis.nlm.nih.gov",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5"]
+  },
+  {
+    "system" : "http://fdi.org/fhir/oralsurfacecodes",
+    "url" : "http://fdi.org/fhir/oralsurfacecodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://fdi.org/fhir/oraltoothcodes",
+    "url" : "http://fdi.org/fhir/oraltoothcodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://goodhealthhospital.org/diet-type-codes",
+    "url" : "http://goodhealthhospital.org/diet-type-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://goodhealthhospital.org/supplement-type-codes",
+    "url" : "http://goodhealthhospital.org/supplement-type-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/example-metadata|20210721",
+    "url" : "http://hl7.org/fhir/CodeSystem/example-metadata|20210721",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/example-metadata|20220721",
+    "url" : "http://hl7.org/fhir/CodeSystem/example-metadata|20220721",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/measure-aggregate-method",
+    "url" : "http://hl7.org/fhir/CodeSystem/measure-aggregate-method",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/medication-intended-performer-role",
+    "url" : "http://hl7.org/fhir/CodeSystem/medication-intended-performer-role",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/nutrient-code",
+    "url" : "http://hl7.org/fhir/CodeSystem/nutrient-code",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/nutrition-product-category",
+    "url" : "http://hl7.org/fhir/CodeSystem/nutrition-product-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/task-code",
+    "url" : "http://hl7.org/fhir/CodeSystem/task-code",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/CodeSystem/usage-context-agreement-scope",
+    "url" : "http://hl7.org/fhir/CodeSystem/usage-context-agreement-scope",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/NamingSystem/iccbba-din",
+    "url" : "http://hl7.org/fhir/NamingSystem/iccbba-din",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/ValueSet/group-code",
+    "url" : "http://hl7.org/fhir/ValueSet/group-code",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/administrative-gender",
+    "url" : "http://hl7.org/fhir/administrative-gender",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5",
+    "https://term.tehik.ee/fhir",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/audit-entity-detail-type-example",
+    "url" : "http://hl7.org/fhir/audit-entity-detail-type-example",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/device-version-type",
+    "url" : "http://hl7.org/fhir/device-version-type",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/ex-coverageeligibilityresponseitemcategory",
+    "url" : "http://hl7.org/fhir/ex-coverageeligibilityresponseitemcategory",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/ex-coverageeligibilityresponseitemproductorservice",
+    "url" : "http://hl7.org/fhir/ex-coverageeligibilityresponseitemproductorservice",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/fhir-old-types",
+    "url" : "http://hl7.org/fhir/fhir-old-types",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/fhir-types",
+    "url" : "http://hl7.org/fhir/fhir-types",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/group-code",
+    "url" : "http://hl7.org/fhir/group-code",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/measure-stratifier",
+    "url" : "http://hl7.org/fhir/measure-stratifier",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/metric-category",
+    "url" : "http://hl7.org/fhir/metric-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/requirement-category",
+    "url" : "http://hl7.org/fhir/requirement-category",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/risk-assessment-type-example",
+    "url" : "http://hl7.org/fhir/risk-assessment-type-example",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/cvx",
+    "url" : "http://hl7.org/fhir/sid/cvx",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/icd-10",
+    "url" : "http://hl7.org/fhir/sid/icd-10",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "url" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/icd-9",
+    "url" : "http://hl7.org/fhir/sid/icd-9",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/ndc",
+    "url" : "http://hl7.org/fhir/sid/ndc",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/title-type",
+    "url" : "http://hl7.org/fhir/title-type",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-us-states-territories-vr",
+    "url" : "http://hl7.org/fhir/us/vr-common-library/CodeSystem/CodeSystem-us-states-territories-vr",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/uv/cqm/CodeSystem/intended-venue-codes",
+    "url" : "http://hl7.org/fhir/uv/cqm/CodeSystem/intended-venue-codes",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/fhir/v3/NullFlavor",
+    "url" : "http://hl7.org/fhir/v3/NullFlavor",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/financial-taskinputtype",
+    "url" : "http://hl7.org/financial-taskinputtype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://hl7.org/financial-taskoutputtype",
+    "url" : "http://hl7.org/financial-taskoutputtype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://i18n.example/rtl-code/",
+    "url" : "http://i18n.example/rtl-code/",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/connectathon/classCodes",
+    "url" : "http://ihe.net/connectathon/classCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/connectathon/practiceSettingCodes",
+    "url" : "http://ihe.net/connectathon/practiceSettingCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/fhir/CodeSystem/identifier-type",
+    "url" : "http://ihe.net/fhir/CodeSystem/identifier-type",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "url" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5"]
+  },
+  {
+    "system" : "http://ihe.net/qrph/adx/",
+    "url" : "http://ihe.net/qrph/adx/",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/xds/connectathon/classCodes",
+    "url" : "http://ihe.net/xds/connectathon/classCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ihe.net/xds/connectathon/eventCodes",
+    "url" : "http://ihe.net/xds/connectathon/eventCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://jurisdiction-specific.example.com/document-type-code-system",
+    "url" : "http://jurisdiction-specific.example.com/document-type-code-system",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://local-code-system.org/recorded-sex-or-gender-jurisdiction",
+    "url" : "http://local-code-system.org/recorded-sex-or-gender-jurisdiction",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://local-code-system.org/recorded-sex-or-gender-type",
+    "url" : "http://local-code-system.org/recorded-sex-or-gender-type",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://localdruglist.org",
+    "url" : "http://localdruglist.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://loinc.org",
+    "url" : "http://loinc.org",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://loinc.org|2.36",
+    "url" : "http://loinc.org|2.36",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://loinc.org|2.82",
+    "url" : "http://loinc.org|2.82",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://national.org/form",
+    "url" : "http://national.org/form",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ncforms.org/formid",
+    "url" : "http://ncforms.org/formid",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "url" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://ncit.nci.nih.gov",
+    "url" : "http://ncit.nci.nih.gov",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://nehta.gov.au/codes/medications/changetype",
+    "url" : "http://nehta.gov.au/codes/medications/changetype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://nema.org/examples/gender",
+    "url" : "http://nema.org/examples/gender",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://nucc.org/provider-taxonomy",
+    "url" : "http://nucc.org/provider-taxonomy",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://ohio.example.gov/drivers-license-sex",
+    "url" : "http://ohio.example.gov/drivers-license-sex",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://orionhealth.com/fhir/apps/specialties",
+    "url" : "http://orionhealth.com/fhir/apps/specialties",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://sig.biostr.washington.edu/projects/fm/AboutFM.html",
+    "url" : "http://sig.biostr.washington.edu/projects/fm/AboutFM.html",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info./sct",
+    "url" : "http://snomed.info./sct",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info.sct",
+    "url" : "http://snomed.info.sct",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/ct",
+    "url" : "http://snomed.info/ct",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/sct",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/sct|http://snomed.info/sct/731000124108",
+    "url" : "http://snomed.info/sct|http://snomed.info/sct/731000124108",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://snomed.info/srt",
+    "url" : "http://snomed.info/srt",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://something",
+    "url" : "http://something",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://sonomacounty.ca.gov/Health/Public-Health/Laboratory/result-codes",
+    "url" : "http://sonomacounty.ca.gov/Health/Public-Health/Laboratory/result-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://sonomacounty.ca.gov/Health/Public-Health/Laboratory/test-codes",
+    "url" : "http://sonomacounty.ca.gov/Health/Public-Health/Laboratory/test-codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/ASN1ToHL7",
+    "url" : "http://terminology.hl7.org/CodeSystem/ASN1ToHL7",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/ContinuaDeviceIdentifiers",
+    "url" : "http://terminology.hl7.org/CodeSystem/ContinuaDeviceIdentifiers",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/ContinuaHFS",
+    "url" : "http://terminology.hl7.org/CodeSystem/ContinuaHFS",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/ContinuaPAN",
+    "url" : "http://terminology.hl7.org/CodeSystem/ContinuaPAN",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/admit-source",
+    "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/allergy-intolerance-category",
+    "url" : "http://terminology.hl7.org/CodeSystem/allergy-intolerance-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/color-rgb",
+    "url" : "http://terminology.hl7.org/CodeSystem/color-rgb",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/condition-stage",
+    "url" : "http://terminology.hl7.org/CodeSystem/condition-stage",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+    "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/definition-use",
+    "url" : "http://terminology.hl7.org/CodeSystem/definition-use",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/designation-use",
+    "url" : "http://terminology.hl7.org/CodeSystem/designation-use",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/diet",
+    "url" : "http://terminology.hl7.org/CodeSystem/diet",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason",
+    "url" : "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/media-type",
+    "url" : "http://terminology.hl7.org/CodeSystem/media-type",
+    "authoritative" : [],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-admin-category",
+    "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-admin-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+    "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/organization-role",
+    "url" : "http://terminology.hl7.org/CodeSystem/organization-role",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+    "url" : "http://terminology.hl7.org/CodeSystem/organization-type",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+    "url" : "http://terminology.hl7.org/CodeSystem/restful-security-service",
+    "authoritative" : [],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+    "url" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0078",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0078",
+    "authoritative" : [],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0136",
+    "authoritative" : [],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0265",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0265",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0354",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0354",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v2-0360/2.7",
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0360/2.7",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5",
+    "https://term.tehik.ee/fhir",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActIncidentCode",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActIncidentCode",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : []
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-HL7DocumentFormatCodes",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+    "authoritative" : ["http://tx.fhir.org/r5"],
+    "candidates" : ["https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5",
+    "https://term.tehik.ee/fhir",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://unitsofmeasure.org",
+    "url" : "http://unitsofmeasure.org",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://unitsofmeasure.org|2.2",
+    "url" : "http://unitsofmeasure.org|2.2",
+    "authoritative" : [],
+    "candidates" : ["http://tx.hl7europe.eu/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "url" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5"]
+  },
+  {
+    "system" : "http://www.ama-assn.org/go/cpt",
+    "url" : "http://www.ama-assn.org/go/cpt",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.genenames.org",
+    "url" : "http://www.genenames.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes",
+    "url" : "http://www.ihe.net/xds/connectathon/healthcareFacilityTypeCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.ihe.net/xds/connectathon/practiceSettingCodes",
+    "url" : "http://www.ihe.net/xds/connectathon/practiceSettingCodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "url" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.radlex.org",
+    "url" : "http://www.radlex.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "http://www.whocc.no/atc",
+    "url" : "http://www.whocc.no/atc",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "http://www.whocc.no/atc/example",
+    "url" : "http://www.whocc.no/atc/example",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://acme.org/codes",
+    "url" : "https://acme.org/codes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://acme.org/identifiers",
+    "url" : "https://acme.org/identifiers",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-AgencyClass",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-AgencyClass",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-ArmGroupType",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-ArmGroupType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-DesignAllocation",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-DesignAllocation",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-InterventionType",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-InterventionType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-InterventionalAssignment",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-InterventionalAssignment",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-StudyType",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-StudyType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-WhoMasked",
+    "url" : "https://clinicaltrials.gov/data-about-studies/study-data-structure#enum-WhoMasked",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://fdc.nal.usda.gov/",
+    "url" : "https://fdc.nal.usda.gov/",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://fevir.net/resources/CodeSystem/179423",
+    "url" : "https://fevir.net/resources/CodeSystem/179423",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://fevir.net/resources/CodeSystem/27270",
+    "url" : "https://fevir.net/resources/CodeSystem/27270",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://fevir.net/resources/CodeSystem/27834",
+    "url" : "https://fevir.net/resources/CodeSystem/27834",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://fevir.net/sevco",
+    "url" : "https://fevir.net/sevco",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "https://fevir.net/sevco|2.0",
+    "url" : "https://fevir.net/sevco|2.0",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "https://hira.or.kr/CodeSystem/lab-result-code",
+    "url" : "https://hira.or.kr/CodeSystem/lab-result-code",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://intranet.aumc.nl/labtestcodes",
+    "url" : "https://intranet.aumc.nl/labtestcodes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://meshb.nlm.nih.gov",
+    "url" : "https://meshb.nlm.nih.gov",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://profiles.ihe.net/ITI/mCSD/CodeSystem/MCSDEndpointTypes",
+    "url" : "https://profiles.ihe.net/ITI/mCSD/CodeSystem/MCSDEndpointTypes",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://terminology.hl7.org/",
+    "url" : "https://terminology.hl7.org/",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://uts.nlm.nih.gov/uts/",
+    "url" : "https://uts.nlm.nih.gov/uts/",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://vetmed.iastate.edu/vdl",
+    "url" : "https://vetmed.iastate.edu/vdl",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.acmeonline.com",
+    "url" : "https://www.acmeonline.com",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.aphis.usda.gov",
+    "url" : "https://www.aphis.usda.gov",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html",
+    "url" : "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNMattersArticles/downloads/SE0801.pdf",
+    "url" : "https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNMattersArticles/downloads/SE0801.pdf",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.cms.gov/codes/billtype",
+    "url" : "https://www.cms.gov/codes/billtype",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.cms.gov/medicare/coding/place-of-service-codes/place_of_service_code_set.html",
+    "url" : "https://www.cms.gov/medicare/coding/place-of-service-codes/place_of_service_code_set.html",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.iana.org/time-zones",
+    "url" : "https://www.iana.org/time-zones",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "https://www.isbt128.org/uri/ABORhD",
+    "url" : "https://www.isbt128.org/uri/ABORhD",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.isbt128.org/uri/CollectionType",
+    "url" : "https://www.isbt128.org/uri/CollectionType",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "https://www.uniprot.org",
+    "url" : "https://www.uniprot.org",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:ietf:bcp:13",
+    "url" : "urn:ietf:bcp:13",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:ietf:bcp:47",
+    "url" : "urn:ietf:bcp:47",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://term.tehik.ee/fhir",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:ihe:event-type-code",
+    "url" : "urn:ihe:event-type-code",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "url" : "urn:iso:std:iso:11073:10101",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166",
+    "url" : "urn:iso:std:iso:3166",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:iso:std:iso:3166:-2",
+    "url" : "urn:iso:std:iso:3166:-2",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:iso:std:iso:4217",
+    "url" : "urn:iso:std:iso:4217",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5",
+    "http://tx.hl7europe.eu/r5",
+    "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:oid:1.2.36.1.2001.1005.17",
+    "url" : "urn:oid:1.2.36.1.2001.1005.17",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+    "url" : "urn:oid:1.2.840.114350.1.13.177.2.7.10.798268.30",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:1.3.6.1.4.1.19376.1.2",
+    "url" : "urn:oid:1.3.6.1.4.1.19376.1.2",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+    "url" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.2.4.15.1060",
+    "url" : "urn:oid:2.16.840.1.113883.2.4.15.1060",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.2.4.15.111",
+    "url" : "urn:oid:2.16.840.1.113883.2.4.15.111",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.6.133",
+    "url" : "urn:oid:2.16.840.1.113883.6.133",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.6.238",
+    "url" : "urn:oid:2.16.840.1.113883.6.238",
+    "authoritative" : [],
+    "candidates" : ["http://tx.fhir.org/r5", "https://tx.hl7.cz/r5"]
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.6.24",
+    "url" : "urn:oid:2.16.840.1.113883.6.24",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.6.69",
+    "url" : "urn:oid:2.16.840.1.113883.6.69",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:oid:2.16.840.1.113883.9.195.4.61",
+    "url" : "urn:oid:2.16.840.1.113883.9.195.4.61",
+    "authoritative" : [],
+    "candidates" : []
+  },
+  {
+    "system" : "urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd",
+    "url" : "urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd",
+    "authoritative" : [],
+    "candidates" : []
+  }]
+}
