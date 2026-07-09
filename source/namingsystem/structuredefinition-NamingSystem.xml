@@ -581,7 +581,7 @@
 			</extension>
 			<path value="NamingSystem.author"/>
 			<short value="Who authored the CodeSystem"/>
-			<definition value="An individiual or organization primarily involved in the creation and maintenance of the NamingSystem."/>
+			<definition value="An individual or organization primarily involved in the creation and maintenance of the NamingSystem."/>
 			<min value="0"/>
 			<max value="*"/>
 			<type>

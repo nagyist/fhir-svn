@@ -81,6 +81,7 @@
         </definitionUnmatched>
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="ImagingSelection.performer.actor">
+        <missingTypes _pattern="Reference(HealthCareService)" reason="Unknown"/>
         <extraTypes _resource="Reference(HealthcareService)" reason="HealthcareService is a possible performer for an imaging selection"/>
         <shortUnmatched reason="Better english">
             <_pattern value="Who performed imaging selection"/>

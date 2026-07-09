@@ -135,6 +135,7 @@
     <divergentElement patternPath="Event.performer.actor" resourcePath="Communication.recipient">
         <lowerCardinality _pattern="1" _resource="0" reason="Unknown"/>
         <upperCardinality _pattern="1" _resource="*" reason="Unknown"/>
+        <missingTypes _pattern="Reference(HealthCareService)" reason="Unknown"/>
         <extraTypes _resource="Reference(Group,HealthcareService,Location,Endpoint)" reason="Unknown"/>
         <summary _pattern="true" _resource="false" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
@@ -148,6 +149,7 @@
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="Communication.sender">
         <lowerCardinality _pattern="1" _resource="0" reason="Unknown"/>
+        <missingTypes _pattern="Reference(HealthCareService)" reason="Unknown"/>
         <extraTypes _resource="Reference(HealthcareService,Endpoint)" reason="Unknown"/>
         <summary _pattern="true" _resource="false" reason="Unknown"/>
         <shortUnmatched reason="Unknown">

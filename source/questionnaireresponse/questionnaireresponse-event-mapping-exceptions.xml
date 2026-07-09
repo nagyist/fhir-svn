@@ -80,7 +80,10 @@
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="QuestionnaireResponse.author">
         <lowerCardinality _pattern="1" _resource="0" reason="The resource scope is broader than the pattern assumptions and this element will not always be known"/>
-        <missingTypes _pattern="Reference(CareTeam)" reason="The missing type(s) never apply in any context where this resource is used"/>
+        <missingTypes _pattern="Reference(CareTeam, HealthCareService)" reason="Unknown">
+            <!--Old pattern: Reference(CareTeam)-->
+            <!--Old reason: The missing type(s) never apply in any context where this resource is used-->
+        </missingTypes>
         <extraTypes _resource="Reference(Group)" reason="This should be in the pattern too"/>
         <shortUnmatched reason="Incorporates content from profile with context-specific wording">
             <_pattern value="Who performed questionnaire response"/>

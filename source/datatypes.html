@@ -399,7 +399,6 @@ Notes:
 </p>
 <ul>
  <li>For all the types, the XML, JSON and Turtle representations of the primitive values are the same except for different escaping in XML and JSON, and some more specific type indications in RDF</li>
- <li>For string content,  parsers and serializers MAY retain, escape or strip unescaped non-supported UNICODE characters. If the characters are retained, a subsequent application-layer process can then determine appropriate handling based on context.</li>
  <li>For decimal values, the XML special values <code>INF</code>, <code>-INF</code> and <code>NaN</code> are not allowed, and JSON is restricted to the <a href="https://www.w3.org/TR/xmlschema-2/">precision limits documented in XML schema for xs:double and xs:decimal</a></li>
  <li>The precision of the decimal value has significance:<a name="precision"></a>
     <ul>
@@ -415,10 +414,6 @@ Notes:
  <li>Issues with the specified regexes:
    <ul>
      <li>The regexes are provided to assist with tooling, but are informative, <b>not normative</b>. There are several issues with the regexes.</li>
-     <li>The string regex has problems with Unicode - specifically, it might or might not allow Unicode whitespace to some degree depending on Unicode support in the regex engine being used.
-        The regexes <code>[\r\n\t\x{0020}-\x{FFFF}]*</code> or <code>[\r\n\t\u0020-\uFFFF]*</code> are better expressions of the constraints on string, but poorly supported (see <a href="https://www.regular-expressions.info/unicode.html">Regex Tutorial</a> for details).
-        The <code>string</code> regex also applies to <code>markdown</code> as well. The regex does not enforce the length limit</li>
-     <li>The Unicode issues also apply to the regex for <code>code</code>.</li>
      <li>The regexes should be qualified with start of string and end of string anchors based on the regex implementation used (e.g., caret '^' and dollar-sign '$' for JavaScript, POSIX, XML and XPath; '\A' and '\Z' for .NET, Java, Python and others; please verify these definitions with the regex implementation used).</li>
      <li>The regexes may allow a broader set of values than are actually valid (e.g., leap years) so additional validation is always needed.</li>
    </ul>
@@ -463,6 +458,30 @@ Notes:
 A simple way to convert plain text to be safe as markdown is to prefix any of the characters *, &amp;, #, [, &lt;, >, and ` with a backslash (\).
 When presenting markdown as plain text, implementers may wish to reverse this transform.
 [%end-note%]
+
+<a name="unicode"></a>
+<h3>Handling Unicode</h3>
+
+<p>
+IETF <a href="https://www.rfc-editor.org/rfc/rfc9839.html">RFC 9839</a> discusses particular sets of Unicode characters that 
+should be avoided on JSON (and XML) mostly because they are not expected or permitted in well-formed unicode. 
+This specification does not prohibit such characters, but implementations SHOULD prohibit their use, and Implementation Guides 
+may prohibit their use.
+</p>
+<p>
+Parsers and serializers MAY retain, escape or strip unescaped non-supported UNICODE characters.
+If the characters are retained, a subsequent application-layer process can then determine appropriate handling based on context.
+</p>
+<p>
+The string regex has problems with Unicode - specifically, it might or might not allow Unicode whitespace to some degree depending
+on Unicode support in the regex engine being used.
+The regexes <code>[\r\n\t\x{0020}-\x{FFFF}]*</code> or <code>[\r\n\t\u0020-\uFFFF]*</code> are better expressions of the constraints 
+on string, but poorly supported (see <a href="https://www.regular-expressions.info/unicode.html">Regex Tutorial</a> for details).
+The <code>string</code> regex also applies to <code>markdown</code> as well. The regex does not enforce the length limit.
+</p>
+<p>The Unicode issues also apply to the regex for <code>code</code>.</p>
+
+
 
 <a name="representations"></a>
 <h3>Representations in XML, JSON, and Turtle</h3>
@@ -692,16 +711,22 @@ is a text representation of the code defined by the <code>system</code> and is u
 the meaning of the code by an application that is not aware of the <code>system</code>.
 </p>
 <p>
-If the 'display' element is populated, the string used in <code>display</code> SHALL be one of the display strings defined for
-that code by the code system. Code systems may define multiple display strings for a single code, by use of:
+If the 'display' element is populated, the string used in <code>display</code> SHALL be 
+one of the display strings defined for that code by one of the in-scope versions of the code system
+or an in-scope code system supplement for that code system. Code systems or supplements 
+may define multiple display strings for a single code, by use of:
 </p>
 <ul>
   <li><code>CodeSystem.concept.display</code></li>
-  <li><code>CodeSystem.concept.designation.value</code> (including in supplements)</li>
-</ul>
-<p>Note that displays defined in value sets (<code>ValueSet.include.concept.display</code> and <code>ValueSet.include.concept.designation.value</code>)
-are not allowed in <code>Coding.display</code>.
-</p>
+  <li><code>CodeSystem.concept.designation.value</code></li>
+</ul> 
+<p>Notes:</p>
+<ul>
+  <li>Code systems and supplements may define multiple display strings for a single code</li>
+  <li>If a Coding.version is specified, that is the only version of the code system in scope. If not, the applicable version(s) may be established by other context, such as meta.profile or validator configuration.</li>
+  <li>Displays defined in value sets (<code>ValueSet.include.concept.display</code> and <code>ValueSet.include.concept.designation.value</code>) are not allowed in <code>Coding.display</code></li>
+</ul>  
+
 <p>
 If one of the available display strings is labeled as preferred, it SHOULD be used (note that <code>CodeSystem.concept.display</code> is preferred
 for the base resource language if it is populated, but other display strings may be preferred in other languages, or for other usages).
@@ -1199,6 +1224,11 @@ simply "structured numbers" - for example, blood pressure measurements (e.g., "1
 A proper ratio has both a numerator and a denominator; however, these are not mandatory in order
 to allow an invalid ratio with an extension with further information.
 </p>
+
+<blockquote class="ballot-note" id="bn1">
+  <p><b>Note to Balloters:</b> Ratio.denominator has been changed from a Quantity to a SimpleQuantity, 
+  on the basis that it does not make sense to use a comparator on a denominator</p>
+</blockquote>
 
 <div class="use">
 <p><b>Constraints</b></p>
@@ -1794,6 +1824,17 @@ Notes:
 Signature is used in the following places: [%dtusage Signature%], and also there is an
 extension: [[[http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature]]].
 </p>
+
+<a name="sig-issues"></a>
+<h3>Known Issues:</h3>
+<p>
+There are situations where FHIR requires data to be transformed as part of the exchange process and
+these transformations will potentially cause signature issues unless a custom canonicalization mechanism
+is chosen that takes the changes into account.  These include:
+</p>
+<ul>
+  <li>Expectations for translating relative urls into absolute urls or moving referenced data inline in the <a href="https://build.fhir.org/ig/HL7/bulk-data/">Bulk Data Exchange</a> portion of the spec.</li>
+</ul>
 
 <a name="Annotation"></a>
 <a name="annotation"></a>
