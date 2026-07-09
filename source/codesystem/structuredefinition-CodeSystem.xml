@@ -538,7 +538,7 @@
 			</extension>
 			<path value="CodeSystem.author"/>
 			<short value="Who authored the CodeSystem"/>
-			<definition value="An individiual or organization primarily involved in the creation and maintenance of the CodeSystem."/>
+			<definition value="An individual or organization primarily involved in the creation and maintenance of the CodeSystem."/>
 			<min value="0"/>
 			<max value="*"/>
 			<type>
