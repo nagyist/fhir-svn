@@ -23711,7 +23711,6 @@ v: {
   "class" : "UNKNOWN",
   "server" : "https://tx.fhir.org/r5",
   "diagnostics" : "0ms tx-op\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Analysing urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1 for validation purposes\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Parameters: disp-lang=en-AU, generate-narrative, include-designations, default-to-latest\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/900000000000207008\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Prepare include[0]: \"(urn:ietf:bcp:13)\"\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: CodeSystem found: \"urn:ietf:bcp:13|null\"\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Validate \"[undefined#xml (\"undefined\")]\" and infer system\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Check \"undefined#xml\"",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -23786,7 +23785,6 @@ v: {
   "class" : "UNKNOWN",
   "server" : "https://tx.fhir.org/r5",
   "diagnostics" : "0ms tx-op\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Analysing urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1 for validation purposes\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Parameters: disp-lang=en-AU, generate-narrative, include-designations, default-to-latest\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/900000000000207008\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Prepare include[0]: \"(urn:ietf:bcp:13)\"\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: CodeSystem found: \"urn:ietf:bcp:13|null\"\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Validate \"[undefined#json (\"undefined\")]\" and infer system\n0ms urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1: Check \"undefined#json\"",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -23826,6 +23824,156 @@ v: {
         "code" : "not-in-vs"
       }],
       "text" : "The provided code '#json' was not found in the value set 'urn:uuid:fe3ca06d-e8b7-4898-848b-86b05a3b6922|1'"
+    },
+    "expression" : ["code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "xml"
+}, "url": "urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b", "version": "1", "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"true", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "code" : "xml",
+  "severity" : "error",
+  "error" : "The System URI could not be determined for the code 'xml' in the ValueSet 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'; The provided code '#xml' was not found in the value set 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Analysing urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1 for validation purposes\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Parameters: disp-lang=en-AU, generate-narrative, include-designations, default-to-latest\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/900000000000207008\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Prepare include[0]: \"(urn:ietf:bcp:13)\"\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: CodeSystem found: \"urn:ietf:bcp:13|null\"\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Validate \"[undefined#xml (\"undefined\")]\" and infer system\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Check \"undefined#xml\"",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNABLE_TO_INFER_CODESYSTEM"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r5"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "cannot-infer"
+      }],
+      "text" : "The System URI could not be determined for the code 'xml' in the ValueSet 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'"
+    },
+    "expression" : ["code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r5"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code '#xml' was not found in the value set 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'"
+    },
+    "expression" : ["code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "json"
+}, "url": "urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b", "version": "1", "langs":"en-AU", "useServer":"true", "useClient":"false", "guessSystem":"true", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "profile-url",
+    "valueString" : "urn:uuid:8250d817-124b-4bc9-858f-678cc0183af6"
+  },
+  {
+    "name" : "excludeNested",
+    "valueBoolean" : false
+  },
+  {
+    "name" : "includeDesignations",
+    "valueBoolean" : true
+  },
+  {
+    "name" : "system-version",
+    "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008"
+  }]
+}}####
+v: {
+  "code" : "json",
+  "severity" : "error",
+  "error" : "The System URI could not be determined for the code 'json' in the ValueSet 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'; The provided code '#json' was not found in the value set 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r5",
+  "diagnostics" : "0ms tx-op\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Analysing urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1 for validation purposes\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Parameters: disp-lang=en-AU, generate-narrative, include-designations, default-to-latest\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Version Rules: default:http://snomed.info/sct#http://snomed.info/sct/900000000000207008\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Prepare include[0]: \"(urn:ietf:bcp:13)\"\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: CodeSystem found: \"urn:ietf:bcp:13|null\"\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Validate \"[undefined#json (\"undefined\")]\" and infer system\n0ms urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1: Check \"undefined#json\"",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNABLE_TO_INFER_CODESYSTEM"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r5"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "cannot-infer"
+      }],
+      "text" : "The System URI could not be determined for the code 'json' in the ValueSet 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'"
+    },
+    "expression" : ["code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r5"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code '#json' was not found in the value set 'urn:uuid:3ba5015e-aa7f-4e70-af36-1c326dd7c55b|1'"
     },
     "expression" : ["code"]
   }]
