@@ -265,9 +265,8 @@ environment, but there is no explicit notion of this in the interface itself.
  <li>Servers MAY support multiple fragment instances for the same code system instance version. When adopting this approach,
   server implementers should take special care to provide a coherent, merged hierarchy reflected in the parent and child properties.</li>
  <li>Care should be taken to ensure the code system resulting from referring to the multiple fragments is aligned with the complete code system. </li>
- <li>Supplements MAY be used with fragments. Supplements SHOULD define the version of they code system they supplement if the code system is versioned.</li>
- <li>Add documentation to the FHIR terminology service page in new section 7.4: Servers must populate TerminologyCapabilities.implementation.fragmentSupport
-   to clarify how fragments are supported in the server implementation.</li>
+ <li>Supplements MAY be used with fragments. Supplements SHOULD define the version of the code system they supplement if the code system is versioned.</li>
+ <li>Servers must populate TerminologyCapabilities.implementation.fragmentSupport to clarify how fragments are supported in the server implementation.</li>
 </ul>
 
 <a name="expand"></a>
