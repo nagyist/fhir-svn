@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <extension url="http://hl7.org/fhir/build/StructureDefinition/description">
-      <valueString value="Consent withholding access to data for Treatment exept for Emergency Treatment"/>
+      <valueString value="Consent withholding access to data for Treatment except for Emergency Treatment"/>
     </extension>
     <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
       <valueString value="consent-example-Emergency"/>
