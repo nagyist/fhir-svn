@@ -29,7 +29,7 @@
         </blockquote>
         <blockquote class="ballot-note" id="bn2">
             <p><b>Ballot Question:</b> <a href="https://jira.hl7.org/browse/FHIR-51119">FHIR-51119</a> added 
-            ValueSet.copmose.include.filter.filter 0..* @filter to support specifying a set of concept codes 
+            ValueSet.compose.include.filter.filter 0..* @filter to support specifying a set of concept codes 
             that are the <i>value</i> of a filter operator. The Terminology Infrastructure Work Group would
             like feedback on this addition. Specifically, Does this add too much complexity, or are there 
             valid use cases for this new element? Will you implement it? Do you have an example to contribute?
