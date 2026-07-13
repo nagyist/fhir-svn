@@ -49,6 +49,17 @@
             <resource value=""/>
         </commentsUnmatched>
     </divergentElement>
+    <divergentElement patternPath="Event.statusReason" resourcePath="DiagnosticReport.statusReason">
+        <definitionUnmatched reason="Unknown">
+            <_pattern value="Captures the reason for the current state of the diagnostic report."/>
+            <resource value="Captures the reason for the current state of the DiagnosticReport."/>
+        </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="This is generally only used for &quot;exception&quot; statuses such as &quot;not-done&quot;, &quot;suspended&quot; or &quot;cancelled&quot;.  The reason for performing the event at all is captured in reasonCode, not here.&#10;."/>
+            <resource value="This is generally only used for &quot;exception&quot; statuses such as &quot;not-done&quot;, &quot;suspended&quot; or &quot;cancelled&quot;."/>
+        </commentsUnmatched>
+    </divergentElement>
+    <doubleMappedElement patternPath="Event.statusReason" reason="Unknown"/>
     <divergentElement patternPath="Event.category" resourcePath="DiagnosticReport.category">
         <bindingExistence _pattern="false" _resource="true" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
@@ -121,12 +132,13 @@
         </definitionUnmatched>
         <commentsUnmatched reason="Unknown">
             <_pattern value="This indicates when the activity actually occurred or is occurring, not when it was asked/requested/ordered to occur.  For the latter, look at the occurence element of the  Request this {{event}} is &quot;basedOn&quot;.  The status code allows differentiation of whether the timing reflects a historic event or an ongoing event.  Ongoing events should not include an upper bound in the Period or Timing.bounds.&#10;."/>
-            <resource value="See the notes on Clinically Relevant Time in the DiagnosticReport resource notes."/>
+            <resource value="See the [notes](diagnosticreport.html#10.3.6.1) on Clinically Relevant Time in the DiagnosticReport resource notes."/>
         </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Event.performer.actor" resourcePath="DiagnosticReport.performer">
         <lowerCardinality _pattern="1" _resource="0" reason="Unknown"/>
         <upperCardinality _pattern="1" _resource="*" reason="Unknown"/>
+        <missingTypes _pattern="Reference(HealthCareService)" reason="Unknown"/>
         <extraTypes _resource="Reference(HealthcareService)" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
             <_pattern value="Who performed diagnostic report"/>
@@ -140,7 +152,7 @@
     <divergentElement patternPath="Event.performer.actor" resourcePath="DiagnosticReport.resultsInterpreter">
         <lowerCardinality _pattern="1" _resource="0" reason="Unknown"/>
         <upperCardinality _pattern="1" _resource="*" reason="Unknown"/>
-        <missingTypes _pattern="Reference(Device)" reason="Unknown"/>
+        <missingTypes _pattern="Reference(Device, HealthCareService)" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
             <_pattern value="Who performed diagnostic report"/>
             <resource value="Who analyzed and reported the conclusions and interpretations"/>

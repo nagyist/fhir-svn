@@ -114,6 +114,10 @@
             <_pattern value="Indicates how quickly the device request should be addressed with respect to other requests."/>
             <resource value="Indicates how quickly the request should be addressed with respect to other requests."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.doNotPerform" resourcePath="DeviceRequest.doNotPerform">
         <shortUnmatched reason="Unknown">
@@ -192,7 +196,7 @@
     </divergentElement>
     <divergentElement patternPath="Request.authoredOn" resourcePath="DeviceRequest.authoredOn">
         <shortUnmatched reason="Unknown">
-            <_pattern value="When request was created/transitioned to active"/>
+            <_pattern value="When request was created/transitioned to active (e.g. signed/authorized)"/>
             <resource value="When recorded"/>
         </shortUnmatched>
         <definitionUnmatched reason="Unknown">

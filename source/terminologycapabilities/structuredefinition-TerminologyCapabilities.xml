@@ -376,7 +376,7 @@
       <path value="TerminologyCapabilities.jurisdiction"/>
       <short value="Jurisdiction of the authority that maintains the terminology capabilities (if applicable)"/>
       <definition value="A legal or geographic region in which the authority that maintains the resource is operating.  In general, the jurisdiction is also found in the useContext.  The useContext may reference additional jurisdictions because the defining jurisdiction does not necessarily limit the jurisdictions of use."/>
-      <comment value="It may be possible for the terminology capabilities to be used in jurisdictions other than those for which it was originally designed or intended.&#xA;&#xA;DEPRECATION NOTE: For consistency, implementations are encouraged to migrate to using the new 'jurisdiction' code in the useContext element.  (I.e. useContext.code indicating http://terminology.hl7.org/CodeSystem/usage-context-type#jurisdiction and useContext.valueCodeableConcept indicating the jurisdiction.)"/>
+      <comment value="It may be possible for the terminology capabilities to be used in jurisdictions other than those for which it was originally designed or intended."/>
       <min value="0"/>
       <max value="*"/>
       <type>
@@ -556,6 +556,32 @@
       <max value="1"/>
       <type>
         <code value="url"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="TerminologyCapabilities.implementation.fragmentSupport">
+      <path value="TerminologyCapabilities.implementation.fragmentSupport"/>
+      <short value="Describes how fragments are supported"/>
+      <definition value="This element provides a description of how fragments are supported (or not)."/>
+      <comment value="Presence of the fragmentSupport element implies that the server supports fragments in some way. This element typically documents whether a server supports multiple fragments of the same code system, or whether an import facility (or similar) is expected to synthesize a single combined code system for internal use; whether fragments are disjoint, may overlap, or may be subsets of each other; and clarify behavior when multiple fragments or a fragment or example code system contain differing information for the same concept."/>
+      <meaningWhenMissing value="If this is not present, the server can be assumed to not support fragments"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="markdown"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="TerminologyCapabilities.implementation.supplementSupport">
+      <path value="TerminologyCapabilities.implementation.supplementSupport"/>
+      <short value="Describes how supplements are supported"/>
+      <definition value="This element provides a description of how supplements are supported (or not)."/>
+      <comment value="Presence of the supplementSupport element implies that the server supports supplements in some way. This element typically documents whether a server supports code system supplements of complete code systems and/or fragments."/>
+      <meaningWhenMissing value="If this is not present, the server can be assumed to not support supplements"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="markdown"/>
       </type>
       <isSummary value="true"/>
     </element>

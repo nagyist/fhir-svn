@@ -83,6 +83,10 @@
             <_pattern value="Indicates how quickly the claim should be addressed with respect to other requests."/>
             <resource value="The provider-required urgency of processing the request. Typical values include: stat, normal, deferred."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value="If a claim processor is unable to complete the processing as per the priority then they should generate an error and not process the request."/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.subject" resourcePath="Claim.subject">
         <shortUnmatched reason="Unknown">
@@ -101,7 +105,7 @@
     <divergentElement patternPath="Request.authoredOn" resourcePath="Claim.created">
         <lowerCardinality _pattern="0" _resource="1" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
-            <_pattern value="When request was created/transitioned to active"/>
+            <_pattern value="When request was created/transitioned to active (e.g. signed/authorized)"/>
             <resource value="Resource creation date"/>
         </shortUnmatched>
         <definitionUnmatched reason="Unknown">

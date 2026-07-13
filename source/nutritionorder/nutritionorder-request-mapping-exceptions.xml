@@ -92,6 +92,10 @@
             <_pattern value="Indicates how quickly the nutrition order should be addressed with respect to other requests."/>
             <resource value="Indicates how quickly the Nutrition Order should be addressed with respect to other        requests."/>
         </definitionUnmatched>
+        <commentsUnmatched reason="Unknown">
+            <_pattern value="Different systems, organizations, and/or jurisdictions may have differing business expectations around the same priority code.  For timing critical requests, it is best to make the timing requirement explicit in Request.effectiv rather than relying on a priority code to indicate performance timing expectations."/>
+            <resource value=""/>
+        </commentsUnmatched>
     </divergentElement>
     <divergentElement patternPath="Request.code" resourcePath="NutritionOrder.oralDiet.type">
         <upperCardinality _pattern="1" _resource="*" reason="Unknown"/>
@@ -246,7 +250,7 @@
     <divergentElement patternPath="Request.authoredOn" resourcePath="NutritionOrder.dateTime">
         <lowerCardinality _pattern="0" _resource="1" reason="Unknown"/>
         <shortUnmatched reason="Unknown">
-            <_pattern value="When request was created/transitioned to active"/>
+            <_pattern value="When request was created/transitioned to active (e.g. signed/authorized)"/>
             <resource value="Date and time the nutrition order was requested"/>
         </shortUnmatched>
         <definitionUnmatched reason="Unknown">
