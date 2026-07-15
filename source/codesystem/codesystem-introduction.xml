@@ -43,7 +43,7 @@ Code systems define which codes (symbols and/or expressions) exist, and how they
 select a set of codes from one or more code systems to specify which codes can be used in a particular context.
 </p>
 <p>
-The CodeSystem resource is used to declare the existence of a code system, and its attributes. Here are examples of CodeSystem elements:
+The CodeSystem resource is used to declare the existence of and describe a code system, code system fragment or code system supplement and its attributes, and optionally define its content. Here are examples of CodeSystem elements:
 </p>
 <ul>
  <li>Identifying URL and version</li>
@@ -60,7 +60,7 @@ additional designations and properties.
 </p>
 <p>
 The CodeSystem resource is not intended to support the process of maintaining code systems. 
-Instead, the focus is on publishing the properties and optionally the content of a code 
+The focus is on publishing the properties and optionally the content of a code 
 system for use throughout the FHIR eco-system, such as to support value set expansion and 
 validation. 
 Note that code systems external to HL7 (SNOMED CT, LOINC, RxNorm, ICD family, etc.) 
@@ -83,11 +83,7 @@ the filters and properties associated with those code systems.
 </ul>
 
 <p>
-The <code>CodeSystem</code> resource declares the existence of a code system and its key properties including its preferred identifier.
-The <code>NamingSystem</code> resource identifies the existence of a code or identifier system, and its possible and preferred identifiers. 
-Ideally there would be only authoritative CodeSystem resources (identified by canonical URL and business version) that are provided by the code system publisher, with multiple copies distributed on additional FHIR servers or elsewhere and used where needed.
-Additionally, there may be multiple authoritative <code>NamingSystem</code> resources for a code system, but ideally there
-would be only one authoritative <code>CodeSystem</code> resource (identified by its canonical URL) that is provided by the code system publisher, with multiple copies distributed on additional FHIR servers or elsewhere and used where needed.
+The <code>CodeSystem</code> resource declares the existence of a code system and its key properties including its preferred identifier. The <code>NamingSystem</code> resource identifies the existence of a code or identifier system, and its possible and preferred identifiers. Ideally there would be only authoritative CodeSystem resources (identified by canonical URL and business version) that are provided by the code system publisher, with multiple copies distributed on additional FHIR servers or elsewhere and used where needed.
 </p>
 <p>
 Both Code System supplements and <a href="conceptmap.html">Concept Maps</a> may be used to define relationships between concepts 
@@ -110,25 +106,22 @@ should be familiar with the content in <a href="terminologies.html">Using Codes 
 <a name="ident"></a>
 <h3>CodeSystem Identification</h3>
 <p>
-A code system has three identifiers. The first two can be used to reference the code system in the FHIR context:
+A code system has three identifiers, <code>url</code>, <code>identifier</code>, and <code>id</code>.
 </p>
 <ul>
  <li><code>CodeSystem.url</code>: The canonical URL that never changes for this code system - it is the same in every copy. The element is named <code>url</code> rather than <code>uri</code> for legacy reasons and to strongly encourage providing a resolvable URL as the identifier whenever possible.  This canonical URL is used to refer to all instances of this particular code system across all servers and systems. Ideally, this URI should be a URL which resolves to the location of the master version of the code system, though this is not always possible.
  </li>
+ <li><code>CodeSystem.identifier</code>: A system/value pair that is used to identify the code system in other contexts (such as an OID in an <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3</a> specification)</li>
+ <li><code>CodeSystem.id</code>: The <a href="resource.html#id">logical id</a> on the system that holds the CodeSystem resource instance - this typically is expected to change as the resource moves from server to server.
+ </li>
 </ul>
+
 <blockquote>
 <p>
 For example, for CodeSystems that are part of the FHIR specification, CodeSystem.url is the url where the CodeSystem may be accessed in the FHIR specification.   However, while a new version of the FHIR specification is being prepared, new code systems that are published in CI build versions will not be found in the released FHIR specification version. 
 </p>
 </blockquote>
-<p>
-The code system identifier is used for references to the code system outside of FHIR:
-</p>
- <ul>
- <li><code>CodeSystem.identifier</code>: A system/value pair that is used to identify the code system in other contexts (such as an OID in an <a href="https://www.hl7.org/implement/standards/product_brief.cfm?product_id=186">HL7 v3</a> specification)</li>
- <li><code>CodeSystem.id</code>: The <a href="resource.html#id">logical id</a> on the system that holds the CodeSystem resource instance - this typically is expected to change as the resource moves from server to server.
- </li>
-</ul>
+
 <p>
 For further information regarding resource identification, see <a href="resource.html#id">Resource Identity</a>.
 </p>
@@ -138,6 +131,7 @@ This means that each code system has 2 different URIs that can be used to refere
 its canonical URL (the <code>url</code> element), and its local location from which it may be retrieved (which includes the <code>id</code> element).
 Most references to code systems use the canonical URL because it is stable and does not change from one FHIR server instance to another.
 </p>
+
 <p>
 Alternatively, the <code>identifier</code> and <code>version</code> elements may be used to reference this code system in a 
 design, a profile, a <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=7">CDA</a> template 
