@@ -103,13 +103,17 @@ is often longer. All concepts SHOULD have a <code>display</code> and a <code>def
 mandatory because there are many cases where no such properties are provided, in spite of their utility and importance
 for clear and safe communication.
 </p>
+
 <p>
-In addition to the display and definition, a concept can have one or more <code>designation</code> elements. 
-The display is equivalent to a special designation with an implied <code>designation.use</code> meaning "primary code/designation" 
-and a language equal to the <a href="resource.html#language">Resource Language</a>. The designations can provide additional displays
-for other language, as well as designations for other purposes. 
-When using concepts, applications use the <code>display</code> and <code>designation</code> unless the language or usage in context provides a reason
-to use one of the designations.
+The display is equivalent to a designation with an implied <code>designation.use</code> of <i>preferredForLanguage</i> and a language equal to the <a href="resource.html#language">Resource Language</a>.
+</p>
+
+<p>
+In addition to the display and definition, a concept can have one or more <code>designation</code> elements. The designations can provide additional displays for other languages, as well as designations for other purposes. When using concepts, applications use the <code>display</code> unless the language or usage in context provides a reason to use one of the designations.
+</p>
+
+<p>
+Language translations can be provided in a <a href="codesystem.html#supplements">code system supplement</a> if they cannot be provided in the code system itself.
 </p>
 
 <a name="properties"></a>
