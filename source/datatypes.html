@@ -1387,6 +1387,11 @@ errors.
 
 [%dt Identifier 9%]
 
+<p>
+Identifiers are intended to uniquely refer to the entity they appear on or are referencing.  They are not used to
+categorize.  Additional guidance on identifier use can be found on the <a href="resource.html#identifiers">Resource</a>,
+<a href="event.html#identifier">Event pattern</a>, and <a href="request.html#identifier">Request pattern</a> pages.
+</p>
 
 <p>
 The <code>system</code> is an absolute URI that defines a set of identifiers (i.e., how the <code>value</code> is made unique).
@@ -1430,7 +1435,7 @@ Identifiers are expected to be globally unique by nature of the combination of s
 In some cases, the 'value' element is already globally unique independent of Identifier.system.
 Typically, these are absolute URIs of some kind (e.g., an OID, a UUID, or a URI with no trailing local part).
 In such a case, an <code>Identifier.system</code> value <a href="identifier-registry.html">may be established</a> by the assigner
-or community to identify that collection of identifiers
+or community to identify that collection of identifiers.
 </p>
 <p>
 When using globally unique identifiers that are expressible as URIs as a value, a system SHALL be provided.
