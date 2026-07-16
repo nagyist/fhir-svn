@@ -1,6 +1,7 @@
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
 
-<div class="ballot-note" data-augury-generated="true" id="bn1">
+<div>
+<blockquote class="ballot-note" data-augury-generated="true" id="bn1">
   <p><b>Note to Balloters:</b>
   Since the previous ballot the Bundle resource received two non-compatible corrections (withdrawal of the deprecated <code>Bundle.signature</code> element and
   removal of the entry-reference restriction on <code>Parameters</code> resources), one compatible substantive correction addressing the "escape valve" values
@@ -18,6 +19,7 @@
   <ul>
     <li>Applied planned spelling and abbreviation corrections across the Bundle notes narrative, transaction/reference examples, and element definitions [<a href="https://jira.hl7.org/browse/FHIR-55143">FHIR-55143</a>]</li>
   </ul>
+</blockquote>
 </div>
 
 <div>
