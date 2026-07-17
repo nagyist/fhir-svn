@@ -1,6 +1,6 @@
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
 
-<div>
+<div class="ballot-note" >
     <blockquote class="ballot-note" id="bn1">
         <p><b>Note to Balloters:</b> Key changes made since FHIR 6.0.0-ballot4:</p>
         <ul>
@@ -16,6 +16,7 @@
             </li>
             <li>Non-substantive Changes
                 <ul>
+                    <li><a href="https://jira.hl7.org/browse/FHIR-53766">FHIR-53766</a>: <code>jurisdiction</code> is no longer deprecated but retains an note describing the prior guidance and current intent</li>
                     <li><a href="https://jira.hl7.org/browse/FHIR-54473">FHIR-54473</a>: FHIR Mapping Language not ready for normative (moved to mapping-language IG with StructureMap)</li>
                 </ul>
             </li>
