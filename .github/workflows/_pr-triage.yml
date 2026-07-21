@@ -477,8 +477,17 @@ jobs:
           BASE_REF: ${{ needs.eligibility.outputs.base_ref }}
           HEAD_SHA: ${{ needs.eligibility.outputs.head_sha }}
           SECURITY_OVERRIDE: ${{ needs.eligibility.outputs.security_override }}
+          IS_FORK: ${{ needs.eligibility.outputs.is_fork }}
+          PR_NUMBER: ${{ needs.eligibility.outputs.pr_number }}
         run: |
           set -e
+
+          # For fork PRs (and workflow_run), the checkout is on the base
+          # branch so the fork's commits aren't in local history. Fetch
+          # the PR ref so HEAD_SHA is available for the diff.
+          if [ "$IS_FORK" = "true" ]; then
+            git fetch --no-tags origin "refs/pull/$PR_NUMBER/head"
+          fi
 
           # Fetch the current tip of the base branch so we can compute the
           # merge base accurately. The recorded pr.base.sha goes stale as
