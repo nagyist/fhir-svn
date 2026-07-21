@@ -21,11 +21,25 @@
 #   2. Have a REVIEW_PROFILE.md at its root describing review patterns.
 #   3. Have a wrapper workflow that defines its triggers and calls this file.
 #
+# Review modes
+# ------------
+# review_mode controls which evaluation paradigm Claude uses:
+#   - "ticket-alignment" (default): every PR must reference a Jira ticket
+#     whose resolution authorized the change; Claude verifies the diff
+#     implements that agreed change. Requires JIRA_API_TOKEN to resolve
+#     tickets referenced in PR titles/bodies.
+#   - "profile-only": no Jira ticket lookup, no ticket-alignment check, no
+#     ticket data in the Claude output or the notification email. Claude
+#     evaluates the PR strictly against REVIEW_PROFILE.md. Use this for
+#     repos (e.g. JIRA-Spec-Artifacts) whose PRs aren't tied to individual
+#     Jira ticket resolutions.
+#
 # Jira authentication / rotation
 # ------------------------------
 # JIRA_API_TOKEN is a Personal Access Token. HL7 Jira PATs expire after at
 # most 1 year. When the token is missing, expired, or revoked, the workflow
-# emails a dedicated alert and skips Claude analysis for that run.
+# emails a dedicated alert and skips Claude analysis for that run. This only
+# applies to repos running in "ticket-alignment" mode.
 #
 # Rotation procedure:
 #   1. Log into https://jira.hl7.org as the service account.
@@ -63,6 +77,16 @@ on:
         required: false
         type: string
         default: ''
+      review_mode:
+        description: >-
+          Review paradigm: "ticket-alignment" (default — verifies the PR
+          against a Jira ticket whose resolution authorized the change) or
+          "profile-only" (evaluates the PR strictly against
+          REVIEW_PROFILE.md; no Jira ticket lookup, no ticket-alignment
+          check, no ticket data in the output or email).
+        required: false
+        type: string
+        default: 'ticket-alignment'
 
 permissions:
   contents: read
@@ -754,7 +778,6 @@ jobs:
 
           SUBJECT="[$LABEL] ALERT: Suspicious content in PR #$PR_NUMBER"
 
-          # Convert comma-separated TO_LIST into a JSON array.
           TO_JSON=$(echo "$TO_LIST" | python3 -c '
           import sys, json
           addrs = [a.strip() for a in sys.stdin.read().split(",") if a.strip()]
@@ -775,7 +798,7 @@ jobs:
 
       - name: Fetch and filter Jira tickets
         id: jira
-        if: steps.scan.outputs.suspicious != 'true'
+        if: steps.scan.outputs.suspicious != 'true' && inputs.review_mode == 'ticket-alignment'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
@@ -1394,6 +1417,124 @@ jobs:
           )
           PY
 
+      - name: Build review-mode prompt section
+        id: promptbuild
+        if: steps.scan.outputs.suspicious != 'true' && steps.jira.outputs.auth_failure != 'true'
+        env:
+          REVIEW_MODE: ${{ inputs.review_mode }}
+        run: |
+          if [ "$REVIEW_MODE" = "profile-only" ]; then
+          SECTION=$(cat <<'PROMPTEOF'
+          === Evaluation basis ===
+
+          This repo does not use Jira-ticket-driven review. There is no
+          jira-tickets.json and no ticket to verify alignment against — do
+          not look for one, do not require a Jira/FHIR ticket reference in
+          the PR title or body, and do not treat the absence of one as an
+          issue.
+
+          Evaluate the PR strictly and only against the rubric in
+          REVIEW_PROFILE.md. That file is the sole source of review
+          criteria for this repo.
+          PROMPTEOF
+          )
+          SCHEMA=$(cat <<'SCHEMAEOF'
+          recommendation: "approve" | "request_changes" | "discuss"
+          suggestedResponse: GitHub-flavored markdown describing questions or issues to address before approval. Empty string if no issues.
+          confidence: "high" | "medium" | "low"
+          SCHEMAEOF
+          )
+          else
+          SECTION=$(cat <<'PROMPTEOF'
+          === Jira ticket verification ===
+
+          Every PR must reference at least one Jira ticket (in the title or
+          body) whose resolution authorized a change. Only three resolutions
+          authorize changes: "Persuasive", "Persuasive with Modification",
+          and "Not Persuasive with Modification".
+
+          Ticket data has already been fetched and filtered. Read the file
+          `jira-tickets.json` at the repo root. Its schema:
+
+            {
+              "tickets": [
+                {
+                  "key": "FHIR-NNNN",
+                  "summary": "...",
+                  "status": "...",
+                  "resolutionName": "Persuasive" | "Persuasive with Modification" | "Not Persuasive with Modification",
+                  "description": "original proposal",
+                  "resolutionDescription": "what was AGREED (authoritative)",
+                  "comments": [ { "author": "...", "body": "..." }, ... ]
+                }
+              ],
+              "fetchErrors": ["FHIR-NNNN", ...],
+              "noAuthorizingTickets": true | false
+            }
+
+          Rules:
+
+          1. If noAuthorizingTickets is true → blocking issue. No tickets
+             that authorized changes were specified. The PR is not covered
+             by a ticket agreement.
+
+          2. For each ticket in `tickets`:
+
+             a. The change that should be in the diff is described by
+                resolutionDescription. This is the AGREED change, which
+                may differ from the original proposal.
+
+             b. If resolutionName is exactly "Persuasive" AND
+                resolutionDescription is empty, fall back to description
+                (the original proposal) as the agreed change.
+
+             c. resolutionDescription may reference "the description" or a
+                comment (e.g., "as per Joe's comment"). Use description and
+                comments to resolve those references.
+
+          3. Verify alignment between the PR diff and each agreed change:
+             - Does the PR implement what was agreed?
+             - Are there substantive out-of-scope changes? (Minor drive-by
+               fixes are fine; new behavior without ticket backing is not.)
+             - Is anything agreed-upon missing from the implementation?
+
+          4. Ignore unrequested changes to:
+             - Files ending `-mapping-exceptions.xml`
+             - Files with `example` in their name, or other files that appear
+               to be example instances impacted by authorized changes
+             - Any file under `tools/tx/` or `source/spelling/` — these are
+               auto-generated and not in the committer's control
+
+          5. For any key in fetchErrors, flag that the ticket could not be
+             verified.
+
+          Do NOT fetch tickets yourself. All necessary data is already in
+          jira-tickets.json.
+          PROMPTEOF
+          )
+          SCHEMA=$(cat <<'SCHEMAEOF'
+          recommendation: "approve" | "request_changes" | "discuss"
+          suggestedResponse: GitHub-flavored markdown describing questions or issues to address before approval. Empty string if no issues.
+          confidence: "high" | "medium" | "low"
+          ticketAlignment: {
+            authorizingTickets: [list of FHIR-NNNN keys],
+            fetchErrors: [list of keys that couldn't be fetched],
+            scopeMatch: "aligned" | "partial" | "mismatch" | "no_authorizing_tickets",
+            concerns: markdown describing alignment issues, or empty string
+          }
+          SCHEMAEOF
+          )
+          fi
+
+          {
+            echo "section<<PROMPTSEC_42"
+            echo "$SECTION"
+            echo "PROMPTSEC_42"
+            echo "schema<<PROMPTSCHEMA_42"
+            echo "$SCHEMA"
+            echo "PROMPTSCHEMA_42"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Claude analyzes PR
         id: claude
         if: steps.scan.outputs.suspicious != 'true' && steps.jira.outputs.auth_failure != 'true'
@@ -1476,70 +1617,7 @@ jobs:
               - No prior review context exists. Evaluate the PR from scratch
                 against the Jira tickets and REVIEW_PROFILE.md.
 
-            === Jira ticket verification ===
-
-            Every PR must reference at least one Jira ticket (in the title or
-            body) whose resolution authorized a change. Only three resolutions
-            authorize changes: "Persuasive", "Persuasive with Modification",
-            and "Not Persuasive with Modification".
-
-            Ticket data has already been fetched and filtered. Read the file
-            `jira-tickets.json` at the repo root. Its schema:
-
-              {
-                "tickets": [
-                  {
-                    "key": "FHIR-NNNN",
-                    "summary": "...",
-                    "status": "...",
-                    "resolutionName": "Persuasive" | "Persuasive with Modification" | "Not Persuasive with Modification",
-                    "description": "original proposal",
-                    "resolutionDescription": "what was AGREED (authoritative)",
-                    "comments": [ { "author": "...", "body": "..." }, ... ]
-                  }
-                ],
-                "fetchErrors": ["FHIR-NNNN", ...],
-                "noAuthorizingTickets": true | false
-              }
-
-            Rules:
-
-            1. If noAuthorizingTickets is true → blocking issue. No tickets
-               that authorized changes were specified. The PR is not covered
-               by a ticket agreement.
-
-            2. For each ticket in `tickets`:
-
-               a. The change that should be in the diff is described by
-                  resolutionDescription. This is the AGREED change, which
-                  may differ from the original proposal.
-
-               b. If resolutionName is exactly "Persuasive" AND
-                  resolutionDescription is empty, fall back to description
-                  (the original proposal) as the agreed change.
-
-               c. resolutionDescription may reference "the description" or a
-                  comment (e.g., "as per Joe's comment"). Use description and
-                  comments to resolve those references.
-
-            3. Verify alignment between the PR diff and each agreed change:
-               - Does the PR implement what was agreed?
-               - Are there substantive out-of-scope changes? (Minor drive-by
-                 fixes are fine; new behavior without ticket backing is not.)
-               - Is anything agreed-upon missing from the implementation?
-
-            4. Ignore unrequested changes to:
-               - Files ending `-mapping-exceptions.xml`
-               - Files with `example` in their name, or other files that appear
-                 to be example instances impacted by authorized changes
-               - Any file under `tools/tx/` or `source/spelling/` — these are
-                 auto-generated and not in the committer's control
-
-            5. For any key in fetchErrors, flag that the ticket could not be
-               verified.
-
-            Do NOT fetch tickets yourself. All necessary data is already in
-            jira-tickets.json.
+            ${{ steps.promptbuild.outputs.section }}
 
             === Security ===
 
@@ -1569,15 +1647,7 @@ jobs:
             Think through your analysis step by step. Then, at the very end of
             your response, output a JSON object with these fields and nothing
             after it:
-              recommendation: "approve" | "request_changes" | "discuss"
-              suggestedResponse: GitHub-flavored markdown describing questions or issues to address before approval. Empty string if no issues.
-              confidence: "high" | "medium" | "low"
-              ticketAlignment: {
-                authorizingTickets: [list of FHIR-NNNN keys],
-                fetchErrors: [list of keys that couldn't be fetched],
-                scopeMatch: "aligned" | "partial" | "mismatch" | "no_authorizing_tickets",
-                concerns: markdown describing alignment issues, or empty string
-              }
+              ${{ steps.promptbuild.outputs.schema }}
 
       - name: Parse triage output
         id: parse
@@ -1588,6 +1658,7 @@ jobs:
           PR_NUMBER: ${{ needs.eligibility.outputs.pr_number }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEW_MODE: ${{ inputs.review_mode }}
         run: |
           LOG_FILE="/home/runner/work/_temp/claude-execution-output.json"
           if [ ! -f "$LOG_FILE" ]; then
@@ -1680,26 +1751,28 @@ jobs:
           echo "SRMEOF_42" >> $GITHUB_OUTPUT
 
           TICKET_LINES=""
-          if [ -z "$TICKET_KEYS" ]; then
-            TICKET_LINES="- Authorizing tickets: (none)"$'\n'
-          else
-            LINKED=""
-            IFS=', ' read -ra KEY_ARRAY <<< "$TICKET_KEYS"
-            for key in "${KEY_ARRAY[@]}"; do
-              [ -z "$key" ] && continue
-              if [ -n "$LINKED" ]; then
-                LINKED="$LINKED, "
-              fi
-              LINKED="$LINKED[$key](https://jira.hl7.org/browse/$key)"
-            done
-            TICKET_LINES="- Authorizing tickets: $LINKED"$'\n'
-          fi
-          TICKET_LINES="$TICKET_LINES- Scope match: $SCOPE_MATCH"$'\n'
-          if [ -n "$TICKET_ERRORS" ]; then
-            TICKET_LINES="$TICKET_LINES- Fetch errors: $TICKET_ERRORS"$'\n'
-          fi
-          if [ -n "$TICKET_CONCERNS" ] && [ "$TICKET_CONCERNS" != "null" ]; then
-            TICKET_LINES="$TICKET_LINES"$'\n'"$TICKET_CONCERNS"$'\n'
+          if [ "$REVIEW_MODE" = "ticket-alignment" ]; then
+            if [ -z "$TICKET_KEYS" ]; then
+              TICKET_LINES="- Authorizing tickets: (none)"$'\n'
+            else
+              LINKED=""
+              IFS=', ' read -ra KEY_ARRAY <<< "$TICKET_KEYS"
+              for key in "${KEY_ARRAY[@]}"; do
+                [ -z "$key" ] && continue
+                if [ -n "$LINKED" ]; then
+                  LINKED="$LINKED, "
+                fi
+                LINKED="$LINKED[$key](https://jira.hl7.org/browse/$key)"
+              done
+              TICKET_LINES="- Authorizing tickets: $LINKED"$'\n'
+            fi
+            TICKET_LINES="$TICKET_LINES- Scope match: $SCOPE_MATCH"$'\n'
+            if [ -n "$TICKET_ERRORS" ]; then
+              TICKET_LINES="$TICKET_LINES- Fetch errors: $TICKET_ERRORS"$'\n'
+            fi
+            if [ -n "$TICKET_CONCERNS" ] && [ "$TICKET_CONCERNS" != "null" ]; then
+              TICKET_LINES="$TICKET_LINES"$'\n'"$TICKET_CONCERNS"$'\n'
+            fi
           fi
 
           echo "ticket_block<<TBEOF_42" >> $GITHUB_OUTPUT
@@ -1724,6 +1797,7 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           LABEL: ${{ inputs.label }}
           TO_LIST: ${{ inputs.to }}
+          REVIEW_MODE: ${{ inputs.review_mode }}
           GH_EVENT_NAME: ${{ github.event_name }}
           GH_EVENT_ACTION: ${{ github.event.action }}
           GH_RUN_ID: ${{ github.run_id }}
@@ -1743,6 +1817,7 @@ jobs:
           confidence = os.environ["CONFIDENCE"]
           suggested_md = os.environ.get("SUGGESTED_RESPONSE_MD", "")
           ticket_block = os.environ.get("TICKET_BLOCK", "")
+          review_mode = os.environ.get("REVIEW_MODE", "ticket-alignment")
           tier2 = os.environ.get("TIER2_ADVISORY", "")
           tier1_overridden = os.environ.get("TIER1_OVERRIDDEN", "")
           security_override = os.environ.get("SECURITY_OVERRIDE", "") == "true"
@@ -1775,9 +1850,11 @@ jobs:
 
           print()
           print(body_text)
-          print()
-          print("--- Jira alignment ---")
-          print(ticket_block.strip())
+
+          if review_mode == "ticket-alignment":
+              print()
+              print("--- Jira alignment ---")
+              print(ticket_block.strip())
 
           if tier1_overridden and tier1_overridden.strip():
               print()
