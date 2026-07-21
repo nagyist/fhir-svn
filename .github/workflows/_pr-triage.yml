@@ -97,7 +97,36 @@ jobs:
             const { owner, repo } = context.repo;
             let prNumber;
 
-            if (eventName === 'pull_request_target') {
+            if (eventName === 'workflow_run') {
+              const wr = context.payload.workflow_run;
+              if (wr.conclusion !== 'success' || wr.event !== 'pull_request') {
+                core.notice(`workflow_run not eligible (conclusion=${wr.conclusion}, event=${wr.event})`);
+                core.setOutput('should_triage', 'false');
+                return;
+              }
+
+              let prs = wr.pull_requests;
+              if (!prs || prs.length === 0) {
+                // For fork PRs, pull_requests is empty — look up by branch.
+                const headOwner = wr.head_repository && wr.head_repository.owner
+                  ? wr.head_repository.owner.login
+                  : owner;
+                const { data: found } = await github.rest.pulls.list({
+                  owner, repo,
+                  state: 'open',
+                  head: `${headOwner}:${wr.head_branch}`,
+                });
+                prs = found;
+              }
+
+              if (!prs || prs.length === 0) {
+                core.notice(`No PR found for ${wr.head_branch} at ${wr.head_sha}`);
+                core.setOutput('should_triage', 'false');
+                return;
+              }
+              prNumber = prs[0].number;
+
+            } else if (eventName === 'pull_request_target') {
               prNumber = context.payload.pull_request.number;
             } else if (eventName === 'issue_comment') {
               if (!context.payload.issue.pull_request) {
@@ -120,7 +149,10 @@ jobs:
 
             let triggerKind;
 
-            if (eventName === 'pull_request_target') {
+            if (eventName === 'workflow_run') {
+              triggerKind = 'build_passed';
+
+            } else if (eventName === 'pull_request_target') {
               const action = context.payload.action;
               if (action === 'opened' || action === 'synchronize') {
                 triggerKind = 'pr_updated';
@@ -417,7 +449,12 @@ jobs:
       - name: Checkout PR code
         uses: actions/checkout@v6
         with:
-          ref: ${{ needs.eligibility.outputs.head_sha }}
+          # For workflow_run events and fork PRs (pull_request_target),
+          # actions/checkout@v6 refuses to check out fork commits in a
+          # trusted context (base repo secrets/token). Fall back to the
+          # base branch — we only need REVIEW_PROFILE.md from the base
+          # repo; Claude reads the actual diff via gh commands.
+          ref: ${{ (github.event_name == 'workflow_run' || needs.eligibility.outputs.is_fork == 'true') && needs.eligibility.outputs.base_ref || needs.eligibility.outputs.head_sha }}
           fetch-depth: 0
 
       - name: Add PR context to run summary
@@ -1363,6 +1400,7 @@ jobs:
 
             Trigger: ${{ needs.eligibility.outputs.trigger_kind }}
             (For your information only — does not change the analysis algorithm below.)
+              - "build_passed": a CI build just completed successfully.
               - "pr_updated": PR was opened non-draft or received new commits.
               - "ready_for_review": a draft was just marked ready.
               - "author_responded": the PR author replied to a prior admin comment.
