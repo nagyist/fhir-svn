@@ -813,13 +813,6 @@ jobs:
                       else:
                           f.write(f"{key}={value}\n")
 
-          if not token:
-              sys.stderr.write("ERROR: JIRA_API_TOKEN is empty\n")
-              write_output("auth_failure", "true")
-              write_output("auth_failure_status", "missing_token")
-              write_output("auth_failure_url", "")
-              sys.exit(2)
-
           keys = set()
           for m in re.findall(r"\bFHIR-(\d+)\b", combined):
               keys.add(f"FHIR-{m}")
@@ -828,6 +821,21 @@ jobs:
           # Also handle full Jira URLs: https://jira.hl7.org/browse/FHIR-NNNN
           for m in re.findall(r"jira\.hl7\.org/browse/FHIR-(\d+)", combined):
               keys.add(f"FHIR-{m}")
+
+          # Token is only required if there are tickets to look up.
+          # Repos like JIRA-Spec-Artifacts may not reference Jira tickets.
+          if not token and not keys:
+              sys.stderr.write("No JIRA_API_TOKEN and no tickets — skipping Jira lookup\n")
+              write_output("auth_failure", "false")
+              json.dump({"tickets": {}, "fetchErrors": []}, sys.stdout)
+              sys.exit(0)
+
+          if not token:
+              sys.stderr.write("ERROR: JIRA_API_TOKEN is empty\n")
+              write_output("auth_failure", "true")
+              write_output("auth_failure_status", "missing_token")
+              write_output("auth_failure_url", "")
+              sys.exit(2)
           keys = sorted(keys)
 
           sys.stderr.write(f"Ticket keys found: {keys or '(none)'}\n")
